@@ -1,10 +1,11 @@
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import NaviMobile from '../comps/NaviMobile';
-import NaviDef from '../comps/NaviDef';
-import LinkVer from '../comps/LinkVer';
+import FocusLock from 'react-focus-lock';
+
+import NaviMobile from '@/comps/NaviMobile';
+import NaviDef from '@/comps/NaviDef';
+import LinkVer from '@/comps/LinkVer';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -26,7 +27,13 @@ const DefCont = styled.div`
   }
 `
 const MobCont = styled.div`
+  display: none;
   
+  @media only screen and (min-width: 1px) and (max-width: 768px){    
+    height: calc(100vh);
+    width: 100%; 
+    display: block;
+  }
 `
 
 const SecCont = styled.div`
@@ -34,14 +41,16 @@ const SecCont = styled.div`
 `
 
 export default function Home() {
+
   return (
     <Cont>
+      {/* Navigations */}
       <DefCont>
         <NaviDef />
-      </DefCont>
+      </DefCont>      
       <MobCont>
-        <NaviMobile />
-      </MobCont>
+        <NaviMobile />        
+      </MobCont> {/* Navigation ends */}
       
       
     </Cont>
