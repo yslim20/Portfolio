@@ -9,12 +9,14 @@ import FocusLock from 'react-focus-lock';
 // import Logo from '../Logo';
 import Burger from '../Burger'
 import Menu from '../Menu';
+import LinkHor from '../LinkHor';
+import LinkVer from '../LinkVer';
 
 // ============ CSS ============== //
 const Cont = styled.div`      
   height: calc(100vh);
   width: 100%;
-  // background-color: #000;
+  background-color: #181818;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -57,12 +59,12 @@ const NaviMobile =({}) =>{
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <div>
+    <Cont>
       <FocusLock disabled = {!open} >
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-        <Menu open={open} setOpen={setOpen} id={menuId} />
-      </FocusLock>     
-    </div>
+        <Menu open={open} setOpen={setOpen} id={menuId} />      
+      </FocusLock>   
+    </Cont>
   )
 }
 

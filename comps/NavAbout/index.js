@@ -35,7 +35,7 @@ const Content = styled.h6`
 const NavAbout =({
 
 // ============ Props  
-  height = "7.81vh",
+  height = "8.5vh",
   color="#999",
 
 })=>{

@@ -5,6 +5,7 @@ import FocusLock from 'react-focus-lock';
 
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
+import LinkHor from '@/comps/LinkHor';
 
 
 // ============ CSS ============== //

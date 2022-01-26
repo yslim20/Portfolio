@@ -7,6 +7,7 @@ import NavContact from '../NavContact';
 import NavDesign from '../NavDesign';
 import NavWeb from '../NavWeb';
 import Logo from '../Logo';
+import LinkHor from '../LinkHor';
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -52,6 +53,8 @@ const Menu = ({ open, ...props }) => {
         <NavDesign />
         <NavContact />
       </LinkCont>
+      
+      <LinkHor />
     </StyledMenu>
   )
 }
