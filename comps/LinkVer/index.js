@@ -5,52 +5,77 @@ import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
 const Cont = styled.div`    
-  width: 24px;
+  width: 25px;
   height: 250px;
-  // margin-top: 55px;
-  // margin-bottom: 25.39%;
   display:flex;
   justify-content:center;
-  align-items:center;
-  cursor: ${props=>props.cursor};
+  align-items:center;  
+  flex-direction: column;
 
   @media only screen and (min-width: 1px) and (max-width: 768px){
-    width: 100px;
-    height: 65px;
-    margin-top: 170px;
-    margin-bottom: 110px;
+    display: none;
   }
 `;
 
-const Img = styled.img`
-  width: ${props=>props.width}%;
-  height: ${props=>props.height}%;
-  display: block;
-  object-fit: contain;
+const UlCont = styled.ul`
+  margin: 0; padding: 0;
+`
 
-  :hover {
-    transform: scale(1.1);
-    transition-duration: 0.3s;     
+const Img = styled.li`
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-image: url("./icons/icon_Links.png");
+  background-repeat: no-repeat;
+  background-position: ${props=>props.position};
+  margin-bottom: 24px;
+
+  :hover {  
+    background-position: ${props=>props.hPosition}; 
   }
+  :last-child{
+    margin-bottom: 15px;
+  }
+`
+
+const GitHub = styled.a`
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;`
+
+const Line = styled.div`
+  width: 2px;
+  height: 115px;
+  display: block;
+  background-image: url("./images/img_LinkLine.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
 `
 
 
 // ============ Function ============== //
 const LinkVer = ({
 
-// ============ Routing
-  routeTo="/",
-
 // ============ Props  
-  cwidth = 60,
-  cheight = 38,
-  mtop = "18.97%",
-  mbttm = "12.27%",
-  width = 100,
-  height = 100,
-  src= "./icons/icon_LinkVer.svg",
-  alt=" ",
-  cursor="pointer"
+
+  altG="GitHub",
+  positionG = "left top",
+  hPositionG = "left bottom",
+  hrefG = 'https://github.com/yslim20?tab=repositories',
+
+
+  altD="Dribbble",
+  positionD = "center top",
+  hPositionD = "center bottom",
+  hrefD = 'https://dribbble.com/yslim2022',
+  
+
+  altL="Linkedin",
+  positionL = "right top",
+  hPositionL = "right bottom",
+  hrefL = 'https://www.linkedin.com/in/younsoo-lim', 
+  
 
 }) => {
 
@@ -59,24 +84,37 @@ const LinkVer = ({
 
 // ============ Layout
   return (
-    <Cont 
-      cwidth={cwidth}
-      cheight={cheight}
-      mtop={mtop}
-      mbttm={mbttm}
-      onClick={()=>router.push(routeTo)}
-      cursor={cursor}
-    >
-      <Link href ='https://github.com/yslim20?tab=repositories' />
-      <Link href ='https://dribbble.com/yslim2022' />
-      <Link href ='https://www.linkedin.com/in/younsoo-lim' />
-
-      {/* <Img 
-        width={width} 
-        height={height}
-        src={src}
-        alt={alt}
-      /> */}
+    <Cont >
+      <UlCont>
+        <Img
+          alt={altG}   
+          position={positionG}   
+          hPosition={hPositionG}
+        >
+          <GitHub 
+            href = {hrefG}
+          />
+        </Img>   
+        <Img
+          alt={altD} 
+          position={positionD}   
+          hPosition={hPositionD}     
+        >
+          <GitHub 
+            href = {hrefD}
+          />
+        </Img> 
+        <Img
+          alt={altL} 
+          position={positionL}   
+          hPosition={hPositionL}     
+        >
+          <GitHub 
+            href = {hrefL}
+          />
+        </Img> 
+      </UlCont>
+      <Line/>
     </Cont>
   );
 }

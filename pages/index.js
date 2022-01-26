@@ -10,15 +10,13 @@ import LinkVer from '@/comps/LinkVer';
 // ============ CSS ============== //
 const Cont = styled.div`  
   display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  flex-direction: row;
 `
 
 const DefCont = styled.div`
   height: calc(100vh);
   width: 110px;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 
@@ -30,27 +28,36 @@ const MobCont = styled.div`
   display: none;
   
   @media only screen and (min-width: 1px) and (max-width: 768px){    
-    height: calc(100vh);
-    width: 100%; 
     display: block;
   }
 `
 
-const SecCont = styled.div`
-  width: 
+const SecCont = styled.div`  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
 `
 
 export default function Home() {
 
   return (
     <Cont>
-      {/* Navigations */}
+{/* Navigations */}
       <DefCont>
         <NaviDef />
       </DefCont>      
       <MobCont>
         <NaviMobile />        
-      </MobCont> {/* Navigation ends */}
+      </MobCont> 
+{/* Navigation ends */}
+
+      <SecCont>
+        <LinkVer />
+      </SecCont>
+
+      
       
       
     </Cont>
