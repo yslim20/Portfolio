@@ -6,7 +6,6 @@ import {useRouter} from 'next/router';
 // ============ CSS ============== //
 const Cont = styled.div`    
   width: 25px;
-  height: 250px;
   display:flex;
   justify-content:center;
   align-items:center;  
@@ -46,7 +45,7 @@ const GitHub = styled.a`
 
 const Line = styled.div`
   width: 2px;
-  height: 115px;
+  height: 80px;
   display: block;
   background-image: url("./images/img_LinkLine.svg");
   background-repeat: no-repeat;

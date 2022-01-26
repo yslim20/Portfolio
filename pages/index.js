@@ -5,7 +5,7 @@ import FocusLock from 'react-focus-lock';
 
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
-import LinkVer from '@/comps/LinkVer';
+
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -54,7 +54,7 @@ export default function Home() {
 {/* Navigation ends */}
 
       <SecCont>
-        <LinkVer />
+
       </SecCont>
 
       

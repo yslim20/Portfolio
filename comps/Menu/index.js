@@ -11,20 +11,31 @@ import Logo from '../Logo';
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
-  background-color: #000;
+  background-color: #181818;
+  padding-top: calc(16.60vh);
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
 
   @media only screen and (min-width: 1px) and (max-width: 768px) {
       width: 100%;
   }
 `;
+
+const LinkCont = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+
+`
 
 const Menu = ({ open, ...props }) => {
   
@@ -34,10 +45,13 @@ const Menu = ({ open, ...props }) => {
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <Logo />
-      <NavAbout />
-      <NavWeb />
-      <NavDesign />
-      <NavContact />
+
+      <LinkCont>
+        <NavAbout />
+        <NavWeb />
+        <NavDesign />
+        <NavContact />
+      </LinkCont>
     </StyledMenu>
   )
 }

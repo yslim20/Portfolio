@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
 const Nav = styled.div`    
-  height: ${props=>props.height}px;
+  height: ${props=>props.height};  
   width: 100%;
   min-width: 110px;
   border-bottom: solid 1px #999;
@@ -14,6 +14,7 @@ const Nav = styled.div`
   justify-content:center;
   cursor: pointer; 
   color: #999;
+  background-color: #000;
 `;
 
 const Content = styled.h6`
@@ -33,7 +34,7 @@ const Content = styled.h6`
 const NavDesign =({
 
 // ============ Props  
-  height = 80,
+  height = "7.81vh",
   color="#999",
 
 })=>{

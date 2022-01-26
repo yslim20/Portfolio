@@ -6,8 +6,8 @@ import {useRouter} from 'next/router';
 const LogoCont = styled.div`    
   width: ${props=>props.cwidth}px;
   height: ${props=>props.cheight}px;
-  margin-top: 55px;
-  margin-bottom: 25.39%;
+  margin-top: ${props=>props.mtop};
+  // margin-bottom: ${props=>props.mbttm};
   // margin-bottom: 260px;
   display:flex;
   justify-content:center;
@@ -17,8 +17,8 @@ const LogoCont = styled.div`
   @media only screen and (min-width: 1px) and (max-width: 768px){
     width: 100px;
     height: 65px;
-    margin-top: 170px;
-    margin-bottom: 110px;
+    // margin-top: 170px;
+    // margin-bottom: 110px;
   }
 `;
 
@@ -44,8 +44,8 @@ const Logo = ({
 // ============ Props  
   cwidth = 60,
   cheight = 38,
-  mtop = "18.97%",
-  mbttm = "12.27%",
+  // mtop = "5.37%",
+  // mbttm = "calc(18vh)",
   width = 100,
   height = 100,
   src= "./icons/icon_Logo.svg",
@@ -62,8 +62,8 @@ const Logo = ({
     <LogoCont 
       cwidth={cwidth}
       cheight={cheight}
-      mtop={mtop}
-      mbttm={mbttm}
+      // mtop={mtop}
+      // mbttm={mbttm}
       onClick={()=>router.push(routeTo)}
       cursor={cursor}
     >
