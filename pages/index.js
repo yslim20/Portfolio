@@ -6,7 +6,7 @@ import FocusLock from 'react-focus-lock';
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
 import HomeSec from '@/comps/HomeSec';
-import DescT from '@/comps/DescT';
+import Desc from '@/comps/Desc';
 
 
 // ============ CSS ============== //
@@ -33,6 +33,8 @@ const DefCont = styled.div`
 const MobCont = styled.div`
   display: none;
   z-index: 999;
+  position: sticky;
+  top: 0;
   
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     display: block;
@@ -69,10 +71,21 @@ const Home = ({
 
   // const size = useWindowSize();
 
+  const sectionOne = useRef()
+
   return (
     <Wrap>
 {/* Navigations */}
       <SideBar>
+        <button onClick={() => {
+          sectionOne.current.scrollIntoView(
+            {
+              behavior: "smooth"
+            }
+          )
+        }}>
+          one
+        </button>
             <DefCont>
               <NaviDef />
             </DefCont>      
@@ -86,12 +99,13 @@ const Home = ({
         conwidth={conwidth}
       >
 
-        <SecCont className='home'>
+        <SecCont className='home' ref = {sectionOne} >
             <HomeSec />
         </SecCont>
 
         <SecCont className='description'>
-          <DescT />
+          <Desc />
+          <Desc flip = {true} />
         </SecCont>
 
 
@@ -105,37 +119,6 @@ const Home = ({
   )
 }
 
-// function useWindowSize() {
-//   // Initialize state with undefined width/height so server and client renders match
-//   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-//   const [windowSize, setWindowSize] = useState({
-//     width: undefined,
-//     height: undefined,
-//   });
 
-//   useEffect(() => {
-//     // only execute all the code below in client side
-//     if (typeof window !== 'undefined') {
-//       // Handler to call on window resize
-//       function handleResize() {
-//         // Set window width/height to state
-//         setWindowSize({
-//           width: window.innerWidth,
-//           height: window.innerHeight,
-//         });
-//       }
-    
-//       // Add event listener
-//       window.addEventListener("resize", handleResize);
-     
-//       // Call handler right away so state gets updated with initial window size
-//       handleResize();
-    
-//       // Remove event listener on cleanup
-//       return () => window.removeEventListener("resize", handleResize);
-//     }
-//   }, []); // Empty array ensures that effect is only run on mount
-//   return windowSize;
-// }
 
 export default Home;

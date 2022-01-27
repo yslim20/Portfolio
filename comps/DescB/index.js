@@ -9,6 +9,7 @@ const DescCont = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;  
+  position: relative;
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     width: 72.46%;
@@ -16,8 +17,7 @@ const DescCont = styled.div`
 `;
 
 const DescTit = styled.h3`
-  width: 100%;
-  margin-bottom: 20px; 
+  width: 100%;  
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     font-size: 2.125em;
@@ -26,40 +26,43 @@ const DescTit = styled.h3`
 `
 
 const DescText = styled.p`
-  width:100%;
+  width:100%;  
+  margin-bottom: 20px; 
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     font-size: 0.875em;
   } 
-
 `
 
 const ArrowCont = styled.div`
-  width: 54px;
-  height: 96px;
-  background-image: url("./images/img_VerTriangle.svg");
+  width: 69px;
+  height: 40px;
+  background-image: url("./images/img_TriangleLine.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  position: relative;
-  top: -20px; left: -20px;
+  position: absolute;
+  bottom: 0.5em; right: 15%;
   z-index: -1;
 
+  @media only screen and (min-width: 1024px) and (max-width: 769px){    
+    right: 5%;
+    transition: all 1s;
+  } 
+
   @media only screen and (min-width: 1px) and (max-width: 768px){    
-    top: 20px; 
-    left: 80%;
+    right: 15%;
     transition: all 1s;
   } 
 `
 
 // ============ Function ============== //
 
-const DescT = ({
+const DescB = ({
 
 // ============ Props
-  title = "Front-end Development",
-  text="My studies at British Columbia Institute of Technology gave me a solid foundation in front-end development, such as HTML, CSS, JavaScript, and jQuery, as well as tools such as Adobe Illustrator, InDesign, Photoshop, and Figma. I bring excellent time management, problem-solving, adaptability, and collaboration skills to my role as a front-end developer.",
+  title = "Design",
+  text="Besides studying Fashion Design at Ewha Woman's University in Seoul, Korea, and Visual Presentation & Exhibition Design at FIT in New York, I studied Digital Design and Development at BCIT. Additionally, I have more than ten years of experience working as a fashion designer in New York and Seoul. I gained a unique insight into the digital design from my previous professional career in UX/UI design.",
   justify="flex-start",
-  color = ""
 
 }) => {
     const router = useRouter();
@@ -70,15 +73,16 @@ const DescT = ({
       justify={justify}
     >
       <ArrowCont />
+      <DescText>
+        {text}
+      </DescText>
+
       <DescTit>
         {title}
       </DescTit>
 
-      <DescText>
-        {text}
-      </DescText>
     </DescCont>
   );
 }
 
-export default DescT;
+export default DescB;
