@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // ============ CSS ============== //
 
 const StyledBurger = styled.button`
-position: absolute;
+  position: absolute;
   top: 5%;
   right: 2rem;
   display: flex;
@@ -17,7 +17,7 @@ position: absolute;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 9999;
 
   :hover span{
     background-color: #2CCCC3;
@@ -31,7 +31,6 @@ position: absolute;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-
     
 
     :first-child {

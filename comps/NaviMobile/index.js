@@ -14,9 +14,7 @@ import LinkVer from '../LinkVer';
 
 // ============ CSS ============== //
 const Cont = styled.div`      
-  height: calc(100vh);
   width: 100%;
-  background-color: #181818;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

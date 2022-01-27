@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
@@ -27,13 +26,13 @@ const Img = styled.li`
   background-image: url("./icons/icon_Links.png");
   background-repeat: no-repeat;
   background-position: ${props=>props.position};
-  margin-bottom: 24px;
+  margin-bottom: 1em;
 
   :hover {  
     background-position: ${props=>props.hPosition}; 
   }
   :last-child{
-    margin-bottom: 15px;
+    margin-bottom: 1em;
   }
 `
 
@@ -41,15 +40,14 @@ const GitHub = styled.a`
   display: block;
   width: 100%;
   height: 100%;
-  cursor: pointer;`
+  cursor: pointer;
+  `
 
 const Line = styled.div`
-  width: 2px;
-  height: 80px;
+  width: 1px;
+  height: 8vh;
   display: block;
-  background-image: url("./images/img_LinkLine.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-color: #E60576;
 `
 
 
