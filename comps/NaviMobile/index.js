@@ -2,15 +2,8 @@ import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
 import FocusLock from 'react-focus-lock';
 
-// import NavAbout from '../NavAbout';
-// import NavContact from '../NavContact';
-// import NavDesign from '../NavDesign';
-// import NavWeb from '../NavWeb';
-// import Logo from '../Logo';
 import Burger from '../Burger'
 import Menu from '../Menu';
-import LinkHor from '../LinkHor';
-import LinkVer from '../LinkVer';
 
 // ============ CSS ============== //
 const Cont = styled.div`      
@@ -22,7 +15,7 @@ const Cont = styled.div`
   justify-content:center;
   display: none;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: block;
     display: flex;
   }

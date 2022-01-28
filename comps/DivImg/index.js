@@ -12,7 +12,7 @@ background-size: contain;
 background-position: ${props => props.position}; 
 z-index: -10;
 
-@media only screen and (min-width: 1px) and (max-width: 768px){
+@media only screen and (min-width: 1px) and (max-width: 1000px){
   background-size: 150%;
   transition: all 0.3s;
 }

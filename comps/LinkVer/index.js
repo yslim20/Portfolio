@@ -10,7 +10,7 @@ const Cont = styled.div`
   align-items:center;  
   flex-direction: column;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: none;
   }
 `;

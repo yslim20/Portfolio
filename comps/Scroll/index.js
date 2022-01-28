@@ -14,7 +14,7 @@ const Cont = styled.div`
   bottom: 0;
   z-index: 10;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     right: 0.25em;
   }
 `;
@@ -30,7 +30,7 @@ const Txt = styled.p`
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     font-size: 0.75em;
   }
 
@@ -38,13 +38,14 @@ const Txt = styled.p`
 
 const Line = styled.div`
   width: 1px;
-  height: 26.36vh;
+  height: 20vh;
   display: block;
   background-color: #E60576;
-  margin-top: 2em;
+  margin-top: 2.5em;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
-    height: 12.27vh;
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
+    margin-top: 1.5em;
+    height: 15vh;
   }
 `
 

@@ -2,10 +2,6 @@ import React from 'react';
 import { bool } from 'prop-types';
 import styled from 'styled-components';
 
-import NavAbout from '../NavAbout';
-import NavContact from '../NavContact';
-import NavDesign from '../NavDesign';
-import NavWeb from '../NavWeb';
 import Logo from '../Logo';
 import NavText from '../NavText';
 import LinkHor from '../LinkHor';
@@ -25,7 +21,7 @@ const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px) {
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
       width: 100%;
   }
 `;

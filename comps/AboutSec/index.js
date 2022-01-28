@@ -16,7 +16,7 @@ const Cont = styled.div`
   z-index: -1;  
   box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 950px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     flex-direction: column;
     align-items: center;  
     justify-content center;  
@@ -36,7 +36,7 @@ const ImgCont = styled.div`
   z-index: -999;  
   box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 950px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     background-size: 100%;
   }
 `
@@ -51,7 +51,7 @@ const DesContL = styled.div`
   position: relative;
   top: 30%;
   
-  @media only screen and (min-width: 1px) and (max-width: 950px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ const DesContR = styled.div`
   position: relative;
   top: 55%;
   
-  @media only screen and (min-width: 1px) and (max-width: 950px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@ const CirCont = styled.div`
   left: 0;
   z-index: -1;
 
-  @media only screen and (min-width: 461px) and (max-width: 768px){    
+  @media only screen and (min-width: 461px) and (max-width: 1000px){    
     width: 3em; height: 3em;    
     transition: all 0.3s;
   }

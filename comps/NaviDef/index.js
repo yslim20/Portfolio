@@ -18,9 +18,9 @@ const Container = styled.div`
   align-items:center;
   justify-content:space-between;
   padding-top: calc(5.37vh);
-  box-sizing: border-box
+  box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: none;
   }
 `;

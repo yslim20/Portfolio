@@ -14,7 +14,7 @@ const LogoCont = styled.div`
   align-items:center;
   cursor: ${props=>props.cursor};
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100px;
     height: 65px;
     // margin-top: 170px;

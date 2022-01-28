@@ -21,13 +21,17 @@ const SideBar = styled.div`
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 0;  
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
+    display: none;
+  }
 `
 const DefCont = styled.div`
   height: calc(100vh);
-  width: 110px;
+  width: 110px;  
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: none;
   }
 `
@@ -37,7 +41,7 @@ const MobCont = styled.div`
   position: sticky;
   top: 0;
   
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width: 1000px){    
     display: block;
   }
 `
@@ -49,7 +53,7 @@ const Cont = styled.div`
   padding-left: 109px;
   width: ${props=>props.conwidth};
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width: 1000px){    
     padding-left:  0;
     transition: all 0.3s;
   }

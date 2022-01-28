@@ -63,7 +63,7 @@ const ButtonInput = styled.button`
       width: 120%;
     }
 
-    @media only screen and (min-width: 1px) and (max-width: 768px){    
+    @media only screen and (min-width: 1px) and (max-width: 1000px){    
       min-width: 182px;
     } 
 `;

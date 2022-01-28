@@ -7,7 +7,7 @@ import {useRouter} from 'next/router';
 const Cont = styled.div`    
   display: none;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: block;
     height: 25px;
     width: 100%;

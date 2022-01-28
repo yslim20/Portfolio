@@ -26,7 +26,7 @@ const Cont = styled.div`
   justify-content:center;
   align-items:flex-start;
   
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     padding: 0 1.5em;
     justify-content:center;
     align-items:flex-start;
@@ -37,7 +37,7 @@ const SubTit = styled.p`
   width: 100%;
   color: #E60576;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width:1000px){    
     font-size: 0.875em;
     font-weight: 500;
   }
@@ -47,7 +47,7 @@ const NameTxt = styled.h2`
   width: 100%;
   color: #2CCCC3;
 
-  @media only screen and (min-width: 376px) and (max-width: 768px){    
+  @media only screen and (min-width: 461px) and (max-width:1000px){    
     font-size: 3em;
     font-weight: 700; 
   }
@@ -62,7 +62,7 @@ const Position = styled.h3`
   width: 100%;
   color: #2CCCC3;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width:1000px){    
     font-size: 2.125em;
     font-weight: 700; 
   }
@@ -72,7 +72,7 @@ const ExTxt = styled.p`
   width: 55%;
   color: #999;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width:1000px){    
     width: 100%;
     font-size: 0.875em;
   }
@@ -93,7 +93,7 @@ const DivCont = styled.div`
   left: 0;
   z-index: -1;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width:1000px){
     background-size: 150%;
     transition: all 0.3s;
   }
@@ -110,7 +110,7 @@ const SqCont = styled.div`
   right: 12.5%;
   z-index: -1;
 
-  @media only screen and (min-width: 376px) and (max-width: 768px){    
+  @media only screen and (min-width: 461px) and (max-width:1000px){    
     width: 3em; height: 3em;    
     bottom: 10%;
     transition: all 0.3s;

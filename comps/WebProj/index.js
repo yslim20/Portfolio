@@ -83,7 +83,7 @@ const ArrowContTwo = styled.div`
 
 // ============ Function ============== //
 
-const WebProj = ({
+const Desc = ({
 
 // ============ Props
   urlOne = "./images/img_VerTriangle.svg",
@@ -142,4 +142,4 @@ const WebProj = ({
   );
 }
 
-export default WebProj;
+export default Desc;
