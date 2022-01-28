@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
-import NavAbout from '../NavAbout';
-import NavContact from '../NavContact';
-import NavDesign from '../NavDesign';
-import NavWeb from '../NavWeb';
+
 import Logo from '../Logo';
 import LinkVer from '../LinkVer';
+import NavText from '../NavText';
 
 // ============ CSS ============== //
 const Container = styled.div`    
@@ -38,18 +36,43 @@ const LinkCont = styled.div`
 
 // ============ Layout
 const NaviDef =({
-
+  
+  onLogoClick = () => {},
+  onAboutClick = () =>{},
+  onWebClick = () => {},
+  onDesClick = () =>{},
+  onContClick = () => {},
 
 })=>{
   
   return (
     <Container>   
-      <Logo />
+      <Logo 
+        onClick={onLogoClick}
+      />
+
       <LinkCont>
-        <NavAbout />
-        <NavWeb />
-        <NavDesign />
-        <NavContact /> 
+        <NavText 
+          onClick = {onAboutClick}
+        />
+
+        <NavText 
+          onClick = {onWebClick}
+          text ="Web"
+          borderT=""
+        />
+
+        <NavText 
+          onClick = {onDesClick}
+          text ="Design" 
+          borderT=""       
+        />
+
+        <NavText 
+          onClick = {onContClick}
+          text ="Contact" 
+          borderT=""         
+        />
       </LinkCont>
       
       <LinkVer />

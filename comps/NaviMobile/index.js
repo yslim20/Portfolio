@@ -30,7 +30,14 @@ const Cont = styled.div`
 
 
 // ============ Layout
-const NaviMobile =({}) =>{
+const NaviMobile =({
+  onLogoClick = () => {},
+  onAboutClick = () =>{},
+  onWebClick = () => {},
+  onDesClick = () =>{},
+  onContClick = () => {}, 
+
+}) =>{
 
   const [open, setOpen] = useState(false);
   const node = useRef();
@@ -60,7 +67,13 @@ const NaviMobile =({}) =>{
     <Cont>
       <FocusLock disabled = {!open} >
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-        <Menu open={open} setOpen={setOpen} id={menuId} />      
+        <Menu open={open} setOpen={setOpen} id={menuId} 
+          onLogoClick ={onLogoClick}
+          onAboutClick={onAboutClick}
+          onWebClick={onWebClick}
+          onDesClick={onDesClick}
+          onContClick={onContClick}        
+        />      
       </FocusLock>   
     </Cont>
   )

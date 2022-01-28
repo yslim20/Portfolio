@@ -95,6 +95,7 @@ const Button = ({
     bshadow = "",
     color="#E60576",
     justify="flex-start",
+    onClick = () =>{},
 
 }) => {
     const router = useRouter();
@@ -107,7 +108,7 @@ const Button = ({
       justify={justify}
 
 // ============ onClick function
-      onClick={()=>router.push(routeTo)}
+      onClick={onClick}
     >
       <ButtonInput
         type={type}

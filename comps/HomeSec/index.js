@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import styles from '@/styles/Home.module.css'
 import Button from '../Button';
-import Scroll from '../Scroll';
+import DivImg from '../DivImg';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -15,9 +15,10 @@ const Cont = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 1;  
-  `
+  box-sizing: border-box;
+`
   
-  const TxtCont = styled.div`
+const TxtCont = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -81,16 +82,10 @@ const ExTxt = styled.p`
 const DivCont = styled.div`
   width: 100%;
   height: 100%;
-  display: block;
-  background-image: url("./images/img_Div_purBttm.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  // background-attachment: fixed;
-  background-position: left bottom;
-  margin-right: 1em;
+  display: block;  
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0px;
   z-index: -1;
 
   @media only screen and (min-width: 1px) and (max-width: 768px){
@@ -127,6 +122,8 @@ const SqCont = styled.div`
 
 const HomeSec = ({
 
+  onButtonClick = () => {},
+
 }) => {
   return (
     <Cont>
@@ -144,13 +141,18 @@ const HomeSec = ({
         <ExTxt>
           Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.
         </ExTxt>
-        <Button />
+        <Button
+          onClick={onButtonClick}        
+        />
       </TxtCont>
 
-      <DivCont />
+      <DivCont>
+        <DivImg 
+          url = "./images/img_Div_purBttm.svg"
+          position = "left bottom"
+        />
+      </DivCont>
       <SqCont />
-      <Scroll />      
-      
     </Cont>
     );
 }

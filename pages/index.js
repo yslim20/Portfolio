@@ -6,7 +6,8 @@ import FocusLock from 'react-focus-lock';
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
 import HomeSec from '@/comps/HomeSec';
-import Desc from '@/comps/Desc';
+import AboutSec from '@/comps/AboutSec';
+import Scroll from '@/comps/Scroll';
 
 
 // ============ CSS ============== //
@@ -45,7 +46,7 @@ const Cont = styled.div`
   width:100%;
   display: flex;
   flex-direction: column;  
-  padding-left: 110px;
+  padding-left: 109px;
   width: ${props=>props.conwidth};
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
@@ -61,59 +62,118 @@ const SecCont = styled.div`
   flex-direction: column;
   justify-content:center;
   align-items:center;
+  
 `
 
 const Home = ({
-  conwidth ="",
-  
+  conwidth ="",  
 
 }) => {
 
-  // const size = useWindowSize();
-
-  const sectionOne = useRef()
+  const sectionOne = useRef();
+  const sectionTwo = useRef();
+  const sectionThree = useRef();
+  const sectionFour = useRef();
+  const sectionFive = useRef();
+  
 
   return (
     <Wrap>
 {/* Navigations */}
       <SideBar>
-        <button onClick={() => {
-          sectionOne.current.scrollIntoView(
-            {
-              behavior: "smooth"
-            }
-          )
-        }}>
-          one
-        </button>
-            <DefCont>
-              <NaviDef />
-            </DefCont>      
+        <DefCont>
+          <NaviDef 
+            onLogoClick={ () => {
+              sectionOne.current.scrollIntoView(
+                {behavior: "smooth"}
+              )
+            }}
+            onAboutClick = {() => {
+              sectionTwo.current.scrollIntoView(
+                {behavior: "smooth"}
+              )
+            }}
+            onWebClick = {() => {
+              sectionThree.current.scrollIntoView(
+                {behavior: "smooth"}
+              )
+            }}
+            onDesClick = {() => {
+              sectionFour.current.scrollIntoView(
+                {behavior: "smooth"}
+              )
+            }}
+            onContClick = {() => {
+              sectionFive.current.scrollIntoView(
+                {behavior: "smooth"}
+              )
+            }}
+          />
+        </DefCont>      
       </SideBar>
       <MobCont>
-        <NaviMobile />        
+        <NaviMobile 
+          onLogoClick={ () => {
+            sectionOne.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onAboutClick = {() => {
+            sectionTwo.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onWebClick = {() => {
+            sectionThree.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onDesClick = {() => {
+            sectionFour.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onContClick = {() => {
+            sectionFive.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}        
+        />        
       </MobCont> 
 {/* Navigation ends */}
+      <Scroll />    
 
       <Cont
         conwidth={conwidth}
       >
 
-        <SecCont className='home' ref = {sectionOne} >
-            <HomeSec />
+        <SecCont ref = {sectionOne} >
+            <HomeSec 
+              onButtonClick={() => {
+                sectionFive.current.scrollIntoView(
+                  {behavior: "smooth"}
+                )
+              }}
+            />
         </SecCont>
 
-        <SecCont className='description'>
-          <Desc />
-          <Desc flip = {true} />
+        <SecCont ref = {sectionTwo}>
+          <AboutSec />
         </SecCont>
 
+        <SecCont ref = {sectionThree}>
+          
+        </SecCont>
 
+        <SecCont ref = {sectionFour}>
+          
+        </SecCont>
 
+        <SecCont ref = {sectionFive}>
+          
+        </SecCont>
         
-        
-      </Cont>
-      
+      </Cont>     
 
     </Wrap>
   )

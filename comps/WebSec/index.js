@@ -15,9 +15,9 @@ const Cont = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 1;  
-`
+  `
   
-const TxtCont = styled.div`
+  const TxtCont = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -125,7 +125,9 @@ const SqCont = styled.div`
 `
 
 
-const DesSec = ({
+const HomeSec = ({
+
+  onButtonClick = () => {},
 
 }) => {
   return (
@@ -144,7 +146,11 @@ const DesSec = ({
         <ExTxt>
           Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.
         </ExTxt>
-        <Button />
+        <Button 
+
+        onClick={onButtonClick}
+        
+        />
       </TxtCont>
 
       <DivCont />
@@ -155,4 +161,4 @@ const DesSec = ({
     );
 }
 
-export default DesSec;
+export default HomeSec;

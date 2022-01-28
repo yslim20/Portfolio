@@ -7,6 +7,7 @@ import NavContact from '../NavContact';
 import NavDesign from '../NavDesign';
 import NavWeb from '../NavWeb';
 import Logo from '../Logo';
+import NavText from '../NavText';
 import LinkHor from '../LinkHor';
 
 const StyledMenu = styled.nav`
@@ -38,20 +39,47 @@ const LinkCont = styled.div`
 
 `
 
-const Menu = ({ open, ...props }) => {
+const Menu = ({ 
+  onLogoClick = () => {},
+  onAboutClick = () =>{},
+  onWebClick = () => {},
+  onDesClick = () =>{},
+  onContClick = () => {}, 
+  open, ...props
+  
+}) => {
   
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <Logo />
+      <Logo 
+        onClick={onLogoClick}
+      />
 
       <LinkCont>
-        <NavAbout />
-        <NavWeb />
-        <NavDesign />
-        <NavContact />
+        <NavText 
+          onClick = {onAboutClick}
+        />
+
+        <NavText 
+          onClick = {onWebClick}
+          text ="Web"
+          borderT=""
+        />
+
+        <NavText 
+          onClick = {onDesClick}
+          text ="Design" 
+          borderT=""       
+        />
+
+        <NavText 
+          onClick = {onContClick}
+          text ="Contact" 
+          borderT=""         
+        />
       </LinkCont>
       
       <LinkHor />

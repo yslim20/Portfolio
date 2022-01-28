@@ -38,19 +38,15 @@ const Img = styled.img`
 // ============ Function ============== //
 const Logo = ({
 
-// ============ Routing
-  routeTo="/",
-
 // ============ Props  
   cwidth = 60,
   cheight = 38,
-  // mtop = "5.37%",
-  // mbttm = "calc(18vh)",
   width = 100,
   height = 100,
   src= "./icons/icon_Logo.svg",
   alt="Younsoo Lim's logo",
-  cursor="pointer"
+  cursor="pointer",
+  onClick = () =>{},
 
 }) => {
 
@@ -62,9 +58,7 @@ const Logo = ({
     <LogoCont 
       cwidth={cwidth}
       cheight={cheight}
-      // mtop={mtop}
-      // mbttm={mbttm}
-      onClick={()=>router.push(routeTo)}
+      onClick={onClick}
       cursor={cursor}
     >
       <Img 

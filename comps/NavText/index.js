@@ -7,8 +7,8 @@ const Nav = styled.div`
   height: ${props=>props.height};  
   width: 100%;
   min-width: 110px;
-  border-top: solid 1px #999;
-  border-bottom: solid 1px #999;
+  border-top: ${props => props.borderT};  
+  border-bottom: ${props => props.borderB};
   box-sizing: border-box;
   display: flex;
   align-items:center;
@@ -32,47 +32,34 @@ const Content = styled.h6`
 `
 
 // ============ Layout
-const NavAbout =({
+const NavText =({
 
 // ============ Props  
   height = "8.5vh",
-  color="#999",
   onClick = () =>{},
+  text ="About",
+  borderT = "solid 1px #999",
+  borderB = "solid 1px #999",
+  color="#999",
 
 })=>{
 
-  // const router = useRouter();
-
-  // if(router.ref == "sectionTwo") 
-  // {
-  //   return (
-  //     <Nav 
-  //       onClick = {onClick} 
-  //       height={height}      
-  //     >            
-  //       <Content               
-  //         color= "#2CCCC3"
-  //       >
-  //         About
-  //       </Content>
-  //     </Nav>
-  //   );
-  // }
-  
 // ============ Layout
   return (
     <Nav 
       onClick = {onClick}      
-      height={height}      
+      height={height} 
+      borderT = {borderT}
+      borderB = {borderB}     
     >            
       <Content               
         color={color}
         lineH={height}  
       >
-        About
+        {text}
       </Content>
     </Nav>
   );
 }
 
-export default NavAbout;
+export default NavText;

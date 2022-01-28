@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import {useRouter} from 'next/router';
+import {useRouter, useEffect} from 'next/router';
 
 // ============ CSS ============== //
 const Cont = styled.div`    
@@ -9,10 +9,10 @@ const Cont = styled.div`
   justify-content:center;
   align-items:center;  
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   right: 2em;
   bottom: 0;
-  z-index: 1;
+  z-index: 10;
 
   @media only screen and (min-width: 1px) and (max-width: 768px){
     right: 0.25em;
@@ -53,6 +53,45 @@ const Line = styled.div`
 const Scroll = ({
 
 }) => {
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [isTabnavOn]);
+
+  // const handleScroll = () => {
+  //   if (window.scrollY > 500 && !isTabnavOn) {
+  //     setIsTabnavOn(true);
+  //     return;
+  //   }
+  //   if (window.scrollY <= 500 && isTabnavOn) {
+  //     setIsTabnavOn(false);
+  //     return;
+  //   }
+  // };
+/** 
+  const [scrollY, setScrollY] = useState(0);
+
+  function logit() {
+    setScrollY(window.pageYOffset);
+
+    if(setScrollY)
+    console.log(new Date().getTime());
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+
+ */ 
 
 // ============ Layout
   return (

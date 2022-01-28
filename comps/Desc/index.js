@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
 const DescCont = styled.div`
-  width: 33.61%;
+  width: 100%;
   display:flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,6 +19,7 @@ const DescCont = styled.div`
 const DescTit = styled.h3`
   width: 100%;
   margin-bottom: ${props => props.TitMarginB}px; 
+  z-index: 1;
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     font-size: 2.125em;
@@ -45,10 +46,14 @@ const ArrowContOne = styled.div`
   top: 0px; left: ${props => props.left}px
   z-index: -1;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 801px) and (max-width: 1024px){   
+    transform: scale(0.8);
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 800px){    
     top: ${props => props.topM}px;
     left: ${props => props.leftM};
-    transform: scale(0.8);
+    transform: scale(0.7);
     transition: all 1s;
   } 
 `
@@ -63,14 +68,15 @@ const ArrowContTwo = styled.div`
   bottom: 0.5em; right: 15%;
   z-index: -1;
 
-  @media only screen and (min-width: 1024px) and (max-width: 769px){    
+  @media only screen and (min-width: 801px) and (max-width: 1024px){    
     right: 5%;
-    transform: scale(0.7);
+    transform: scale(0.8);
     transition: all 1s;
   } 
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){    
+  @media only screen and (min-width: 1px) and (max-width: 800px){    
     right: 15%;
+    transform: scale(0.7);
     transition: all 1s;
   } 
 `
@@ -82,8 +88,8 @@ const Desc = ({
 // ============ Props
   urlOne = "./images/img_VerTriangle.svg",
   leftOne = -20, 
-  topMOne = 20, 
-  leftMOne = "80%",
+  topMOne = 50, 
+  leftMOne = "95%",
   titleOne = "Front-end Development",
   textOne = "My studies at British Columbia Institute of Technology gave me a solid foundation in front-end development, such as HTML, CSS, JavaScript, and jQuery, as well as tools such as Adobe Illustrator, InDesign, Photoshop, and Figma. I bring excellent time management, problem-solving, adaptability, and collaboration skills to my role as a front-end developer.",
   TitMarginB = 20,
