@@ -2,21 +2,12 @@ import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
 import FocusLock from 'react-focus-lock';
 
-// import NavAbout from '../NavAbout';
-// import NavContact from '../NavContact';
-// import NavDesign from '../NavDesign';
-// import NavWeb from '../NavWeb';
-// import Logo from '../Logo';
 import Burger from '../Burger'
 import Menu from '../Menu';
-import LinkHor from '../LinkHor';
-import LinkVer from '../LinkVer';
 
 // ============ CSS ============== //
 const Cont = styled.div`      
-  height: calc(100vh);
   width: 100%;
-  background-color: #181818;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -24,7 +15,7 @@ const Cont = styled.div`
   justify-content:center;
   display: none;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: block;
     display: flex;
   }
@@ -32,7 +23,14 @@ const Cont = styled.div`
 
 
 // ============ Layout
-const NaviMobile =({}) =>{
+const NaviMobile =({
+  onLogoClick = () => {},
+  onAboutClick = () =>{},
+  onWebClick = () => {},
+  onDesClick = () =>{},
+  onContClick = () => {}, 
+
+}) =>{
 
   const [open, setOpen] = useState(false);
   const node = useRef();
@@ -62,7 +60,28 @@ const NaviMobile =({}) =>{
     <Cont>
       <FocusLock disabled = {!open} >
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-        <Menu open={open} setOpen={setOpen} id={menuId} />      
+        <Menu open={open} setOpen={setOpen} id={menuId} 
+          onLogoClick ={() => {
+            onLogoClick();
+            setOpen(false);
+          }}
+          onAboutClick={() =>{
+            onAboutClick();
+            setOpen(false)
+          }}
+          onWebClick={() =>{
+            onWebClick();
+            setOpen(false);
+          }}
+          onDesClick={() => {
+            onDesClick();
+            setOpen(false);
+          }}
+          onContClick={() =>{
+            onContClick();
+            setOpen(false);
+          }}        
+        />      
       </FocusLock>   
     </Cont>
   )

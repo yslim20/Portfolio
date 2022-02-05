@@ -2,11 +2,8 @@ import React from 'react';
 import { bool } from 'prop-types';
 import styled from 'styled-components';
 
-import NavAbout from '../NavAbout';
-import NavContact from '../NavContact';
-import NavDesign from '../NavDesign';
-import NavWeb from '../NavWeb';
 import Logo from '../Logo';
+import NavText from '../NavText';
 import LinkHor from '../LinkHor';
 
 const StyledMenu = styled.nav`
@@ -24,7 +21,7 @@ const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px) {
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
       width: 100%;
   }
 `;
@@ -38,20 +35,50 @@ const LinkCont = styled.div`
 
 `
 
-const Menu = ({ open, ...props }) => {
+const Menu = ({ 
+  onLogoClick = () => {},
+  onAboutClick = () =>{
+
+  },
+  onWebClick = () => {},
+  onDesClick = () =>{},
+  onContClick = () => {}, 
+  open, ...props
   
-  const isHidden = open ? true : false;
+}) => {
+  
+  const isHidden = open ? true : false; // make a state rather than just open and put them in the individual functins
   const tabIndex = isHidden ? 0 : -1;
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <Logo />
+      <Logo 
+        // open={open} aria-hidden={!isHidden} {...props}
+        onClick={onLogoClick}
+      />
 
       <LinkCont>
-        <NavAbout />
-        <NavWeb />
-        <NavDesign />
-        <NavContact />
+        <NavText 
+          onClick = {onAboutClick}
+        />
+
+        <NavText 
+          onClick = {onWebClick}
+          text ="Web"
+          borderT=""
+        />
+
+        <NavText 
+          onClick = {onDesClick}
+          text ="Design" 
+          borderT=""       
+        />
+
+        <NavText 
+          onClick = {onContClick}
+          text ="Contact" 
+          borderT=""         
+        />
       </LinkCont>
       
       <LinkHor />

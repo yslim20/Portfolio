@@ -15,42 +15,43 @@ const Nav = styled.div`
   cursor: pointer; 
   color: #999;
   background-color: #000;
+
+  :hover h6{
+    color:#2CCCC3; 
+  }
+
+  :active h6{
+    color: #2CCCC3;
+  }
 `;
 
 const Content = styled.h6`
   line-height: ${props=>props.lineH}px;
   color: ${props=>props.color};
-
-  :hover {
-    color:#2CCCC3; 
-  }
-
-  :active {
-    color: #2CCCC3;
-  }
+  
 `
 
 // ============ Layout
-const NavWeb =({
+const NavContact =({
 
 // ============ Props  
-  height = "8.5vh",
+  height =  "8.5vh",
   color="#999",
 
 })=>{
   
   const router = useRouter();
-  if(router.pathname === "/Web") 
+  if(router.pathname === "/Contact") 
   {
     return (
       <Nav 
-        onClick={() => router.push("/Web")}
+        onClick={() => router.push("/Contact")}
         height={height}      
       >            
         <Content               
           color= "#2CCCC3"
         >
-          Web
+          Contact
         </Content>
       </Nav>
     );
@@ -59,17 +60,17 @@ const NavWeb =({
 // ============ Layout
   return (
     <Nav 
-      onClick={() => router.push("/Web")}
+      onClick={() => router.push("/Contact")}
       height={height}      
     >            
       <Content               
         color={color}
-        lineH={height}   
+        lineH={height}  
       >
-        Web
+        Contact
       </Content>
     </Nav>
   );
 }
 
-export default NavWeb;
+export default NavContact;

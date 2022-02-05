@@ -15,23 +15,23 @@ const Nav = styled.div`
   cursor: pointer; 
   color: #999;
   background-color: #000;
+
+  :hover h6{
+    color:#2CCCC3; 
+  }
+
+  :active h6{
+    color: #2CCCC3;
+  }
 `;
 
 const Content = styled.h6`
   line-height: ${props=>props.lineH}px;
-  color: ${props=>props.color}; 
-
-  :hover {
-    color:#2CCCC3; 
-  }
-
-  :active {
-    color: #2CCCC3;
-  }
+  color: ${props=>props.color};
 `
 
 // ============ Layout
-const NavDesign =({
+const NavWeb =({
 
 // ============ Props  
   height = "8.5vh",
@@ -40,17 +40,17 @@ const NavDesign =({
 })=>{
   
   const router = useRouter();
-  if(router.pathname === "/Design") 
+  if(router.pathname === "/Web") 
   {
     return (
       <Nav 
-        onClick={() => router.push("/Design")}
+        onClick={() => router.push("/Web")}
         height={height}      
       >            
         <Content               
           color= "#2CCCC3"
         >
-          Design
+          Web
         </Content>
       </Nav>
     );
@@ -59,17 +59,17 @@ const NavDesign =({
 // ============ Layout
   return (
     <Nav 
-      onClick={() => router.push("/Design")}
+      onClick={() => router.push("/Web")}
       height={height}      
     >            
       <Content               
         color={color}
-        lineH={height}  
+        lineH={height}   
       >
-        Design
+        Web
       </Content>
     </Nav>
   );
 }
 
-export default NavDesign;
+export default NavWeb;

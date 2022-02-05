@@ -7,7 +7,7 @@ import {useRouter} from 'next/router';
 const Cont = styled.div`    
   display: none;
 
-  @media only screen and (min-width: 1px) and (max-width: 768px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px){
     display: block;
     height: 25px;
     width: 100%;
@@ -15,7 +15,7 @@ const Cont = styled.div`
     justify-content:flex-end;
     align-items:center;  
     flex-direction: row;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     box-sizing: border-box;
   }
 `;
@@ -33,13 +33,13 @@ const Img = styled.li`
   background-image: url("./icons/icon_Links.png");
   background-repeat: no-repeat;
   background-position: ${props=>props.position};
-  margin-right: 1.25em;
+  margin-right: 1em;
 
   :hover {  
     background-position: ${props=>props.hPosition}; 
   }
   :last-child{
-    margin-right: 1.25em;
+    margin-right: 1em;
   }
 `
 

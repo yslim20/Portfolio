@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useRef } from 'react';
 import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
@@ -7,6 +7,7 @@ const Nav = styled.div`
   height: ${props=>props.height};  
   width: 100%;
   min-width: 110px;
+  border-top: solid 1px #999;
   border-bottom: solid 1px #999;
   box-sizing: border-box;
   display: flex;
@@ -15,61 +16,63 @@ const Nav = styled.div`
   cursor: pointer; 
   color: #999;
   background-color: #000;
+
+  :hover h6{
+    color:#2CCCC3; 
+  }
+
+  :active h6{
+    color: #2CCCC3;
+  }
 `;
 
 const Content = styled.h6`
   line-height: ${props=>props.lineH}px;
   color: ${props=>props.color};
-
-  :hover {
-    color:#2CCCC3; 
-  }
-
-  :active {
-    color: #2CCCC3;
-  }
 `
 
 // ============ Layout
-const NavContact =({
+const NavAbout =({
 
 // ============ Props  
-  height =  "8.5vh",
+  height = "8.5vh",
   color="#999",
+  onClick = () =>{},
 
 })=>{
-  
-  const router = useRouter();
-  if(router.pathname === "/Contact") 
-  {
-    return (
-      <Nav 
-        onClick={() => router.push("/Contact")}
-        height={height}      
-      >            
-        <Content               
-          color= "#2CCCC3"
-        >
-          Contact
-        </Content>
-      </Nav>
-    );
-  }
+
+  // const router = useRouter();
+
+  // if(router.ref == "sectionTwo") 
+  // {
+  //   return (
+  //     <Nav 
+  //       onClick = {onClick} 
+  //       height={height}      
+  //     >            
+  //       <Content               
+  //         color= "#2CCCC3"
+  //       >
+  //         About
+  //       </Content>
+  //     </Nav>
+  //   );
+  // }
   
 // ============ Layout
   return (
     <Nav 
-      onClick={() => router.push("/Contact")}
+      onClick = {onClick}      
       height={height}      
     >            
       <Content               
         color={color}
         lineH={height}  
       >
-        Contact
+        About
       </Content>
     </Nav>
   );
 }
 
-export default NavContact;
+export default NavAbout;
