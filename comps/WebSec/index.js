@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import styles from '@/styles/Home.module.css'
 import Button from '../Button';
 import Scroll from '../Scroll';
+import DivImg from '../DivImg';
+import WebProj from '../WebProj';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -11,7 +13,7 @@ const Cont = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 9.02%;
-  background: #000;
+  background: #2CCCC3;
   position: relative;
   overflow: hidden;
   z-index: 1;  
@@ -78,20 +80,14 @@ const ExTxt = styled.p`
   }
 `
 
-const DivCont = styled.div`
+const DivConT = styled.div`
   width: 100%;
   height: 100%;
   display: block;
-  background-image: url("./images/img_Div_purBttm.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  // background-attachment: fixed;
-  background-position: left bottom;
-  margin-right: 1em;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -99;
 
   @media only screen and (min-width: 1px) and (max-width:1000px){
     background-size: 150%;
@@ -99,66 +95,48 @@ const DivCont = styled.div`
   }
 `
 
-const SqCont = styled.div`
-  width: 4.25em; height: 4.25em;
-  background-image: url("./images/img_Square.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+const DivConB = styled.div`
+  width: 100%;
+  height: 100%;
+  display: block;
   position: absolute;
-  bottom: 17.57%;
-  right: 12.5%;
-  z-index: -1;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
 
-  @media only screen and (min-width: 461px) and (max-width:1000px){    
-    width: 3em; height: 3em;    
-    bottom: 10%;
+  @media only screen and (min-width: 1px) and (max-width:1000px){
+    background-size: 150%;
     transition: all 0.3s;
   }
-
-  @media only screen and (min-width: 1px) and (max-width:460px){    
-    width: 2.5em; height: 2.5em;    
-    bottom: 6%;
-    transition: all 0.3s;
-  }
-
 `
 
 
-const HomeSec = ({
+const WebSec = ({
 
-  onButtonClick = () => {},
+  // onButtonClick = () => {},
 
 }) => {
   return (
     <Cont>
-
-      <TxtCont>
-        <SubTit>
-          Hello, I am ...
-        </SubTit>
-        <NameTxt>
-          Youn Soo Lim,
-        </NameTxt>
-        <Position>
-          front-end developer
-        </Position>
-        <ExTxt>
-          Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.
-        </ExTxt>
-        <Button 
-
-        onClick={onButtonClick}
-        
+      <DivConT>      
+        <DivImg 
+          url = "./images/img_Div_white.svg"
         />
-      </TxtCont>
+      </DivConT>
 
-      <DivCont />
-      <SqCont />
+      <WebProj />
+
+
+      <DivConB>
+        <DivImg 
+          url = "./images/img_Div_yellowBttm.svg"
+          position = "left bottom"
+        />
+      </DivConB>
       <Scroll />      
       
     </Cont>
     );
 }
 
-export default HomeSec;
+export default WebSec;

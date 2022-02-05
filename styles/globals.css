@@ -47,6 +47,7 @@ h2 {
 h3 {
   font-size: 3em;
   font-weight: 700; 
+  margin-bottom: 0.25em;;
 }
 
 h4 {
@@ -74,10 +75,15 @@ body, p {
   font-weight: 400; 
 }
 
-button, .body2{
+button {
+  font-weight: 700
+}
+
+.body2{
   font-size: 0.875em;
   font-weight: 300;
 }
+
 
 /* .title {
   font-family: 'Heebo', sans-serif;

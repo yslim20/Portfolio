@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import React, { useRef } from 'react';
-import {useRouter} from 'next/router';
+import React, { useState, useRef, useEffect } from 'react';
 
 // ============ CSS ============== //
 const Nav = styled.div`    
@@ -44,9 +43,34 @@ const NavText =({
 
 })=>{
 
+  // const [open, setOpen] = useState(false);
+  // const node = useRef();
+  // const listId = "menu-list";
+
+  // const useOnClickOutside = (ref, handler) => {
+  //   useEffect(() => {
+  //     const listener = event => {
+  //       if (!ref.current || ref.current.contains(event.target)) {
+  //         return;
+  //       }
+  //       handler(event);
+  //     };
+  //     document.addEventListener('mousedown', listener);
+  
+  //     return () => {
+  //       document.removeEventListener('mousedown', listener);
+  //     };
+  //   },
+  //   [ref, handler],
+  //   );
+  // };
+
+  // useOnClickOutside(node, () => setOpen(false));
+
 // ============ Layout
   return (
     <Nav 
+      // open={open} setOpen={setOpen} 
       onClick = {onClick}      
       height={height} 
       borderT = {borderT}

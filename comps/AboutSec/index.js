@@ -4,6 +4,15 @@ import styles from '@/styles/Home.module.css';
 import Desc from '@/comps/Desc';
 import DivImg from '@/comps/DivImg';
 
+import { useTheme } from "@/utils/provider";
+import {
+  bkColor,
+  themes,
+  bttnBkColor,
+  hovBkColor,
+  hovColor,
+} from "@/utils/variables";
+
 // ============ CSS ============== //
 const Cont = styled.div`  
   width: 100%; height: 100%;
@@ -34,7 +43,7 @@ const ImgCont = styled.div`
   position: absolute;
   bottom: 0; left: 0;
   z-index: -999;  
-  box-sizing: border-box;
+  box-sizing: border-box;  
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     background-size: 100%;
@@ -49,14 +58,15 @@ const DesContL = styled.div`
   margin-top: ${props => props.marginT}%;
   box-sizing: border-box;
   position: relative;
-  top: 30%;
+  top: 25%;
+  transition: all 0.3s;
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100%;
     align-items: center;
     justify-content: center;
-    top: 5%;
-    margin-bottom: 48px;
+    top: 5%; left: -10%;
+    margin-bottom: 48px;    
   }
 `
 
@@ -67,13 +77,15 @@ const DesContR = styled.div`
   align-items: flex-end;
   box-sizing: border-box;
   position: relative;
-  top: 55%;
+  top: 50%;
+  transition: all 0.3s;
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100%;
     align-items: center;
     justify-content: center;
     position: static;
+    left: 10%;
   }
 `
 
@@ -112,6 +124,8 @@ const CirCont = styled.div`
 const AboutSec = ({
 
 }) => {
+  const { theme, setTheme } = useTheme();
+  
   return (
     <Cont>
       <DivCont>
@@ -120,6 +134,7 @@ const AboutSec = ({
 
       <DesContL>
         <Desc 
+          bkColor={bkColor[theme]}
           TxtMarginB = "30"            
         />
       </DesContL>

@@ -37,7 +37,9 @@ const LinkCont = styled.div`
 
 const Menu = ({ 
   onLogoClick = () => {},
-  onAboutClick = () =>{},
+  onAboutClick = () =>{
+
+  },
   onWebClick = () => {},
   onDesClick = () =>{},
   onContClick = () => {}, 
@@ -45,12 +47,13 @@ const Menu = ({
   
 }) => {
   
-  const isHidden = open ? true : false;
+  const isHidden = open ? true : false; // make a state rather than just open and put them in the individual functins
   const tabIndex = isHidden ? 0 : -1;
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <Logo 
+        // open={open} aria-hidden={!isHidden} {...props}
         onClick={onLogoClick}
       />
 

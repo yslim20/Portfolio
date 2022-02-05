@@ -1,12 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router';
+// import styles from '../styles/globals.css'
 import FocusLock from 'react-focus-lock';
+import Head from 'next/head';
+import { useTheme } from "@/utils/provider";
 
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
 import HomeSec from '@/comps/HomeSec';
 import AboutSec from '@/comps/AboutSec';
+import WebSec from '@/comps/WebSec';
 import Scroll from '@/comps/Scroll';
 
 
@@ -19,7 +23,7 @@ const Wrap = styled.div`
 const SideBar = styled.div`
   overflow-x: hidden;
   position: fixed;
-  z-index: 1;
+  z-index:999;
   top: 0;
   left: 0;  
 
@@ -83,6 +87,9 @@ const Home = ({
 
   return (
     <Wrap>
+      <Head>
+        
+      </Head>
 {/* Navigations */}
       <SideBar>
         <DefCont>
@@ -166,7 +173,7 @@ const Home = ({
         </SecCont>
 
         <SecCont ref = {sectionThree}>
-          
+          <WebSec />
         </SecCont>
 
         <SecCont ref = {sectionFour}>

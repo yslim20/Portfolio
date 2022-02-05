@@ -86,7 +86,7 @@ const DivCont = styled.div`
   position: absolute;
   bottom: 0;
   left: 0px;
-  z-index: -1;
+  z-index: -99;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     background-size: 150%;
@@ -107,13 +107,13 @@ const SqCont = styled.div`
 
   @media only screen and (min-width: 459px) and (max-width: 1000px){    
     width: 3em; height: 3em;    
-    bottom: 10%;
+    bottom: 15%;
     transition: all 0.3s;
   }
 
   @media only screen and (min-width: 1px) and (max-width:460px){    
     width: 2.5em; height: 2.5em;    
-    bottom: 6%;
+    bottom: 10%;
     transition: all 0.3s;
   }
 
@@ -142,7 +142,8 @@ const HomeSec = ({
           Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.
         </ExTxt>
         <Button
-          onClick={onButtonClick}        
+          onClick={onButtonClick}   
+          width='242px'     
         />
       </TxtCont>
 

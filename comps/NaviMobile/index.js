@@ -61,11 +61,26 @@ const NaviMobile =({
       <FocusLock disabled = {!open} >
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
         <Menu open={open} setOpen={setOpen} id={menuId} 
-          onLogoClick ={onLogoClick}
-          onAboutClick={onAboutClick}
-          onWebClick={onWebClick}
-          onDesClick={onDesClick}
-          onContClick={onContClick}        
+          onLogoClick ={() => {
+            onLogoClick();
+            setOpen(false);
+          }}
+          onAboutClick={() =>{
+            onAboutClick();
+            setOpen(false)
+          }}
+          onWebClick={() =>{
+            onWebClick();
+            setOpen(false);
+          }}
+          onDesClick={() => {
+            onDesClick();
+            setOpen(false);
+          }}
+          onContClick={() =>{
+            onContClick();
+            setOpen(false);
+          }}        
         />      
       </FocusLock>   
     </Cont>

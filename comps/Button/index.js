@@ -18,7 +18,7 @@ const ButtonInput = styled.button`
     background-color:${props=>props.bg};
     border:${props => props.border};
     border-radius:${props=>props.radius}px;
-    width: ${props=>props.width}px;
+    width: ${props=>props.width};
     min-width: ${props=>props.minWidth}px;
     height: ${props=>props.height}px;
     align-items:center;
@@ -49,7 +49,7 @@ const ButtonInput = styled.button`
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s;
-      background: rgba(230,5,118,0.3);
+      background: ${props => props.bgafter};      
       transform: skewX(15deg);
       z-index: -1;
   }
@@ -84,17 +84,18 @@ const Button = ({
     type = "",
     text="Contact me",
     margintop = 40,
-    minWidth= 242,
+    width = "100%",
+    minWidth = 182,
     marginright="",
     bgcolor = "transparent",
     radius = 10,
-    width = 182,
     height = 48,
     border = "2px solid #E60576",
-    routeTo = "/Contact",
+    // routeTo = "/Contact",
     bshadow = "",
     color="#E60576",
     justify="flex-start",
+    bgafter = "rgba(230,5,118,0.3)",
     onClick = () =>{},
 
 }) => {
@@ -119,6 +120,7 @@ const Button = ({
         border={border}
         bshadow={bshadow}
         minWidth={minWidth}
+        bgafter={bgafter}
       >
         <ButtonText
           color={color}
