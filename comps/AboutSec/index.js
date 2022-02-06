@@ -28,10 +28,10 @@ const Cont = styled.div`
 `
 
 const ImgCont = styled.div`
-  width: 100%; height: 80%; 
+  width: 100%; height: 100%; 
   background-image: url("./images/img_Background.svg");
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: contain;
   background-position: center center;
   background-attachment: fixed; 
   opacity: 0.2;
@@ -50,10 +50,10 @@ const DesContL = styled.div`
   display: flex;
   flex-direction: column;  
   align-items: flex-start;
-  margin-top: ${props => props.marginT}%;
+  // margin-top: ${props => props.marginT}%;
   box-sizing: border-box;
   position: relative;
-  top: 25%;
+  top: ${props => props.top}%;
   transition: all 0.3s;
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
@@ -72,7 +72,7 @@ const DesContR = styled.div`
   align-items: flex-end;
   box-sizing: border-box;
   position: relative;
-  top: 50%;
+  top: ${props => props.top}%;
   transition: all 0.3s;
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
@@ -117,6 +117,8 @@ const CirCont = styled.div`
 
 
 const AboutSec = ({
+  topL = 15,
+  topR = 50,
 
 }) => {
   const { theme, setTheme } = useTheme();
@@ -124,17 +126,22 @@ const AboutSec = ({
   return (
     <Cont>
       <DivCont>
-        <DivImg />
+        <DivImg url ="" />
       </DivCont>
 
-      <DesContL>
+      <DesContL
+        top ={topL}
+      >
         <Desc 
           bkColor={ltLylac[theme]}
-          TxtMarginB = "30"            
+          TxtMarginB = "30"  
+                  
         />
       </DesContL>
 
-      <DesContR >
+      <DesContR 
+        top = {topR}
+      >
         <CirCont />
         <Desc flip = {true} />
       </DesContR>      

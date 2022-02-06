@@ -20,13 +20,13 @@ const StyledBurger = styled.button`
   z-index: 9999;
 
   :hover span{
-    background-color: #2CCCC3;
+    background-color: #5550F2;
   }
 
   span {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => open ? '#2CCCC3' : '#999'};
+    background: ${({ open }) => open ? '#5550F2' : '#999'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

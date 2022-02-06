@@ -24,6 +24,7 @@ const Cont = styled.div`
 const Txt = styled.p`  
   color: ${props => props.color};
   width: 11.72vh;
+  min-width: 100px;
   padding: 0; margin: 0;
   line-height: 1em;
   transform: rotate(90deg); 
