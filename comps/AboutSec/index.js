@@ -5,13 +5,8 @@ import Desc from '@/comps/Desc';
 import DivImg from '@/comps/DivImg';
 
 import { useTheme } from "@/utils/provider";
-import {
-  bkColor,
-  themes,
-  bttnBkColor,
-  hovBkColor,
-  hovColor,
-} from "@/utils/variables";
+import { themes, ltLylac } from '@/utils/variables';
+
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -134,7 +129,7 @@ const AboutSec = ({
 
       <DesContL>
         <Desc 
-          bkColor={bkColor[theme]}
+          bkColor={ltLylac[theme]}
           TxtMarginB = "30"            
         />
       </DesContL>

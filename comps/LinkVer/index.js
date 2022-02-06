@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
+import { useTheme } from "@/utils/provider";
+import { themes, ltLylac, lylac, medBlue } from '@/utils/variables';
 
 // ============ CSS ============== //
 const Cont = styled.div`    
@@ -27,9 +29,11 @@ const Img = styled.li`
   background-repeat: no-repeat;
   background-position: ${props=>props.position};
   margin-bottom: 1em;
+  transition: all 0.3s;
 
   :hover {  
     background-position: ${props=>props.hPosition}; 
+    transform: scale(1.1);    
   }
   :last-child{
     margin-bottom: 1em;
@@ -47,7 +51,7 @@ const Line = styled.div`
   width: 1px;
   height: 8vh;
   display: block;
-  background-color: #E60576;
+  background-color: ${props => props.bkcolor} ;
 `
 
 
@@ -78,6 +82,8 @@ const LinkVer = ({
 
 // ============ Router
   const router = useRouter();
+
+  const {theme, setTheme} = useTheme();
 
 // ============ Layout
   return (
@@ -111,7 +117,7 @@ const LinkVer = ({
           />
         </Img> 
       </UlCont>
-      <Line/>
+      <Line bkcolor = {lylac[theme]}/>
     </Cont>
   );
 }

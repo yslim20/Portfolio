@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import styles from '@/styles/Home.module.css'
+import { useTheme } from "@/utils/provider";
+import { lylac, ltLylac, medBlue } from '@/utils/variables';
+
 import Button from '../Button';
 import DivImg from '../DivImg';
 
@@ -36,7 +39,7 @@ const TxtCont = styled.div`
 
 const SubTit = styled.p`
   width: 100%;
-  color: #E60576;
+  color: ${props => props.subColor};
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
     font-size: 0.875em;
@@ -46,7 +49,32 @@ const SubTit = styled.p`
 
 const NameTxt = styled.h2`
   width: 100%;
-  color: #2CCCC3;
+  color: ${props => props.h2Color};
+
+  background-image: linear-gradient(
+    -225deg,
+    #CA91F2 0%,
+    #5550F2 29%,
+    #D7AEF2 67%,
+    #CA91F2 100%      
+  );
+
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 6s linear infinite;
+  display: inline-block;
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
 
   @media only screen and (min-width: 459px) and (max-width: 1000px){    
     font-size: 3em;
@@ -61,7 +89,18 @@ const NameTxt = styled.h2`
 
 const Position = styled.h3`
   width: 100%;
-  color: #2CCCC3;
+  color: ${props => props.h3Color};
+
+  :after {
+    content:"front-end developer";
+    animation: spin 5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { content:"front-end developer";}
+    50% { content: "UX/UI designer"; }
+    90% { content: "front-end developer"; }
+  }
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
     font-size: 2.125em;
@@ -125,18 +164,27 @@ const HomeSec = ({
   onButtonClick = () => {},
 
 }) => {
+
+  const {theme, setTheme} = useTheme();
+
   return (
     <Cont>
 
       <TxtCont>
-        <SubTit>
+        <SubTit
+          subColor = {medBlue[theme]}
+        >
           Hello, I am ...
         </SubTit>
-        <NameTxt>
+        <NameTxt
+          h2Color = {lylac[theme]}
+        >
           Youn Soo Lim,
         </NameTxt>
-        <Position>
-          front-end developer
+        <Position
+          h3Color = {ltLylac[theme]}
+        >
+
         </Position>
         <ExTxt>
           Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.

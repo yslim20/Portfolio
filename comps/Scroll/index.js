@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter, useEffect} from 'next/router';
+import { useTheme } from "@/utils/provider";
+import { ltLylac, lylac } from '@/utils/variables';
 
 // ============ CSS ============== //
 const Cont = styled.div`    
@@ -20,7 +22,7 @@ const Cont = styled.div`
 `;
 
 const Txt = styled.p`  
-  color: #E60576;
+  color: ${props => props.color};
   width: 11.72vh;
   padding: 0; margin: 0;
   line-height: 1em;
@@ -40,7 +42,7 @@ const Line = styled.div`
   width: 1px;
   height: 20vh;
   display: block;
-  background-color: #E60576;
+  background-color: ${props => props.bkcolor};
   margin-top: 2.5em;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
@@ -54,6 +56,9 @@ const Line = styled.div`
 const Scroll = ({
 
 }) => {
+
+  const {theme, setTheme} = useTheme();
+
 
   // useEffect(() => {
   //   window.addEventListener('scroll', handleScroll);
@@ -97,8 +102,12 @@ const Scroll = ({
 // ============ Layout
   return (
     <Cont >
-      <Txt>Scroll down</Txt>
-      <Line/>
+      <Txt
+        color = {lylac[theme]}
+      >Scroll down</Txt>
+      <Line
+        bkcolor = {lylac[theme]}
+      />
     </Cont>
   );
 }

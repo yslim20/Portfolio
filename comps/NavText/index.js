@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
+import { useTheme } from "@/utils/provider";
+import { themes, ltLylac, medBlue } from '@/utils/variables';
 
 // ============ CSS ============== //
 const Nav = styled.div`    
@@ -17,11 +19,11 @@ const Nav = styled.div`
   background-color: #000;
 
   :hover h6{
-    color:#2CCCC3; 
+    color: ${props => props.hovColor}; 
   }
 
   :active h6{
-    color: #2CCCC3;
+    color: ${props => props.hovColor}; 
   }
 `;
 
@@ -67,6 +69,8 @@ const NavText =({
 
   // useOnClickOutside(node, () => setOpen(false));
 
+  const {theme, setTheme} = useTheme();
+
 // ============ Layout
   return (
     <Nav 
@@ -74,7 +78,8 @@ const NavText =({
       onClick = {onClick}      
       height={height} 
       borderT = {borderT}
-      borderB = {borderB}     
+      borderB = {borderB}  
+      hovColor = {medBlue[theme]}   
     >            
       <Content               
         color={color}

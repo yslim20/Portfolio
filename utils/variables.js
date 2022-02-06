@@ -1,30 +1,36 @@
 export const themes = {
   light:{
-    body: "#FFF",
+    body: "#FFFFFF",
+    // h2: '#D7AEF2',
+    // h3: '#D7AEF2',
   },
   dark:{
-    body: "#333333",
+    body: "#000000",
   }
 }
 
-// Detail box background color
-export const bkColor = { 
-  light:'#F9E7E7',
-  dark:'#B08584',
+// color
+export const ltLylac = { 
+  light:'#D7AEF2',
+  dark:'#D7AEF2',
 }
 
-// Button background color
-export const bttnBkColor = { 
-  light:'#FFFFFF',
-  dark:'#F9E7E7',
+export const lylac = { 
+  light:'#CA91F2',
+  dark:'#CA91F2',
 }
 
-export const hovBkColor = {
-  light: '#B08584',
-  dark: '#333333'
+export const medBlue = { 
+  light:'#5550F2',
+  dark:'#5550F2',
 }
 
-export const hovColor = {
-  light: '#FFFFFF',
-  dark: '#ADADAD'
-}
+// export const hovBkColor = {
+//   light: '#B08584',
+//   dark: '#333333'
+// }
+
+// export const hovColor = {
+//   light: '#FFFFFF',
+//   dark: '#ADADAD'
+// }

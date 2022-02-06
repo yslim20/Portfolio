@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
-// import login from '../../scripts/auth/login'
+import { useTheme } from "@/utils/provider";
+import { themes, ltLylac, medBlue } from '@/utils/variables';
 
 // ============ CSS ============== //
 const ButtonCont = styled.div`
@@ -90,16 +91,17 @@ const Button = ({
     bgcolor = "transparent",
     radius = 10,
     height = 48,
-    border = "2px solid #E60576",
+    border = "2px solid #5550F2",
     // routeTo = "/Contact",
     bshadow = "",
     color="#E60576",
     justify="flex-start",
-    bgafter = "rgba(230,5,118,0.3)",
+    bgafter = "rgba(85, 80, 242, 0.5)",
     onClick = () =>{},
 
 }) => {
     const router = useRouter();
+    const {theme, setTheme} = useTheme();
 
 // ============ Layout
   return (
@@ -123,7 +125,7 @@ const Button = ({
         bgafter={bgafter}
       >
         <ButtonText
-          color={color}
+          color={medBlue[theme]}
         >
           {text}
         </ButtonText>
