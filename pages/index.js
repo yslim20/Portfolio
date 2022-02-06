@@ -64,7 +64,7 @@ const Cont = styled.div`
 `
 
 const SecCont = styled.div`  
-  height: 100vh;
+  height: ${props => props.height};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -75,6 +75,8 @@ const SecCont = styled.div`
 
 const Home = ({
   conwidth ="",  
+  height = "100vh",
+  heightAll = "",
 
 }) => {
 
@@ -158,7 +160,7 @@ const Home = ({
         conwidth={conwidth}
       >
 
-        <SecCont ref = {sectionOne} >
+        <SecCont ref = {sectionOne} height = {height}>
             <HomeSec 
               onButtonClick={() => {
                 sectionFive.current.scrollIntoView(
@@ -168,19 +170,19 @@ const Home = ({
             />
         </SecCont>
 
-        <SecCont ref = {sectionTwo}>
+        <SecCont ref = {sectionTwo} height = {heightAll}>
           <AboutSec />
         </SecCont>
 
-        <SecCont ref = {sectionThree}>
+        <SecCont ref = {sectionThree} height = {heightAll}>
           <WebSec />
         </SecCont>
 
-        <SecCont ref = {sectionFour}>
+        <SecCont ref = {sectionFour} height = {heightAll}>
           
         </SecCont>
 
-        <SecCont ref = {sectionFive}>
+        <SecCont ref = {sectionFive} height = {height}>
           
         </SecCont>
         

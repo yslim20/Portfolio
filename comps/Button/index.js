@@ -65,8 +65,12 @@ const ButtonInput = styled.button`
       width: 120%;
     }
 
+    @media only screen and (min-width: 1001px) and (max-width: 1100px){    
+      min-width: 0;
+    } 
+
     @media only screen and (min-width: 1px) and (max-width: 1000px){    
-      min-width: 182px;
+      min-width: 0;
     } 
 `;
 
@@ -95,7 +99,6 @@ const Button = ({
     borderStyle = "solid",
     // routeTo = "/Contact",
     bshadow = "",
-    color="#E60576",
     justify="flex-start",
     bgafter = "rgba(85, 80, 242, 0.5)",
     onClick = () =>{},

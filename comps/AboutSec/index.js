@@ -10,7 +10,7 @@ import { themes, ltLylac } from '@/utils/variables';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
-  width: 100%; height: 100%;
+  width: 100%; height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -18,12 +18,15 @@ const Cont = styled.div`
   position: relative;
   // overflow: hidden;
   z-index: -1;  
+  
   box-sizing: border-box;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     flex-direction: column;
     align-items: center;  
-    justify-content center;  
+    justify-content center; 
+    height: 100%; 
+    margin-bottom: 100px;
   }
 `
 
