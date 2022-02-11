@@ -10,23 +10,27 @@ import DivImg from '../DivImg';
 import ImageBox from '../ImageBox';
 import ImagePopOne from '../ImagePopOne';
 import ImagePopTwo from '../ImagePopTwo';
+import Mediabox from '../Mediabox';
+import IllustBox from '../IllustBox';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5% 9.02%;
+  // padding: 5% 9.02%;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   background: #000;
   z-index: 1;  
   box-sizing: border-box;
+  
 `
 
 const Title = styled.h5`
   width: 100%;
-  margin-bottom: 100px;
+  padding: 5% 9.02%;
+  margin-bottom: 30px;
   color: ${props => props.titColor};
   transition: all 0.3x;
   position: relative;
@@ -70,16 +74,45 @@ const ShapeCont = styled.div`
 `
 
 const IllCont = styled.div`
-  width: 100%; height: 100px;
-  paddingL 5px;
+  width: 100%; 
+  display: flex;
+  flex-direction: row;
+  margin: 0; padding: 0;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px){   
+
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 768px){    
+    width: 100%; 
+    flex-direction: column;
+  }  
+`
+
+const IllItem = styled.div`
+  width: 30%; height: 500px;
+  display: flex;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px){   
+    width: 100%; 
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 768px){    
+    width: 100%; 
+  } 
+
+
+   
 `
 
 const InCont = styled.div`
-  width: 100%;
+  width: 100%; height: 500px;
+  background: blue;
 `
 
 const PhoCont = styled.div`
-  width: 100%;  
+  width: 100%; height: 500px;
 `
 
 
@@ -98,15 +131,23 @@ const DesignSec = ({
 }) => {
 
   const {theme, setTheme} = useTheme();
-  const [showpop, setShowPop] = useState(false)	
+  const [showpos, setShowPos] = useState(false)	
+  const [showVidPop, setShowVidPop] = useState(false)	
 
   function handleClick() {
-		setShowPop(true)	
-	}
-
+		setShowPos(true)	
+	}  
   function handleClickClose(e){
+    e.stopPropagation()
+    setShowPos(false)
+	}
+  
+  function handleVidClick() {
+    setShowVidPop(true)
+  }
+  function handleVideoClose(e){
 		e.stopPropagation()
-    setShowPop(false)
+    setShowVidPop(false)
 	}
 
   return (
@@ -124,18 +165,33 @@ const DesignSec = ({
         height = {shapeHeight}
       />
 
-      <IllCont
-       onDoubleClick={() => handleClick()}
-      >
+      <IllCont>
+        <IllItem>
+          <IllustBox
+            clickHandler={() => handleClick()}
+          />
+          {showpos === true && <ImagePopTwo 
+            clickHandler={(e) => handleClickClose(e)}				
+          />}
+        </IllItem>
 
-      {showpop === true && <ImagePopTwo 
-        clickHandler={(e) => handleClickClose(e)}				
-      />}
+         {/*<IllItem
+          onClick={() => handleClick()}
+        >
+          {showpop === true && <ImagePopTwo 
+            clickHandler={(e) => handleClickClose(e)}				
+          />} 
+        </IllItem>*/}
 
       </IllCont>
+      
 
-      <InCont>
-
+      <InCont
+        onDoubleClick={() => handleVidClick()}
+      >
+        {showVidPop === true && <Mediabox 
+          clickHandler={(e) => handleVideoClose(e)}				
+        />}
       </InCont>
 
       <PhoCont>

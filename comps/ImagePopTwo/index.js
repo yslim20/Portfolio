@@ -7,47 +7,34 @@ import { CCarouselItem, CCarousel, CImage, CCloseButton } from '@coreui/react';
 
 // ============ CSS ============== //
 const PopCont = styled.div`
-    // height: 50vh;
+    height: auto; 
+    width: ${props => props.width};
     display:${props=>props.cdisplay}; 
     flex-direction: column;
     align-items:center;
     item-alignment: center;
     box-shadow: ${props=>props.cbshadow}; 
-    // padding: 60px 70px;
-    // background-color: #fff;
-    position: relative;
+    position: absolute; 
+    top: ${props => props.top}; 
+    left: ${props => props.left};
     z-index: 22;
-    transition: all 1s ease-in-out;
-    // cursor: pointer;
-`;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 
-const ButtonInput = styled.button`
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-    border: none;
-    background-color:${props=>props.bg};
-    border-radius:${props=>props.radius}px;
-    width: ${props=>props.width};
-    height: ${props=>props.height}px;
-    font-size: ${props=>props.size}px;    
-    box-shadow: ${props=>props.bshadow}; 
-
-    :hover{
-        transform: scale(0.95);
-        transition-duration: 0.5s;       
+    :hover {
+      transform: scale(1.05);
     }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px){   
+      top: 2%; left: 25%;
+      width: 50%; height: auto;
+    }
+  
+    @media only screen and (min-width: 1px) and (max-width: 768px){    
+      top: 0; left: 0;
+      width: 100%;
+    } 
 `;
-
-const ButtonText = styled.p`
-    color:${props=>props.color} ;
-    font-size: ${props=>props.fontSize};
-    text-align:center;
-    font-weight: ${props=>props.fontWeight};
-`;
-
-
 
 // ============ Function ============== //
 const ImagePopTwo = ({
@@ -55,12 +42,14 @@ const ImagePopTwo = ({
 // ============ Props
 
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
-
     cdisplay="flex",
+    width = "35%",
+    top = '5%',
+    left = '30%',
 
-    fistSrc = "./images/design/illust/design_Poster1.jpg",
+    fistSrc = "./images/design/illust/design_Poster2.jpg",
     altOne = "Concert Poster version 1",
-    SecSrc = "./images/design/illust/design_Poster2.jpg",
+    SecSrc = "./images/design/illust/design_Poster1.jpg",
     altTwo = "Concert Poster version 2",
 
 
@@ -72,9 +61,12 @@ const ImagePopTwo = ({
 // ============ Layout
     return (
       <PopCont 
-        cbshadow={cbshadow}
-        cdisplay={cdisplay}
-        onDoubleClick={(e) => clickHandler(e)}
+        width = {width}
+        cdisplay = {cdisplay}
+        cbshadow = {cbshadow}
+        top = {top}
+        left = {left}
+        onClick={(e) => clickHandler(e)}
       >  
         <CCarousel controls indicators dark>
           <CCarouselItem>

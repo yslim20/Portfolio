@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-// import styles from '../styles/globals.css'
 import FocusLock from 'react-focus-lock';
 import Head from 'next/head';
 import { useTheme } from "@/utils/provider";
