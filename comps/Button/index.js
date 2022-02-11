@@ -10,7 +10,7 @@ const ButtonCont = styled.div`
     margin-right: ${props=>props.mright}px;
     width: 100%;
     display:flex;
-    justify-content:${props=>props.justify};    
+    justify-content:${props=>props.justify}; 
 `;
 
 const ButtonInput = styled.button`
@@ -80,6 +80,7 @@ const ButtonText = styled.p`
     font-size: ${props=>props.fontSize};
     text-align:center;
     font-weight: ${props=>props.fontWeight};
+    margin: 0;
 `;
 
 // ============ Function ============== //

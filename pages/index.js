@@ -11,6 +11,7 @@ import NaviDef from '@/comps/NaviDef';
 import HomeSec from '@/comps/HomeSec';
 import AboutSec from '@/comps/AboutSec';
 import WebSec from '@/comps/WebSec';
+import DesignSec from '@/comps/DesignSec'
 import Scroll from '@/comps/Scroll';
 
 
@@ -179,7 +180,7 @@ const Home = ({
         </SecCont>
 
         <SecCont ref = {sectionFour} height = {heightAll}>
-          
+          <DesignSec />
         </SecCont>
 
         <SecCont ref = {sectionFive} height = {height}>
