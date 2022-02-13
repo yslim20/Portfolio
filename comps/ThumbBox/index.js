@@ -26,17 +26,26 @@ const Img = styled.div`
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
   
   :hover{
     background-size: ${props => props.bkSize}%;
     opacity: 1;
-    transition: all 0.5s ease-in-out;  
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
   }
 
   @media only screen and (min-width: 1025px) and (max-width: 1100px){    
     :hover{
       transition: all 0.5s ease-in-out; 
+      -webkit-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
     }
   }
 
@@ -45,6 +54,10 @@ const Img = styled.div`
     
     :hover{
       background-size: 130%;
+      transition: all 0.5s ease-in-out; 
+      -webkit-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out; 
     }
   }
 `;

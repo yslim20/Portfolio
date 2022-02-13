@@ -12,6 +12,8 @@ import AboutSec from '@/comps/AboutSec';
 import WebSec from '@/comps/WebSec';
 import DesignSec from '@/comps/DesignSec'
 import Scroll from '@/comps/Scroll';
+import ContactSec from '@/comps/ContactSec';
+import Contact from '@/comps/Contact';
 
 
 // ============ CSS ============== //
@@ -69,8 +71,31 @@ const SecCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content:center;
-  align-items:center;
-  
+  align-items:center;  
+  position: relative;  
+`
+
+const ContCont = styled.div`
+  position: absolute;
+  top: 1em; left: 0;
+  width: 45%;
+  margin-left: 35%;
+  margin-top: 5%;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 481px) and (max-width:1000px){    
+    width: 100%;
+    margin-left: 0;
+    padding: 0 9.02%;
+    top: 5%;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width:480px){    
+    width: 100%;
+    margin-left: 0;
+    padding: 0 9.02%;
+    top: 15%;
+  }
 `
 
 const Home = ({
@@ -183,9 +208,11 @@ const Home = ({
         </SecCont>
 
         <SecCont ref = {sectionFive} height = {height}>
-          
-        </SecCont>
-        
+          <ContactSec />
+          <ContCont>              
+            <Contact /> 
+          </ContCont>          
+        </SecCont>        
       </Cont>     
 
     </Wrap>

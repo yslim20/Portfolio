@@ -4,10 +4,6 @@ import styles from '@/styles/Home.module.css'
 import { useTheme } from "@/utils/provider";
 import { lylac, themes } from '@/utils/variables';
 
-import Button from '../Button';
-import Scroll from '../Scroll';
-import DivImg from '../DivImg';
-import ImageBox from '../ImageBox';
 import ImagePopOne from '../ImagePopOne';
 import ImagePopTwo from '../ImagePopTwo';
 import ImagePopMag from '../ImagePopMag';
@@ -150,13 +146,19 @@ const SqCont = styled.div`
   @media only screen and (min-width: 459px) and (max-width: 1000px){    
     width: 3em; height: 3em;    
     bottom: 1.5%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out; 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    -moz-transition: all 0.3s ease-in-out; 
   }
 
   @media only screen and (min-width: 1px) and (max-width:460px){    
     width: 2.5em; height: 2.5em;    
     bottom: 1.5%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out; 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    -moz-transition: all 0.3s ease-in-out; 
   }
 `
 

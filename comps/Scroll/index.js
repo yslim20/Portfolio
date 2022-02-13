@@ -60,46 +60,6 @@ const Scroll = ({
 
   const {theme, setTheme} = useTheme();
 
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [isTabnavOn]);
-
-  // const handleScroll = () => {
-  //   if (window.scrollY > 500 && !isTabnavOn) {
-  //     setIsTabnavOn(true);
-  //     return;
-  //   }
-  //   if (window.scrollY <= 500 && isTabnavOn) {
-  //     setIsTabnavOn(false);
-  //     return;
-  //   }
-  // };
-/** 
-  const [scrollY, setScrollY] = useState(0);
-
-  function logit() {
-    setScrollY(window.pageYOffset);
-
-    if(setScrollY)
-    console.log(new Date().getTime());
-  }
-
-  useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit);
-    }
-    watchScroll();
-    return () => {
-      window.removeEventListener("scroll", logit);
-    };
-  });
-
- */ 
-
 // ============ Layout
   return (
     <Cont >

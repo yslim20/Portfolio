@@ -19,7 +19,7 @@ const Nav = styled.div`
   background-color: #000;
 
   :hover h6{
-    color: ${props => props.hovColor}; 
+    color: ${props => props.hovColor};     
   }
 
   :active h6{
@@ -30,6 +30,7 @@ const Nav = styled.div`
 const Content = styled.h6`
   line-height: ${props=>props.lineH}px;
   color: ${props=>props.color};
+  font-size: 1em;
 `
 
 // ============ Layout
@@ -44,30 +45,6 @@ const NavText =({
   color="#999",
 
 })=>{
-
-  // const [open, setOpen] = useState(false);
-  // const node = useRef();
-  // const listId = "menu-list";
-
-  // const useOnClickOutside = (ref, handler) => {
-  //   useEffect(() => {
-  //     const listener = event => {
-  //       if (!ref.current || ref.current.contains(event.target)) {
-  //         return;
-  //       }
-  //       handler(event);
-  //     };
-  //     document.addEventListener('mousedown', listener);
-  
-  //     return () => {
-  //       document.removeEventListener('mousedown', listener);
-  //     };
-  //   },
-  //   [ref, handler],
-  //   );
-  // };
-
-  // useOnClickOutside(node, () => setOpen(false));
 
   const {theme, setTheme} = useTheme();
 

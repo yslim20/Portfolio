@@ -1,8 +1,6 @@
 export const themes = {
   light:{
     body: "#FFFFFF",
-    // h2: '#D7AEF2',
-    // h3: '#D7AEF2',
   },
   dark:{
     body: "#000000",
@@ -10,6 +8,11 @@ export const themes = {
 }
 
 // color
+export const textColor = { 
+  light:'#181818',
+  dark:'#333',
+}
+
 export const ltLylac = { 
   light:'#D7AEF2',
   dark:'#D7AEF2',
@@ -25,12 +28,22 @@ export const medBlue = {
   dark:'#5550F2',
 }
 
-// export const hovBkColor = {
-//   light: '#B08584',
-//   dark: '#333333'
-// }
+export const nightBlue = {
+  light: '#1C1972',
+  dark: '#1C1972'
+}
 
-// export const hovColor = {
-//   light: '#FFFFFF',
-//   dark: '#ADADAD'
-// }
+export const hovBkColor = {
+  light: '#B08584',
+  dark: '#333333'
+}
+
+export const hovColor = {
+  light: '#FFFFFF',
+  dark: '#ADADAD'
+}
+
+export const lightTxt = {
+  light: '#999',
+  dark: '#999'
+}

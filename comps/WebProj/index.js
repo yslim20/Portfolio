@@ -139,7 +139,7 @@ const WebProj = ({
   leftM = "30%",
 
   topB = 15,
-  leftB = -200, 
+  leftB = -260, 
   topMB = 20, 
   leftMB = "-25%",
 

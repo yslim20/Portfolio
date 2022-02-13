@@ -75,7 +75,6 @@ const ButtonInput = styled.button`
 `;
 
 const ButtonText = styled.p`
-    font-family: 'Heebo', sans-serif;
     color:${props=>props.color} ;
     font-size: ${props=>props.fontSize};
     text-align:center;
@@ -98,7 +97,6 @@ const Button = ({
     radius = 10,
     height = 48,
     borderStyle = "solid",
-    // routeTo = "/Contact",
     bshadow = "",
     justify="flex-start",
     bgafter = "rgba(85, 80, 242, 0.5)",

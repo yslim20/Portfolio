@@ -8,38 +8,38 @@ const globalStyles = createGlobalStyle`
     html, body {
       margin: 0;
       padding: 0;
+      font-family: 'VisbyCF', Verdana, Tahoma, sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
-      /* font-family: 'VisbyCF', Verdana, Tahoma, sans-serif; */
+    h1, h2, h3, h4, h5, h6, p {      
       margin: 0;
       color: #181818;
     }
 
     h1 {
       font-size: 6em;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     h2 {
       font-size: 4.5em; 
-      font-weight: 700; 
+      font-weight: 600; 
     }
 
     h3 {
       font-size: 3em;
-      font-weight: 700; 
+      font-weight: 600; 
       margin-bottom: 0.25em;;
     }
 
     h4 {
       font-size: 2.125em;
-      font-weight: 700; 
+      font-weight: 600; 
     }
 
     h5 {
       font-size: 1.5em;
-      font-weight: 700; 
+      font-weight: 600; 
     }
 
     h6 {
@@ -49,7 +49,11 @@ const globalStyles = createGlobalStyle`
 
     body, p {
       font-size: 1em;
-      font-weight: 300; 
+      font-weight: 300;       
+    }
+
+    p {
+      line-height: 1.4em;
     }
 
     .subtitle {
@@ -66,19 +70,6 @@ const globalStyles = createGlobalStyle`
       font-weight: 300;
     }
 
-
-    /* .title {
-      font-family: 'Heebo', sans-serif;
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    .link{
-      font-family: 'Heebo', sans-serif;
-      font-size: 16px;
-      font-weight: 300;
-      text-decoration: underline;
-    }  */
     /* Font ends */
 
     /* STYLE */
@@ -93,6 +84,16 @@ const globalStyles = createGlobalStyle`
     a {
       text-decoration: none;
     }
+
+    textarea:focus, input:focus {
+      color: #5550F2;
+    }
+    
+    input, select, textarea{
+      color: #181818;
+      font-size: 1em;
+    }
+
 `;
 
 export default globalStyles;

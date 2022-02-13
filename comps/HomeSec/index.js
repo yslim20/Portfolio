@@ -88,17 +88,17 @@ const NameTxt = styled.h2`
 
 const Position = styled.h3`
   width: 100%;
+  line-height: 1.5em;
   color: ${props => props.h3Color};
 
   :after {
-    content:"front-end developer";
+    content:"front-end developer 👩‍💻";
     animation: spin 5s linear infinite;
   }
 
   @keyframes spin {
-    0% { content:"front-end developer";}
-    50% { content: "UX/UI designer"; }
-    90% { content: "front-end developer"; }
+    0% { content:"front-end developer 👩‍💻";}
+    50% { content: "UX/UI designer 🎨"; }
   }
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
@@ -146,15 +146,20 @@ const SqCont = styled.div`
   @media only screen and (min-width: 459px) and (max-width: 1000px){    
     width: 3em; height: 3em;    
     bottom: 15%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out; 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    -moz-transition: all 0.3s ease-in-out; 
   }
 
   @media only screen and (min-width: 1px) and (max-width:460px){    
     width: 2.5em; height: 2.5em;    
     bottom: 10%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out; 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    -moz-transition: all 0.3s ease-in-out; 
   }
-
 `
 
 

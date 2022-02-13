@@ -127,7 +127,7 @@ const WebProjLast = ({
 
   url = "./images/img_Pro_Triangle-line.svg",
   top = 15,
-  left = -220, 
+  left = -260, 
   topM = 20, 
   leftM = 0,
 
