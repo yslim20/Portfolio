@@ -12,6 +12,7 @@ const Cont = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 50px;
   box-sizing: border-box;
 `
 

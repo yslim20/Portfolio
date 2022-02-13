@@ -72,12 +72,13 @@ const SecCont = styled.div`
   flex-direction: column;
   justify-content:center;
   align-items:center;  
-  position: relative;  
+  position: relative; 
+  box-sizing: border-box; 
 `
 
 const ContCont = styled.div`
   position: absolute;
-  top: 1em; left: 0;
+  top: 2.8%; left: 0;
   width: 45%;
   margin-left: 35%;
   margin-top: 5%;
