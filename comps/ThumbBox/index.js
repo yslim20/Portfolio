@@ -20,6 +20,7 @@ const Img = styled.div`
   flex-direction: column;
   align-items:center;
   justify-content:center;
+  opacity: 0.7;
   background-image: url('${props => props.url}');
   background-repeat: no-repeat;
   background-position: center;
@@ -30,6 +31,7 @@ const Img = styled.div`
   
   :hover{
     background-size: ${props => props.bkSize}%;
+    opacity: 1;
     transition: all 0.3s;   
   }
 
@@ -54,7 +56,7 @@ const Title = styled.p`
   color: #999;
   padding-left: 1em;
   padding-right: 0.25em;
-  line-height: 1.25em;
+  line-height: 1.5em;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
@@ -66,7 +68,7 @@ const Title = styled.p`
 const ThumbBox = ({
   
   url = "./images/design/img_Illustposter.svg",
-  title = "Poster",
+  title = "Illustrator: Poster",
   bkSize = "160",
   mbkPos = '10% 25%',
 

@@ -28,14 +28,14 @@ const PopCont = styled.div`
     }
 
     @media only screen and (min-width: 769px) and (max-width: 1250px){   
-      width: ${props => props.tWidth}%; height: auto;
+      width: ${props => props.tWidth}%; height: ${props => props.tHeight};
       margin-left: ${props=>props.tMarginL}%;
       margin-top: ${props=>props.tMarginT}%;
     }
   
     @media only screen and (min-width: 1px) and (max-width: 768px){    
-      height: auto; width: 100vw;
-      margin-left: -50%; margin-top: -33.33%;      
+      height: ${props => props.mHeight}; width: ${props => props.mWidth};
+      margin-left: -50%; margin-top: ${props => props.mMartinT}%;      
     } 
 `;
 
@@ -47,12 +47,17 @@ const ImagePopOne = ({
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
     cdisplay="flex",
     width = "35",    
-    
-    tWidth = '50',
     marginL = '-15',
     marginT = '-23',
+    
+    tWidth = '50',
+    tHeight = 'auto',
     tMarginL = '-20',
     tMarginT = '-33',
+
+    mHeight = 'auto',
+    mWidth = '100vw',
+    mMartinT = '-33.33',
 
     src = "./images/design/illust/design_Tech_Drawing.svg",
     alt = "Technical Drawing",
@@ -69,15 +74,19 @@ const ImagePopOne = ({
         cbshadow = {cbshadow}
         marginL = {marginL}
         marginT = {marginT}
+        tHeight = {tHeight}
+        tWidth = {tWidth}
         tMarginL = {tMarginL}
         tMarginT = {tMarginT}
-        tWidth = {tWidth}
+        mHeight = {mHeight}
+        mWidth = {mWidth}
+        mMartinT = {mMartinT}
 
         onDoubleClick={(e) => clickHandler(e)}
       > 
         <CCarousel>
           <CCarouselItem>
-            <CImage className="d-block w-100" src={src} alt={alt} />
+            <CImage className="d-block w-100 h-100" src={src} alt={alt} />
           </CCarouselItem>
         </CCarousel>
       </PopCont>

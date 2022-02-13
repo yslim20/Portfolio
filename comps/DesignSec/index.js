@@ -21,10 +21,11 @@ const Cont = styled.div`
   flex-direction: column;
   // padding: 5% 9.02%;
   position: relative;
-  // overflow: hidden;
   background: #000;
   z-index: 1;  
   box-sizing: border-box;  
+  padding-bottom: 100px;
+  background-color: #000;
 `
 
 const Title = styled.h5`
@@ -73,7 +74,7 @@ const ShapeCont = styled.div`
   } 
 `
 
-const IllCont = styled.div`
+const ThreeCont = styled.div`
   width: 100%; 
   display: flex;
   flex-direction: row;
@@ -91,7 +92,7 @@ const IllCont = styled.div`
   }  
 `
 
-const IllItem = styled.div`
+const ThreeItem = styled.div`
   width: 33.33%; height: 500px;
   display: flex;
   box-sizing: border-box;
@@ -136,10 +137,6 @@ const InItem = styled.div`
   } 
 `
 
-const PhoCont = styled.div`
-  width: 100%; height: 500px;
-`
-
 const DesignSec = ({
   url = "./images/img_Cross.svg",
   top = "1%",
@@ -153,16 +150,30 @@ const DesignSec = ({
 }) => {
 
   const {theme, setTheme} = useTheme();
+// ========== illustrator
   const [showpos, setShowPos] = useState(false)	
   const [showtech, setShowTech] = useState(false)	
   const [showart, setShowArt] = useState(false)	
+
+// ========== inDesign
   const [setmag, setShowMagPop] = useState(false)
   const [setmed, setShowMedPop] = useState(false)	
 
+// ========== photoshop
+  const [showmov, setShowMov] = useState(false)	
+  const [showpho, setShowPhoPop] = useState(false)	
+  const [showport, setShowPortPop] = useState(false)	
+
+// ========== illustrator
   function handlePosClick() {
 		setShowPos(true)
     setShowTech(false)
     setShowArt(false)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(false)
 	}  
   function handlePosClose(e){
     e.stopPropagation()
@@ -170,9 +181,14 @@ const DesignSec = ({
 	}
 
   function handleTechClick(e) {
-		setShowTech(true)	
-    setShowPos(false)
+		setShowPos(false)
+    setShowTech(true)
     setShowArt(false)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(false)
 	}  
   function handleTechClose(e){
     e.stopPropagation()
@@ -180,31 +196,96 @@ const DesignSec = ({
 	}
   
   function handleArtClick(e) {
-		setShowArt(true)
-    setShowPos(false)
-    setShowTech(false)	
+		setShowPos(false)
+    setShowTech(false)
+    setShowArt(true)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(false)	
 	}  
   function handleArtClose(e){
     e.stopPropagation()
     setShowArt(false)
-	}
+	} // illustrator
 
+// ========== inDesign
   function handleMagClick() {
+    setShowPos(false)
+    setShowTech(false)
+    setShowArt(false)	
     setShowMagPop(true)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(false)
   }
-
   function handleMagClose(e) {
     e.stopPropagation()
     setShowMagPop(false)
   }
 
   function handleMedClick() {
+    setShowPos(false)
+    setShowTech(false)
+    setShowArt(false)	
+    setShowMagPop(false)
     setShowMedPop(true)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(false)
   }
   function handleMedClose(e){
 		e.stopPropagation()
     setShowMedPop(false)
+	} // inDesign
+
+// ========== photoshop
+  function handleMovClick(e) {
+		setShowPos(false)
+    setShowTech(false)
+    setShowArt(false)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(true)
+    setShowPhoPop(false)
+    setShowPortPop(false)	
+	}  
+  function handleMovClose(e){
+    e.stopPropagation()
+    setShowMov(false)
 	}
+
+  function handlePhoClick() {
+    setShowPos(false)
+    setShowTech(false)
+    setShowArt(false)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(true)
+    setShowPortPop(false)
+  }
+  function handlePhoClose(e) {
+    e.stopPropagation()
+    setShowPhoPop(false)
+  }
+
+  function handlePortClick() {
+    setShowPos(false)
+    setShowTech(false)
+    setShowArt(false)	
+    setShowMagPop(false)
+    setShowMedPop(false)
+    setShowMov(false)
+    setShowPhoPop(false)
+    setShowPortPop(true)
+  }
+  function handlePortClose(e){
+		e.stopPropagation()
+    setShowPortPop(false)
+	} // photoshop
 
   return (
     <Cont>
@@ -221,22 +302,23 @@ const DesignSec = ({
         height = {shapeHeight}
       />
 
-      <IllCont>
-        <IllItem>
+{/* =========== Illustrator =========== */}
+      <ThreeCont>
+        <ThreeItem>
           <ThumbBox
             clickHandler={() => handlePosClick()}
           />
           {showpos === true && <ImagePopTwo 
             clickHandler={(e) => handlePosClose(e)}				
           />}
-        </IllItem>
+        </ThreeItem>
 
-         <IllItem>
+         <ThreeItem>
           <ThumbBox
             clickHandler={() => handleTechClick()}            
-            title="Technical Drawing"
+            title="Illustrator: Technical Drawing"
             url="./images/design/img_Illust_technical.svg"
-            bkSize = "130%"
+            bkSize = "130"
           />
           {showtech === true && <ImagePopOne 
             clickHandler={(e) => handleTechClose(e)}		
@@ -246,12 +328,12 @@ const DesignSec = ({
             tMarginL = '-25'
             tMarginT = '-20'
           />} 
-        </IllItem>
+        </ThreeItem>
 
-        <IllItem>
+        <ThreeItem>
           <ThumbBox
             clickHandler={() => handleArtClick()}            
-            title="Digital Art"
+            title="Illustrator: Digital Art"
             url="./images/design/img_Illust_art.svg"
             bkSize = "130"
           />
@@ -259,15 +341,15 @@ const DesignSec = ({
             src="./images/design/illust/design_Illust_CreativeArt.svg"
             clickHandler={(e) => handleArtClose(e)}		
           />} 
-        </IllItem>
-      </IllCont>
-      
+        </ThreeItem>
+      </ThreeCont>   
 
+{/* ===========inDesign =========== */}
       <InCont>
         <InItem>
           <ThumbBox
               clickHandler={() => handleMagClick()}            
-              title="Magazine"
+              title="InDesign: Magazine"
               url="./images/design/img_Indesign_Magazine.png"
               bkSize = "130"
               mbkPos = '75% 25%'
@@ -280,7 +362,7 @@ const DesignSec = ({
         <InItem>
           <ThumbBox
               clickHandler={() => handleMedClick()}            
-              title="eBook: Images by EAKEAK, kostymo, absent84, MicroOne,andriocolts and more - stock.adobe.com"
+              title="InDesign: eBook - Images by EAKEAK, kostymo, absent84, MicroOne,andriocolts and more - stock.adobe.com"
               url="./images/design/img_Indesign_eBook.png"
               bkSize = "130"
               mbkPos = '75% 25%'
@@ -291,9 +373,52 @@ const DesignSec = ({
         </InItem>
       </InCont>
 
-      <PhoCont>
+{/* =========== Photoshop =========== */}
+      <ThreeCont>
+        <ThreeItem>
+          <ThumbBox
+              clickHandler={() => handleMovClick()}            
+              title="Photoshop: Movie Poster"
+              url="./images/design/design_Photo_Poster.svg"
+              bkSize = "130" 
+            />
+            {showmov === true && <ImagePopOne 
+              src="./images/design/photoshop/design_Movie_Poster.svg"
+              marginT = '-26.5' tMarginT = '-37'
+              mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
+              clickHandler={(e) => handleMovClose(e)}		
+            />} 
+          </ThreeItem>
 
-      </PhoCont>      
+         <ThreeItem>
+         <ThumbBox
+            clickHandler={() => handlePhoClick()}            
+            title="Photoshop: Digital Art"
+            url="./images/design/img_Photo_Digital_art.png"
+            bkSize = "130"
+          />
+          {showpho === true && <ImagePopOne 
+            src="./images/design/photoshop/design_Photo_CreativeArt.png"
+            mHeight='auto' mWidth='auto'  mMartinT = '-65'
+            clickHandler={(e) => handlePhoClose(e)}		
+          />} 
+        </ThreeItem>
+
+        <ThreeItem>
+          <ThumbBox
+            clickHandler={() => handlePortClick()}            
+            title="Photoshop: Portrait"
+            url="./images/design/img_Photo_Portrait.svg"
+            bkSize = "130"
+          />
+          {showport === true && <ImagePopOne 
+            src="./images/design/photoshop/design_Portrait.svg"
+            marginT = '-30' tMarginT = '-37'
+            mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
+            clickHandler={(e) => handlePortClose(e)}		
+          />} 
+        </ThreeItem>
+      </ThreeCont>    
     </Cont>
     );
 }
