@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "http://younsoolim.com",
   "private": true,
   "scripts": {
     "dev": "next dev",

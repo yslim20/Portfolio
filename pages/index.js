@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import FocusLock from 'react-focus-lock';
 import Head from 'next/head';
 import { useTheme } from "@/utils/provider";
 
@@ -116,7 +114,8 @@ const Home = ({
   return (
     <Wrap>
       <Head>
-        
+        <title>Youn Soo Lim's Portfolio</title>
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" />            */}
       </Head>
 {/* Navigations */}
       <SideBar>
