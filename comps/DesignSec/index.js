@@ -10,6 +10,7 @@ import DivImg from '../DivImg';
 import ImageBox from '../ImageBox';
 import ImagePopOne from '../ImagePopOne';
 import ImagePopTwo from '../ImagePopTwo';
+import ImagePopMag from '../ImagePopMag';
 import Mediabox from '../Mediabox';
 import ThumbBox from '../ThumbBox';
 
@@ -156,7 +157,7 @@ const DesignSec = ({
   const [showtech, setShowTech] = useState(false)	
   const [showart, setShowArt] = useState(false)	
   const [setmag, setShowMagPop] = useState(false)
-  const [showVidPop, setShowVidPop] = useState(false)	
+  const [setmed, setShowMedPop] = useState(false)	
 
   function handlePosClick() {
 		setShowPos(true)
@@ -192,17 +193,17 @@ const DesignSec = ({
     setShowMagPop(true)
   }
 
-  function handleMagClose() {
+  function handleMagClose(e) {
     e.stopPropagation()
     setShowMagPop(false)
   }
 
-  function handleVidClick() {
-    setShowVidPop(true)
+  function handleMedClick() {
+    setShowMedPop(true)
   }
-  function handleVideoClose(e){
+  function handleMedClose(e){
 		e.stopPropagation()
-    setShowVidPop(false)
+    setShowMedPop(false)
 	}
 
   return (
@@ -271,9 +272,21 @@ const DesignSec = ({
               bkSize = "130"
               mbkPos = '75% 25%'
             />
-            {setmag === true && <ImagePopOne 
+            {setmag === true && <ImagePopMag 
               clickHandler={(e) => handleMagClose(e)}		
-              src="./images/design/illust/design_Illust_CreativeArt.png"
+            />} 
+        </InItem>
+
+        <InItem>
+          <ThumbBox
+              clickHandler={() => handleMedClick()}            
+              title="eBook: Images by EAKEAK, kostymo, absent84, MicroOne,andriocolts and more - stock.adobe.com"
+              url="./images/design/img_Indesign_eBook.png"
+              bkSize = "130"
+              mbkPos = '75% 25%'
+            />
+            {setmed === true && <Mediabox 
+              clickHandler={(e) => handleMedClose(e)}		
             />} 
         </InItem>
       </InCont>

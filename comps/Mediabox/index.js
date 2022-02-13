@@ -4,21 +4,31 @@ import CardMedia from '@mui/material/CardMedia';
 
 // ============ CSS ============== //
 const MedCont = styled.div`    
-  max-width: ${props=>props.cwidth}px;
-  height: ${props=>props.cheight};
-  margin: ${props=>props.cmargin}px;
-  display:flex;
-  justify-content:center;
+  height: auto;     
+  width: ${props => props.width}%;
+  display:${props=>props.cdisplay}; 
+  flex-direction: column;
   align-items:center;
+  item-alignment: center;
+  box-shadow: ${props=>props.cbshadow}; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  margin-left: ${props=>props.marginL}%;
+  margin-top: ${props=>props.marginT}%;
+  z-index: 22;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 
-  @media only screen and (min-width: 769px) and (max-width: 1024px){   
-    top: 2%; left: 25%;
-    width: 50%; height: auto;
+  :hover {
+    transform: scale(1.05);
   }
 
   @media only screen and (min-width: 1px) and (max-width: 768px){    
-    top: 0; left: 0;
-    width: 100%;
+    height: auto; width:100%;
+    top: 50%; left: 0;
+    margin: 0;
+    margin-top: ${props=>props.mMarginT}%;
   } 
 `;
 
@@ -26,9 +36,12 @@ const MedCont = styled.div`
 const Mediabox = ({
 
 // ============ Props
-  cwidth = 751,
-  cheight = "auto",
-  cmargin="auto",
+  cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
+  cdisplay="flex",
+  width = "60",
+  marginL = '-25',
+  marginT = '-22.5',
+  mMarginT = '-33.33',
   component = "video" ,
   src = "./video/I_Spy_Constuction_Vehicles.mp4",
 
@@ -39,10 +52,14 @@ const Mediabox = ({
 // ============ Layout
   return (
     <MedCont 
-      cwidth={cwidth}
-      cheight={cheight}
-      cmargin={cmargin}
-      onClick={(e) => clickHandler(e)}
+      width = {width}
+      cdisplay = {cdisplay}
+      cbshadow = {cbshadow}
+      marginL = {marginL}
+      marginT = {marginT}
+      mMarginT = {mMarginT}
+
+      onDoubleClick={(e) => clickHandler(e)}
     >
       <CardMedia
         component={component}                       
