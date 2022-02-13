@@ -372,29 +372,31 @@ const DesignSec = ({
 {/* ===========inDesign =========== */}
       <InCont>
         <InItem>
-          <ThumbBox
-              clickHandler={() => handleMagClick()}            
-              title="InDesign: Magazine"
-              url="./images/design/img_Indesign_Magazine.png"
-              bkSize = "130"
-              mbkPos = '75% 25%'
-            />
-            {setmag === true && <ImagePopMag 
-              clickHandler={(e) => handleMagClose(e)}		
-            />} 
+          <ThumbBox 
+            dataAos = 'fade-left'
+            clickHandler={() => handleMagClick()}            
+            title="InDesign: Magazine"
+            url="./images/design/img_Indesign_Magazine.png"
+            bkSize = "130"
+            mbkPos = '75% 25%'
+          />
+          {setmag === true && <ImagePopMag 
+            clickHandler={(e) => handleMagClose(e)}		
+          />} 
         </InItem>
 
         <InItem>
           <ThumbBox
-              clickHandler={() => handleMedClick()}            
-              title="InDesign: eBook - Images by EAKEAK, kostymo, absent84, MicroOne,andriocolts and more - stock.adobe.com"
-              url="./images/design/img_Indesign_eBook.png"
-              bkSize = "130"
-              mbkPos = '75% 25%'
-            />
-            {setmed === true && <Mediabox 
-              clickHandler={(e) => handleMedClose(e)}		
-            />} 
+            dataAos = 'fade-left'
+            clickHandler={() => handleMedClick()}            
+            title="InDesign: eBook - Images by EAKEAK, kostymo, absent84, MicroOne,andriocolts and more - stock.adobe.com"
+            url="./images/design/img_Indesign_eBook.png"
+            bkSize = "130"
+            mbkPos = '75% 25%'
+          />
+          {setmed === true && <Mediabox 
+            clickHandler={(e) => handleMedClose(e)}		
+          />} 
         </InItem>
       </InCont>
 

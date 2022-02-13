@@ -109,13 +109,12 @@ const Home = ({
   const sectionThree = useRef();
   const sectionFour = useRef();
   const sectionFive = useRef();
-  
-
+ 
   return (
     <Wrap>
       <Head>
         <title>Youn Soo Lim's Portfolio</title>
-        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" />            */}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 {/* Navigations */}
       <SideBar>

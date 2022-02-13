@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {useRouter} from 'next/router';
 import { useTheme } from "@/utils/provider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Button from '../Button';
 import { medBlue } from '@/utils/variables';
@@ -119,10 +121,14 @@ const WebProjMob = ({
   
   const router = useRouter();
   const {theme, setTheme} = useTheme();
+  useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
 
 // ============ Layout
   return (
     <WebProjCont 
+      data-aos="fade-up"
       direction={direction}
       justify={justify}
     >

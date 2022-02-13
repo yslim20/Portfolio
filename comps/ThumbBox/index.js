@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
 import {useRouter} from 'next/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -84,16 +86,21 @@ const ThumbBox = ({
   bkSize = "160",
   mbkPos = '10% 25%',
   just = 'center',
+  dataAos = 'fade-right',
 
   clickHandler=() => {},
 
 }) => {
 
+  useEffect(() => {
+		AOS.init({ duration: 1500 });
+	}, []);
 
 // ============ Layout
     return (
       <Cont 
         onClick={(e) => clickHandler(e)}
+        data-aos = {dataAos}
       >  
         <Img 
           url = {url}

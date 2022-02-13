@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useRouter} from 'next/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // ============ CSS ============== //
 const DescCont = styled.div`
@@ -105,6 +107,9 @@ const WebProj = ({
 
 }) => {
     const router = useRouter();
+    useEffect(() => {
+      AOS.init({ duration: 1000 });
+    }, []);
 
 // ============ Layout
   return (
@@ -112,30 +117,33 @@ const WebProj = ({
       justify={justify}
     >
       {flip=== false ? <>
-        <ArrowContOne 
-          url = {urlOne} 
-          left = {leftOne}  
-          topM = {topMOne}   
-          leftM = {leftMOne}
-        />
-        <DescTit TitMarginB = {TitMarginB} >
-          {titleOne}
-        </DescTit>
+        <div data-aos = 'fade-down'>
+          <ArrowContOne 
+            url = {urlOne} 
+            left = {leftOne}  
+            topM = {topMOne}   
+            leftM = {leftMOne}
+          />
+          <DescTit TitMarginB = {TitMarginB} >
+            {titleOne}
+          </DescTit>
 
-        <DescText TxtMarginB = {TxtMarginB} >
-          {textOne}
-        </DescText>
-
+          <DescText TxtMarginB = {TxtMarginB}>
+            {textOne}
+          </DescText>
+        </div>
       </> : 
       <>
-        <ArrowContTwo />
-        <DescText  TxtMarginB = {TxtMarginBT} >
-          {textTwo}
-        </DescText>
+        <div data-aos = 'fade-up'>
+          <ArrowContTwo/>
+          <DescText  TxtMarginB = {TxtMarginBT} >
+            {textTwo}
+          </DescText>
 
-        <DescTit  TitMarginB = {TitMarginBT}>
-          {titleTwo}
-        </DescTit>
+          <DescTit  TitMarginB = {TitMarginBT} >
+            {titleTwo}
+          </DescTit>
+        </div>
       </>
       }
     </DescCont>

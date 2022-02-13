@@ -16,6 +16,12 @@ yarn dev
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
+## AOS Installtion
+
+```bash
+npm install aos --save
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
