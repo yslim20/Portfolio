@@ -136,6 +136,29 @@ const InItem = styled.div`
     width: 100%; 
   } 
 `
+const SqCont = styled.div`
+  width: 4.25em; height: 4.25em;
+  background-image: url("./images/img_Square.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 2.5%;
+  right: 8%;
+  z-index: -1;
+
+  @media only screen and (min-width: 459px) and (max-width: 1000px){    
+    width: 3em; height: 3em;    
+    bottom: 1.5%;
+    transition: all 0.3s;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width:460px){    
+    width: 2.5em; height: 2.5em;    
+    bottom: 1.5%;
+    transition: all 0.3s;
+  }
+`
 
 const DesignSec = ({
   url = "./images/img_Cross.svg",
@@ -418,7 +441,9 @@ const DesignSec = ({
             clickHandler={(e) => handlePortClose(e)}		
           />} 
         </ThreeItem>
-      </ThreeCont>    
+      </ThreeCont>   
+
+      <SqCont /> 
     </Cont>
     );
 }

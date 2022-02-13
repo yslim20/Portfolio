@@ -26,18 +26,17 @@ const Img = styled.div`
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  transition: all 0.3s;
   transition: all 1s ease-in-out;
   
   :hover{
     background-size: ${props => props.bkSize}%;
     opacity: 1;
-    transition: all 0.3s;   
+    transition: all 0.5s ease-in-out;  
   }
 
   @media only screen and (min-width: 1025px) and (max-width: 1100px){    
     :hover{
-      background-size: 180%;
+      transition: all 0.5s ease-in-out; 
     }
   }
 
