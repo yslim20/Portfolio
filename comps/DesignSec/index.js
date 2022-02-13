@@ -89,7 +89,7 @@ const ThreeCont = styled.div`
 `
 
 const ThreeItem = styled.div`
-  width: 33.33%; height: 500px;
+  width: 33.33%; height: 350px;
   display: flex;
   box-sizing: border-box;
 
@@ -120,7 +120,7 @@ const InCont = styled.div`
 `
 
 const InItem = styled.div`
-  width: 50%; height: 320px;
+  width: 50%; height: 290px;
   display: flex;
   box-sizing: border-box;
 
@@ -434,7 +434,7 @@ const DesignSec = ({
             clickHandler={() => handlePortClick()}            
             title="Photoshop: Portrait"
             url="./images/design/img_Photo_Portrait.svg"
-            bkSize = "130"
+            bkSize = "130" 
           />
           {showport === true && <ImagePopOne 
             src="./images/design/photoshop/design_Portrait.svg"

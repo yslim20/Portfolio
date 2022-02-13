@@ -19,7 +19,7 @@ const Img = styled.div`
   display:flex;
   flex-direction: column;
   align-items:center;
-  justify-content:center;
+  justify-content: ${props => props.just};
   opacity: 0.7;
   background-image: url('${props => props.url}');
   background-repeat: no-repeat;
@@ -83,6 +83,7 @@ const ThumbBox = ({
   title = "Illustrator: Poster",
   bkSize = "160",
   mbkPos = '10% 25%',
+  just = 'center',
 
   clickHandler=() => {},
 
@@ -98,6 +99,7 @@ const ThumbBox = ({
           url = {url}
           bkSize={bkSize}
           mbkPos={mbkPos}
+          just={just}
         />
 
         <Title>
