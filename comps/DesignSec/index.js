@@ -11,7 +11,7 @@ import ImageBox from '../ImageBox';
 import ImagePopOne from '../ImagePopOne';
 import ImagePopTwo from '../ImagePopTwo';
 import Mediabox from '../Mediabox';
-import IllustBox from '../IllustBox';
+import ThumbBox from '../ThumbBox';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -23,14 +23,13 @@ const Cont = styled.div`
   // overflow: hidden;
   background: #000;
   z-index: 1;  
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 `
 
 const Title = styled.h5`
   width: 100%;
   padding: 5% 9.02%;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   color: ${props => props.titColor};
   transition: all 0.3x;
   position: relative;
@@ -78,6 +77,7 @@ const IllCont = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0; padding: 0;
+  margin-bottom: 20px;
 
   @media only screen and (min-width: 769px) and (max-width: 1024px){   
 
@@ -91,8 +91,9 @@ const IllCont = styled.div`
 `
 
 const IllItem = styled.div`
-  width: 30%; height: 500px;
+  width: 33.33%; height: 500px;
   display: flex;
+  box-sizing: border-box;
 
   @media only screen and (min-width: 769px) and (max-width: 1024px){   
     width: 100%; 
@@ -101,26 +102,46 @@ const IllItem = styled.div`
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     width: 100%; 
   } 
-
-
-   
 `
 
 const InCont = styled.div`
-  width: 100%; height: 500px;
-  background: blue;
+  width: 100%; 
+  display: flex;
+  flex-direction: row;
+  margin: 0; padding: 0;
+  margin-bottom: 20px;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px){
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 768px){    
+    width: 100%; 
+    flex-direction: column;
+  }  
+`
+
+const InItem = styled.div`
+  width: 50%; height: 320px;
+  display: flex;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px){   
+    width: 100%; 
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 768px){    
+    width: 100%; 
+  } 
 `
 
 const PhoCont = styled.div`
   width: 100%; height: 500px;
 `
 
-
 const DesignSec = ({
-
-  // onButtonClick = () => {},
   url = "./images/img_Cross.svg",
-  top = "10%",
+  top = "1%",
   left ="5%", 
   topM = "5%",
   leftM = "",
@@ -132,16 +153,50 @@ const DesignSec = ({
 
   const {theme, setTheme} = useTheme();
   const [showpos, setShowPos] = useState(false)	
+  const [showtech, setShowTech] = useState(false)	
+  const [showart, setShowArt] = useState(false)	
+  const [setmag, setShowMagPop] = useState(false)
   const [showVidPop, setShowVidPop] = useState(false)	
 
-  function handleClick() {
-		setShowPos(true)	
+  function handlePosClick() {
+		setShowPos(true)
+    setShowTech(false)
+    setShowArt(false)	
 	}  
-  function handleClickClose(e){
+  function handlePosClose(e){
     e.stopPropagation()
     setShowPos(false)
 	}
+
+  function handleTechClick(e) {
+		setShowTech(true)	
+    setShowPos(false)
+    setShowArt(false)	
+	}  
+  function handleTechClose(e){
+    e.stopPropagation()
+    setShowTech(false)
+	}
   
+  function handleArtClick(e) {
+		setShowArt(true)
+    setShowPos(false)
+    setShowTech(false)	
+	}  
+  function handleArtClose(e){
+    e.stopPropagation()
+    setShowArt(false)
+	}
+
+  function handleMagClick() {
+    setShowMagPop(true)
+  }
+
+  function handleMagClose() {
+    e.stopPropagation()
+    setShowMagPop(false)
+  }
+
   function handleVidClick() {
     setShowVidPop(true)
   }
@@ -167,31 +222,60 @@ const DesignSec = ({
 
       <IllCont>
         <IllItem>
-          <IllustBox
-            clickHandler={() => handleClick()}
+          <ThumbBox
+            clickHandler={() => handlePosClick()}
           />
           {showpos === true && <ImagePopTwo 
-            clickHandler={(e) => handleClickClose(e)}				
+            clickHandler={(e) => handlePosClose(e)}				
           />}
         </IllItem>
 
-         {/*<IllItem
-          onClick={() => handleClick()}
-        >
-          {showpop === true && <ImagePopTwo 
-            clickHandler={(e) => handleClickClose(e)}				
+         <IllItem>
+          <ThumbBox
+            clickHandler={() => handleTechClick()}            
+            title="Technical Drawing"
+            url="./images/design/img_Illust_technical.svg"
+            bkSize = "130%"
+          />
+          {showtech === true && <ImagePopOne 
+            clickHandler={(e) => handleTechClose(e)}		
+            width = "60"
+            marginL = '-25'
+            marginT = '-20'
+            tMarginL = '-25'
+            tMarginT = '-20'
           />} 
-        </IllItem>*/}
+        </IllItem>
 
+        <IllItem>
+          <ThumbBox
+            clickHandler={() => handleArtClick()}            
+            title="Digital Art"
+            url="./images/design/img_Illust_art.svg"
+            bkSize = "130"
+          />
+          {showart === true && <ImagePopOne 
+            src="./images/design/illust/design_Illust_CreativeArt.svg"
+            clickHandler={(e) => handleArtClose(e)}		
+          />} 
+        </IllItem>
       </IllCont>
       
 
-      <InCont
-        onDoubleClick={() => handleVidClick()}
-      >
-        {showVidPop === true && <Mediabox 
-          clickHandler={(e) => handleVideoClose(e)}				
-        />}
+      <InCont>
+        <InItem>
+          <ThumbBox
+              clickHandler={() => handleMagClick()}            
+              title="Magazine"
+              url="./images/design/img_Indesign_Magazine.png"
+              bkSize = "130"
+              mbkPos = '75% 25%'
+            />
+            {setmag === true && <ImagePopOne 
+              clickHandler={(e) => handleMagClose(e)}		
+              src="./images/design/illust/design_Illust_CreativeArt.png"
+            />} 
+        </InItem>
       </InCont>
 
       <PhoCont>

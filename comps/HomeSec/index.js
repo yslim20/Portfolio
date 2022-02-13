@@ -59,7 +59,6 @@ const NameTxt = styled.h2`
     #CA91F2 100%      
   );
 
-  background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;

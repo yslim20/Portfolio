@@ -7,44 +7,36 @@ import { CCarouselItem, CCarousel, CImage } from '@coreui/react';
 
 // ============ CSS ============== //
 const PopCont = styled.div`
-    width: 50%;
+    height: auto; 
+    width: ${props => props.width}%;
     display:${props=>props.cdisplay}; 
     flex-direction: column;
     align-items:center;
     item-alignment: center;
-    border-radius: 30px;
     box-shadow: ${props=>props.cbshadow}; 
-    padding: 60px 70px;
-    // background-color: #fff;
-    // position: absolute;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    margin-left: ${props=>props.marginL}%;
+    margin-top: ${props=>props.marginT}%;
     z-index: 22;
-    transition: all 1s ease-in-out;
-`;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 
-const ButtonInput = styled.button`
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-    border: none;
-    background-color:${props=>props.bg};
-    border-radius:${props=>props.radius}px;
-    width: ${props=>props.width};
-    height: ${props=>props.height}px;
-    font-size: ${props=>props.size}px;    
-    box-shadow: ${props=>props.bshadow}; 
-
-    :hover{
-        transform: scale(0.95);
-        transition-duration: 0.5s;       
+    :hover {
+      transform: scale(1.05);
     }
-`;
 
-const ButtonText = styled.p`
-    color:${props=>props.color} ;
-    font-size: ${props=>props.fontSize};
-    text-align:center;
-    font-weight: ${props=>props.fontWeight};
+    @media only screen and (min-width: 769px) and (max-width: 1250px){   
+      width: ${props => props.tWidth}%; height: auto;
+      margin-left: ${props=>props.tMarginL}%;
+      margin-top: ${props=>props.tMarginT}%;
+    }
+  
+    @media only screen and (min-width: 1px) and (max-width: 768px){    
+      height: auto; width: 100vw;
+      margin-left: -50%; margin-top: -33.33%;      
+    } 
 `;
 
 
@@ -52,45 +44,42 @@ const ButtonText = styled.p`
 const ImagePopOne = ({
   
 // ============ Props
-    errortext = "You need to login first.",
-    text="Log In",
-    bgcolor = "#5333ED",
-    radius = 20,
-    width = "80%",
-    height = 72,
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
-    bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-    color="#fff",
-    fontSize="24px",
-    fontWeight="500",
     cdisplay="flex",
+    width = "35",    
+    
+    tWidth = '50',
+    marginL = '-15',
+    marginT = '-23',
+    tMarginL = '-20',
+    tMarginT = '-33',
 
-    src = "./images/design/illust/design_Poster1.jpg",
-    alt = "",
+    src = "./images/design/illust/design_Tech_Drawing.svg",
+    alt = "Technical Drawing",
 
-    clickHandler=() => {}
+    clickHandler=() => {},
 
 }) => {
-
-  // const [showpop, setShowPop] = useState(false);
-
-  // function onClick(){
-  //   setShowPop(false)
-  // }	
 
 // ============ Layout
     return (
       <PopCont 
-        cbshadow={cbshadow}
-        cdisplay={cdisplay}
-        oonDoubleClick={(e) => clickHandler(e)}
-      >  
-        <CCarousel controls indicators>
+        width = {width}
+        cdisplay = {cdisplay}
+        cbshadow = {cbshadow}
+        marginL = {marginL}
+        marginT = {marginT}
+        tMarginL = {tMarginL}
+        tMarginT = {tMarginT}
+        tWidth = {tWidth}
+
+        onDoubleClick={(e) => clickHandler(e)}
+      > 
+        <CCarousel>
           <CCarouselItem>
             <CImage className="d-block w-100" src={src} alt={alt} />
           </CCarouselItem>
         </CCarousel>
-
       </PopCont>
     );
 }
