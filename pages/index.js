@@ -113,7 +113,7 @@ const Home = ({
   return (
     <Wrap>
       <Head>
-        <title>Youn Soo Lim's Portfolio</title>
+        <title>Youn Soo Lim Portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 {/* Navigations */}
