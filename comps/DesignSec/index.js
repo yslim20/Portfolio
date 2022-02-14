@@ -9,6 +9,7 @@ import ImagePopTwo from '../ImagePopTwo';
 import ImagePopMag from '../ImagePopMag';
 import Mediabox from '../Mediabox';
 import ThumbBox from '../ThumbBox';
+import Scroll from '../Scroll';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -22,6 +23,8 @@ const Cont = styled.div`
   box-sizing: border-box;  
   padding-bottom: 100px;
   background-color: #000;
+  overflow: hidden;
+  position: relative;
 `
 
 const Title = styled.h5`
@@ -326,6 +329,7 @@ const DesignSec = ({
         width = {shapeWidth}
         height = {shapeHeight}
       />
+      <Scroll />
 
 {/* =========== Illustrator =========== */}
       <ThreeCont>

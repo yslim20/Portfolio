@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import styles from '@/styles/Home.module.css';
 import Desc from '@/comps/Desc';
 import DivImg from '@/comps/DivImg';
+import Scroll from '../Scroll';
 
 import { useTheme } from "@/utils/provider";
 import { themes, ltLylac } from '@/utils/variables';
@@ -18,7 +19,7 @@ const Cont = styled.div`
   position: relative;
   // overflow: hidden;
   z-index: -1;  
-  
+  position: relative;
   box-sizing: border-box;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
@@ -131,6 +132,8 @@ const AboutSec = ({
       <DivCont>
         <DivImg url ="" />
       </DivCont>
+
+      <Scroll />
 
       <DesContL
         top ={topL}

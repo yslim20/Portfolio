@@ -11,7 +11,7 @@ const Cont = styled.div`
   justify-content:center;
   align-items:center;  
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   right: 2em;
   bottom: 0;
   z-index: 10;
@@ -59,6 +59,44 @@ const Scroll = ({
 }) => {
 
   const {theme, setTheme} = useTheme();
+
+  // function scrollNav(){
+  //   // Hide Header on on scroll down
+  //   var didScroll;
+  //   var lastScrollBottom = 0;
+  //   var delta = 5;
+  //   var navbarHeight = $('header').outerHeight();
+  
+  //   $(window).scroll(function(event){
+  //       didScroll = true;
+  //   });
+            
+  //   setInterval(function() {
+  //       if (didScroll) {
+  //           hasScrolled();
+  //           didScroll = false;
+  //       }
+  //   }, 250);
+  
+  //   function hasScrolled() {
+  //       var st = $(this).scrollTop();
+        
+  //       // Make sure they scroll more than delta
+  //       if(Math.abs(lastScrollBottom - st) <= delta)
+  //           return;
+        
+  //       if (st > lastScrollBottom && st > navbarHeight){
+  //           // Scroll Down
+  //           $('header').removeClass('nav-down').addClass('nav-up');
+  //       } else {
+  //           // Scroll Up
+  //           if(st + $(window).height() < $(document).height()) {
+  //               $('header').removeClass('nav-up').addClass('nav-down');
+  //           }
+  //       }      
+  //       lastScrollBottom = st;
+  //   } 
+  // }
 
 // ============ Layout
   return (

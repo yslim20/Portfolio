@@ -6,6 +6,7 @@ import { lylac, ltLylac, medBlue } from '@/utils/variables';
 
 import Button from '../Button';
 import DivImg from '../DivImg';
+import Scroll from '../Scroll';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
@@ -19,6 +20,7 @@ const Cont = styled.div`
   overflow: hidden;
   z-index: 1;  
   box-sizing: border-box;
+  position: relative;
 `
   
 const TxtCont = styled.div`
@@ -118,7 +120,7 @@ const ExTxt = styled.p`
 `
 
 const DivCont = styled.div`
-  width: 100%;
+  width: 101%;
   height: 100%;
   display: block;  
   position: absolute;
@@ -173,6 +175,7 @@ const HomeSec = ({
 
   return (
     <Cont>
+      <Scroll />
 
       <TxtCont>
         <SubTit

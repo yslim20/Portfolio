@@ -178,7 +178,7 @@ const Home = ({
         />        
       </MobCont> 
 {/* Navigation ends */}
-      <Scroll />    
+      {/* <Scroll />     */}
 
       <Cont
         conwidth={conwidth}
