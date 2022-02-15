@@ -26,6 +26,13 @@ const PopCont = styled.div`
     :hover {
       transform: scale(1.05);
     }
+
+    @media only screen and (min-width: 769px) and (max-width: 1000px){    
+      height: auto; width:100%;
+      top: 50%; left: 0;
+      margin: 0;
+      margin-top: ${props=>props.mMarginT}%;
+    } 
  
     @media only screen and (min-width: 1px) and (max-width: 768px){    
       height: auto; width:100%;

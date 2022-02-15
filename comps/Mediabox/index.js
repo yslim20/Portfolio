@@ -24,6 +24,11 @@ const MedCont = styled.div`
     transform: scale(1.05);
   }
 
+  @media only screen and (min-width: 769px) and (max-width: 1000px){ 
+    width: 80%;
+    margin-left: -41%; margin-top: -30%;
+  }
+
   @media only screen and (min-width: 1px) and (max-width: 768px){    
     height: auto; width:100%;
     top: 50%; left: 0;
@@ -39,7 +44,7 @@ const Mediabox = ({
   cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
   cdisplay="flex",
   width = "60",
-  marginL = '-25',
+  marginL = '-28',
   marginT = '-22.5',
   mMarginT = '-33.33',
   component = "video" ,

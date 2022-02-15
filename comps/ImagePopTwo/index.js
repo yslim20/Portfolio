@@ -28,16 +28,22 @@ const PopCont = styled.div`
       transform: scale(1.05);
     }
 
-    @media only screen and (min-width: 769px) and (max-width: 1250px){   
-      width: 50%; height: auto;
-      margin-left: ${props=>props.tMarginL}%;
-      margin-top: ${props=>props.tMarginT}%;
+    @media only screen and (min-width: 1000px) and (max-width: 1250px){   
+      width: 55%; height: auto;
+      margin-left: -23%;
+      margin-top: -36.5%;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 999px){ 
+      width: 55%; height: auto;
+      margin-left: -30%;
+      margin-top: -37.5%;
     }
   
     @media only screen and (min-width: 1px) and (max-width: 768px){    
-      top: 0; left: 0;
-      height: 100vh; width: auto
-    } 
+      height: auto; width: 93%;
+      margin-left: -47%;
+      margin-top: -61.5%;
 `;
 
 // ============ Function ============== //
@@ -47,11 +53,9 @@ const ImagePopTwo = ({
 
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
     cdisplay="flex",
-    width = "35%",
-    marginL = '-15',
-    marginT = '-23',
-    tMarginL = '-20',
-    tMarginT = '-33',
+    width = "45%",
+    marginL = '-20',
+    marginT = '-30',
     fistSrc = "./images/design/illust/design_Poster2.jpg",
     altOne = "Concert Poster version 1",
     secSrc = "./images/design/illust/design_Poster1.jpg",
@@ -69,8 +73,6 @@ const ImagePopTwo = ({
         cbshadow = {cbshadow}
         marginL = {marginL}
         marginT = {marginT}
-        tMarginL = {tMarginL}
-        tMarginT = {tMarginT}
 
         onDoubleClick={(e) => clickHandler(e)}
       >  

@@ -13,7 +13,6 @@ const Cont = styled.div`
   justify-content: center;
   transition: all 1s ease-in-out;
   cursor: pointer;
-  box-sizing: border-box;
 `;
 
 const Img = styled.div`
@@ -76,6 +75,7 @@ const Title = styled.p`
   -webkit-line-clamp: 1;
   overflow: hidden;  
   box-sizing: border-box;
+  margin-bottom: 10px;
 `
 
 // ============ Function ============== //

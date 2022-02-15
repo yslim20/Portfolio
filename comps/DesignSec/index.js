@@ -350,12 +350,15 @@ const DesignSec = ({
             bkSize = "130"
           />
           {showtech === true && <ImagePopOne 
-            clickHandler={(e) => handleTechClose(e)}		
+            clickHandler={(e) => handleTechClose(e)}
             width = "60"
             marginL = '-25'
             marginT = '-20'
             tMarginL = '-25'
             tMarginT = '-20'
+            ttMarginL = '-38'
+            ttMarginT = '-25'
+            ttWidth = '75'
           />} 
         </ThreeItem>
 
@@ -368,6 +371,12 @@ const DesignSec = ({
           />
           {showart === true && <ImagePopOne 
             src="./images/design/illust/design_Illust_CreativeArt.svg"
+            alt='creative art' width = '40'
+            ttWidth = '60'
+            marginT = '-26' marginL = '-20' tMarginT = '-32'
+            ttMarginL = '-30' ttWidth = '60' ttMarginT = '-38'
+            mHeight='auto' mWidth='auto'  mMartinT = '-65'
+
             clickHandler={(e) => handleArtClose(e)}		
           />} 
         </ThreeItem>
@@ -415,7 +424,9 @@ const DesignSec = ({
             />
             {showmov === true && <ImagePopOne 
               src="./images/design/photoshop/design_Movie_Poster.svg"
+              alt='movie poster'
               marginT = '-26.5' tMarginT = '-37'
+              ttMarginL = '-30' ttWidth = '60' ttMarginT = '-45'
               mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
               clickHandler={(e) => handleMovClose(e)}		
             />} 
@@ -430,6 +441,8 @@ const DesignSec = ({
           />
           {showpho === true && <ImagePopOne 
             src="./images/design/photoshop/design_Photo_CreativeArt.png"
+            alt='creative art' width = '45' marginT = '-29' marginL = '-18' 
+            ttMarginL = '-35' ttWidth = '70' ttMarginT = '-45'
             mHeight='auto' mWidth='auto'  mMartinT = '-65'
             clickHandler={(e) => handlePhoClose(e)}		
           />} 
@@ -444,7 +457,8 @@ const DesignSec = ({
           />
           {showport === true && <ImagePopOne 
             src="./images/design/photoshop/design_Portrait.svg"
-            marginT = '-30' tMarginT = '-37'
+            marginT = '-30' tMarginT = '-45' alt = 'portrait'
+            ttWidth = '65' ttMarginL = '-33' ttMarginT = '-57.5'
             mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
             clickHandler={(e) => handlePortClose(e)}		
           />} 

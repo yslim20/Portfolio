@@ -27,10 +27,16 @@ const PopCont = styled.div`
       transform: scale(1.05);
     }
 
-    @media only screen and (min-width: 769px) and (max-width: 1250px){   
+    @media only screen and (min-width: 1000px) and (max-width: 1300px){   
       width: ${props => props.tWidth}%; height: ${props => props.tHeight};
       margin-left: ${props=>props.tMarginL}%;
       margin-top: ${props=>props.tMarginT}%;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 999px){ 
+      width: ${props => props.ttWidth}%; height: ${props => props.tHeight};
+      margin-left: ${props=>props.ttMarginL}%;
+      margin-top: ${props=>props.ttMarginT}%;
     }
   
     @media only screen and (min-width: 1px) and (max-width: 768px){    
@@ -38,6 +44,13 @@ const PopCont = styled.div`
       margin-left: -50%; margin-top: ${props => props.mMartinT}%;      
     } 
 `;
+
+const ImgBox = styled.img`
+    width: 100%; height: 100%;
+    display: block;
+    z-index: 100;
+    object-fit: cover;
+`
 
 
 // ============ Function ============== //
@@ -54,6 +67,9 @@ const ImagePopOne = ({
     tHeight = 'auto',
     tMarginL = '-20',
     tMarginT = '-33',
+    ttMarginL = '',
+    ttMarginT = '-33',
+    ttWidth = '',
 
     mHeight = 'auto',
     mWidth = '100vw',
@@ -78,17 +94,18 @@ const ImagePopOne = ({
         tWidth = {tWidth}
         tMarginL = {tMarginL}
         tMarginT = {tMarginT}
+        ttMarginL = {ttMarginL}
+        ttWidth = {ttWidth}
+        ttMarginT = {ttMarginT}
         mHeight = {mHeight}
         mWidth = {mWidth}
         mMartinT = {mMartinT}
 
         onDoubleClick={(e) => clickHandler(e)}
       > 
-        <CCarousel>
-          <CCarouselItem>
-            <CImage className="d-block w-100 h-100" src={src} alt={alt} />
-          </CCarouselItem>
-        </CCarousel>
+        <ImgBox 
+          src={src} alt={alt}       
+        />
       </PopCont>
     );
 }

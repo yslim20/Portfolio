@@ -71,13 +71,14 @@ const Title = styled.h5`
 `
 
 const DivConB = styled.div`
-  width: 100%;
+  width: 101%;
   height: 100%;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   z-index: -99;
+  overflow: hidden;
 
   @media only screen and (min-width: 1px) and (max-width:1000px){
     background-size: 150%;
