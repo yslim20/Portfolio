@@ -12,7 +12,7 @@ import DesignSec from '@/comps/DesignSec'
 import Scroll from '@/comps/Scroll';
 import ContactSec from '@/comps/ContactSec';
 import Contact from '@/comps/Contact';
-
+//
 
 // ============ CSS ============== //
 const Wrap = styled.div`
