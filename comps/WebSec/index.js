@@ -109,7 +109,7 @@ const WebSec = ({
         />
 
         <WebProj flip = {true} 
-          leftonClickB = {() => window.open('https://revamp-8wfmv8ftl-yslim.vercel.app/', '_blank')}
+          leftonClickB = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
           rightonClickB = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
         />
 
@@ -129,7 +129,7 @@ const WebSec = ({
           srcT = "./images/projects/img_irl_Dater.png"
 
           rightonClickT = {() => window.open('http://younsoolim.com/irl_Dater/home.html', '_blank')}
-          leftonClickT = {() => window.open('https://www.figma.com/proto/RRoFoBBwCjVylyz1niMRwD/idsp-but-its-figma?node-id=495%3A10404&scaling=scale-down&page-id=399%3A7384&starting-point-node-id=495%3A10404', '_blank')}
+          leftonClickT = {() => window.open('https://www.figma.com/proto/RRoFoBBwCjVylyz1niMRwD/idsp-but-its-figma?node-id=447%3A191&scaling=scale-down&page-id=399%3A7384&starting-point-node-id=495%3A10404', '_blank')}
         
           bttnTxtR = "Marketing Page"
           bttnTxtL = "Figma Protptype"

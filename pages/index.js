@@ -82,6 +82,12 @@ const ContCont = styled.div`
   position: absolute;
   margin-left: 25%;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+
+  @media only screen and (min-width: 1001px) and (max-width:1100px){    
+    width: 50%;
+    margin-left: 10%;
+  }
 
   @media only screen and (min-width: 481px) and (max-width:1000px){    
     width: 100%;
