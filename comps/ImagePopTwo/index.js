@@ -7,9 +7,8 @@ import { CCarouselItem, CCarousel, CImage, CCloseButton } from '@coreui/react';
 
 // ============ CSS ============== //
 const PopCont = styled.div`
-    height: auto; 
-    
-    width: ${props => props.width};
+    height: auto;     
+    width: ${props => props.width}%;
     display:${props=>props.cdisplay}; 
     flex-direction: column;
     align-items:center;
@@ -29,20 +28,20 @@ const PopCont = styled.div`
     }
 
     @media only screen and (min-width: 1000px) and (max-width: 1250px){   
-      width: 55%; height: auto;
-      margin-left: -23%;
-      margin-top: -36.5%;
+      width: 45%; height: auto;
+      margin-left: -22.5%;
+      margin-top: -30%;
     }
 
-    @media only screen and (min-width: 769px) and (max-width: 999px){ 
-      width: 55%; height: auto;
+    @media only screen and (min-width: 601px) and (max-width: 999px){ 
+      width: 60%; height: auto;
       margin-left: -30%;
-      margin-top: -37.5%;
+      margin-top: -39.5%;
     }
   
-    @media only screen and (min-width: 1px) and (max-width: 768px){    
+    @media only screen and (min-width: 1px) and (max-width: 600px){    
       height: auto; width: 93%;
-      margin-left: -47%;
+      margin-left: -46.5%;
       margin-top: -61.5%;
 `;
 
@@ -53,9 +52,9 @@ const ImagePopTwo = ({
 
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
     cdisplay="flex",
-    width = "45%",
-    marginL = '-20',
-    marginT = '-30',
+    width = '35',
+    marginL = '-17.5',
+    marginT = '-23.3',
     fistSrc = "./images/design/illust/design_Poster2.jpg",
     altOne = "Concert Poster version 1",
     secSrc = "./images/design/illust/design_Poster1.jpg",

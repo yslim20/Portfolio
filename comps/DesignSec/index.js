@@ -338,7 +338,7 @@ const DesignSec = ({
             clickHandler={() => handlePosClick()}
           />
           {showpos === true && <ImagePopTwo 
-            clickHandler={(e) => handlePosClose(e)}				
+            clickHandler={(e) => handlePosClose(e)}		
           />}
         </ThreeItem>
 
@@ -351,14 +351,9 @@ const DesignSec = ({
           />
           {showtech === true && <ImagePopOne 
             clickHandler={(e) => handleTechClose(e)}
-            width = "60"
-            marginL = '-25'
-            marginT = '-20'
-            tMarginL = '-25'
-            tMarginT = '-20'
-            ttMarginL = '-38'
-            ttMarginT = '-25'
-            ttWidth = '75'
+            width = "60" marginL = '-30' marginT = '-20'
+            tWidth = '70' tMarginL = '-35' tMarginT = '-25'
+            ttWidth = '75' ttMarginL = '-37.5' ttMarginT = '-25'            
           />} 
         </ThreeItem>
 
@@ -371,10 +366,9 @@ const DesignSec = ({
           />
           {showart === true && <ImagePopOne 
             src="./images/design/illust/design_Illust_CreativeArt.svg"
-            alt='creative art' width = '40'
-            ttWidth = '60'
+            alt='creative art' width = '40'            
             marginT = '-26' marginL = '-20' tMarginT = '-32'
-            ttMarginL = '-30' ttWidth = '60' ttMarginT = '-38'
+            ttWidth = '60' ttMarginL = '-30' ttWidth = '60' ttMarginT = '-38'
             mHeight='auto' mWidth='auto'  mMartinT = '-65'
 
             clickHandler={(e) => handleArtClose(e)}		
@@ -426,7 +420,7 @@ const DesignSec = ({
               src="./images/design/photoshop/design_Movie_Poster.svg"
               alt='movie poster'
               marginT = '-26.5' tMarginT = '-37'
-              ttMarginL = '-30' ttWidth = '60' ttMarginT = '-45'
+              ttWidth = '60' ttMarginL = '-30' ttMarginT = '-45'
               mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
               clickHandler={(e) => handleMovClose(e)}		
             />} 
@@ -441,8 +435,8 @@ const DesignSec = ({
           />
           {showpho === true && <ImagePopOne 
             src="./images/design/photoshop/design_Photo_CreativeArt.png"
-            alt='creative art' width = '45' marginT = '-29' marginL = '-18' 
-            ttMarginL = '-35' ttWidth = '70' ttMarginT = '-45'
+            alt='creative art' width = '45' marginT = '-29' marginL = '-22.5' 
+            ttWidth = '70' ttMarginL = '-35' ttMarginT = '-45'
             mHeight='auto' mWidth='auto'  mMartinT = '-65'
             clickHandler={(e) => handlePhoClose(e)}		
           />} 
@@ -458,7 +452,7 @@ const DesignSec = ({
           {showport === true && <ImagePopOne 
             src="./images/design/photoshop/design_Portrait.svg"
             marginT = '-30' tMarginT = '-45' alt = 'portrait'
-            ttWidth = '65' ttMarginL = '-33' ttMarginT = '-57.5'
+            ttWidth = '65' ttMarginL = '-32.5' ttMarginT = '-57.5'
             mHeight='auto' mWidth='auto'  mMartinT = '-77.5'
             clickHandler={(e) => handlePortClose(e)}		
           />} 
