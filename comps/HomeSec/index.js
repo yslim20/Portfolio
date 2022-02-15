@@ -128,7 +128,7 @@ const DivCont = styled.div`
   height: 100%;
   display: block;  
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0px;
   z-index: -99;
 

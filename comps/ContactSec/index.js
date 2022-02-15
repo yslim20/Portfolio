@@ -49,13 +49,14 @@ const ImgCont = styled.div`
 `
 
 const DivCont = styled.div`
-  width: 100%;
+  width: 101%;
   height: 100%;
   display: block;  
   position: absolute;
   top: -1px;
-  left: 0px;
+  left: -1px;
   z-index: -99;
+  overflow: hidden;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     background-size: 150%;
