@@ -18,7 +18,7 @@ const Cont = styled.div`
   padding: 0 9.02%;
   position: relative;
   z-index: -2;  
-  over-flow: hidden;
+  overflow: hidden;
   box-sizing: border-box;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
