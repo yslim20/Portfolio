@@ -95,7 +95,11 @@ const Position = styled.h3`
 
   :after {
     content:"front-end developer 👩‍💻";
-    animation: spin 5s linear infinite;
+    -webkit-animation: spin 5s linear infinite;
+       -moz-animation: spin 5s linear infinite;
+        -ms-animation: spin 5s linear infinite;
+         -o-animation: spin 5s linear infinite;
+            animation: spin 5s linear infinite; 
   }
 
   @keyframes spin {

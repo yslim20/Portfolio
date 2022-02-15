@@ -20,7 +20,7 @@ const SubTitle = styled.h5`
   width: 100%;
   margin-bottom: 20px;
   color: ${props => props.titColor};
-  transition: all 0.3x;
+  transition: all 0.3s;
 
   @media only screen and (min-width: 461px) and (max-width:1000px){    
     margin-bottom: 50px;
@@ -39,7 +39,11 @@ const ContTitle = styled.h2`
 
   :after {
     content:"Get in touch...";
-    animation: spintit 5s linear infinite;
+    -webkit-animation: spintit 5s linear infinite;
+       -moz-animation: spintit 5s linear infinite;
+        -ms-animation: spintit 5s linear infinite;
+         -o-animation: spintit 5s linear infinite;
+            animation: spintit 5s linear infinite; 
   }
 
   @keyframes spintit {

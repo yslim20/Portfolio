@@ -53,13 +53,16 @@ const Menu = ({
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <Logo 
-        // open={open} aria-hidden={!isHidden} {...props}
         onClick={onLogoClick}
       />
 
       <LinkCont>
         <NavText 
-          onClick = {onAboutClick}
+          onClick = {()=>{
+            onAboutClick()
+            // setNav('about')
+          }}
+          // color={nav ==='about' ? 'blue':'white'}
         />
 
         <NavText 
