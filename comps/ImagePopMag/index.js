@@ -19,7 +19,7 @@ const PopCont = styled.div`
     left: 50%; 
     margin-left: ${props=>props.marginL}%;
     margin-top: ${props=>props.marginT}%;
-    z-index: 999;
+    z-index: 99999;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 

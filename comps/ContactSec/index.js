@@ -13,12 +13,12 @@ import { themes, ltLylac } from '@/utils/variables';
 const Cont = styled.div`  
   width: 100%; height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   padding: 0 9.02%;
+  padding-down: 5%;
   position: relative;
-  z-index: -2;  
-  overflow: hidden;
   box-sizing: border-box;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
@@ -26,7 +26,6 @@ const Cont = styled.div`
     align-items: center;  
     justify-content center; 
     height: 100%; 
-    margin-bottom: 100px;
   }
 `
 
@@ -65,10 +64,22 @@ const DivCont = styled.div`
 `
 
 const ContCont = styled.div`
-  width: 50%;
-  margin-left: 45%;
-  margin-top: 5%;
+  width: 55%;
+  margin-right: 10%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 1000px){
+    width: 80%;
+    margin-right: 0; 
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 480px){
+    width: 100%;
+    margin-right: 0; 
+  }
 `
 
 const CirCont = styled.div`
@@ -109,6 +120,11 @@ const ContactSec = ({
         />
       </DivCont>
       <ImgCont />
+
+      <ContCont>
+        <Contact />
+      </ContCont>
+
 
       <ContCont>
         <CirCont />
