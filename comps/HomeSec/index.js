@@ -107,6 +107,11 @@ const Position = styled.h3`
     50% { content: "UX/UI designer 🎨"; }
   }
 
+  -webkit-@keyframes spin {
+    0% { content:"front-end developer 👩‍💻";}
+    50% { content: "UX/UI designer 🎨"; }
+  }
+
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
     font-size: 2.125em;
     font-weight: 700; 
