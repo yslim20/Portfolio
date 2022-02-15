@@ -75,25 +75,24 @@ const SecCont = styled.div`
 `
 
 const ContCont = styled.div`
+  width: 45%; height: 100%;
+  display: flex;
+  justify-content: center;
+  items-align: center;
   position: absolute;
-  top: 2.8%; left: 0;
-  width: 45%;
-  margin-left: 35%;
-  margin-top: 5%;
+  margin-left: 25%;
   box-sizing: border-box;
 
   @media only screen and (min-width: 481px) and (max-width:1000px){    
     width: 100%;
     margin-left: 0;
     padding: 0 9.02%;
-    top: 5%;
   }
 
   @media only screen and (min-width: 1px) and (max-width:480px){    
     width: 100%;
     margin-left: 0;
     padding: 0 9.02%;
-    top: 15%;
   }
 `
 
