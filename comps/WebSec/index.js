@@ -104,7 +104,7 @@ const WebSec = ({
       <WebCont>
 
         <WebProj 
-          leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app/', '_blank')}
+          leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
           rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}    
         />
 
@@ -136,14 +136,17 @@ const WebSec = ({
         />
       </WebCont>
       
-      <WebProjMob />
+      <WebProjMob 
+        leftonClick = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
+        rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}      
+      />
 
       <WebProjMob 
         src = "./images/projects/img_reVamp.png"
         title = "reVamp"
         span = "reVamp"
         text = "is an application that shows how old clothes can be repurposed through its tutorials. It offers many different methods for upcycling clothing items. Additionally, the app aims to educate users about the relationship between sustainability and fast fashion."
-        leftonClick = {() => window.open('https://revamp-8wfmv8ftl-yslim.vercel.app/', '_blank')}
+        leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
       />
 

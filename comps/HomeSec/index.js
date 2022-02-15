@@ -104,23 +104,23 @@ const Position = styled.h3`
 
 // test
 
--webkit-animation-name: spin;
--webkit-animation-duration: 5s;
--webkit-animation-delay: 0s;
--webkit-animation-iteration-count: infinite;
--webkit-animation-timing-function: ease;
--webkit-animation-direction: linear;
--webkit-animation-fill-mode: none;
--webkit-animation-play-state: running;
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 5s;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-direction: linear;
+      -webkit-animation-fill-mode: none;
+      -webkit-animation-play-state: running;
 
-animation-name: spin;
-animation-duration: 5s;
-animation-delay: 0s;
-animation-iteration-count: infinite;
-animation-timing-function: ease;
-animation-direction: linear;
-animation-fill-mode: none;
-animation-play-state: running;
+      animation-name: spin;
+      animation-duration: 5s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+      animation-direction: linear;
+      animation-fill-mode: none;
+      animation-play-state: running;
 
 // test
 
