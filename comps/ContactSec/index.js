@@ -20,6 +20,7 @@ const Cont = styled.div`
   padding-down: 5%;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     flex-direction: column;
