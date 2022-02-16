@@ -11,7 +11,7 @@ import { themes, ltLylac } from '@/utils/variables';
 
 // ============ CSS ============== //
 const Cont = styled.div`  
-  width: 100%; height: 100vh;
+  width: 100%; height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +55,7 @@ const DivCont = styled.div`
   top: -1px;
   left: -1px;
   z-index: -99;
-  overflow: hidden;
+  over-flow: hidden;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     background-size: 150%;

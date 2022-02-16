@@ -211,11 +211,8 @@ const Home = ({
 
         <SecCont ref = {sectionFive} height = {height}>
           <ContactSec />
-          {/* <ContCont>              
-            <Contact /> 
-          </ContCont>           */}
         </SecCont>        
-      </Cont>     s
+      </Cont>    d
 
     </Wrap>
   )
