@@ -11,6 +11,7 @@ const ButtonCont = styled.div`
     width: 100%;
     display:flex;
     justify-content:${props=>props.justify}; 
+    z-index: 0;
 `;
 
 const ButtonInput = styled.button`
