@@ -212,7 +212,7 @@ const Home = ({
         <SecCont ref = {sectionFive} height = {height}>
           <ContactSec />
         </SecCont>        
-      </Cont>    d
+      </Cont>
 
     </Wrap>
   )
