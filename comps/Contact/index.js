@@ -35,6 +35,7 @@ const SubTitle = styled.h5`
 const ContTitle = styled.h2`
   color : ${props => props.color}; 
   line-height: 1.5em;
+  margin-bottom: 1rem;
 
   :after {
     content:"Get in touch...";
@@ -50,13 +51,13 @@ const ContTitle = styled.h2`
     50% { content: "with me 📫"; }
   }
 
-  @media only screen and (min-width: 461px) and (max-width:1400px){    
+  @media only screen and (min-width: 601px) and (max-width:1400px){    
     font-size: 3em;
-    line-height: 1.25em;
+    line-height: 1.5em;
   }
 
-  @media only screen and (min-width: 1px) and (max-width:460px){    
-    font-size: 1.25em;
+  @media only screen and (min-width: 1px) and (max-width:600px){    
+    font-size: 2em;
   }
 `
 
@@ -64,6 +65,10 @@ const Content = styled.p`
   line-height: 1.5em;
   color: ${props=>props.color};
   margin-bottom: 30px;
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px){    
+    font-size: 0.875em;
+  }
 `
 
 const Form = styled.form`
