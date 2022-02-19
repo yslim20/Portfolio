@@ -105,7 +105,7 @@ const WebSec = ({
       <WebCont>
 
         <WebProj 
-          leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
+          // leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
           rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}    
         />
 
@@ -138,7 +138,7 @@ const WebSec = ({
       </WebCont>
       
       <WebProjMob 
-        leftonClick = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
+        // leftonClick = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}      
       />
 
