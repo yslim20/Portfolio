@@ -34,7 +34,7 @@ const LinkCont = styled.div`
   justify-content:center;
 `
 
-const Menu = ({ 
+const MenuRe = ({ 
   onLogoClick = () => {},
   onAboutClick = () =>{},
   onWebClick = () => {},
@@ -52,39 +52,13 @@ const Menu = ({
       <Logo 
         onClick={onLogoClick}
       />
-
-      <LinkCont>
-        <NavText 
-          onClick = {onWebClick}
-          text ="Web"
-        />
-
-        <NavText 
-          onClick = {onDesClick}
-          text ="Design" 
-          borderT=""       
-        />
-
-        {/* <NavText 
-          onClick = {onContClick}
-          text ="Contact" 
-          borderT=""         
-        /> */}
-
-        <NavText 
-          onClick = {onAboutClick}
-          borderT=""         
-        />
-
-      </LinkCont>
-      
       <LinkHor />
     </StyledMenu>
   )
 }
 
-Menu.propTypes = {
+MenuRe.propTypes = {
   open: bool.isRequired,
 }
 
-export default Menu;
+export default MenuRe;

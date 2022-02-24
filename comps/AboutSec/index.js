@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import styles from "@/styles/Home.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Desc from "@/comps/Desc";
 import DivImg from "@/comps/DivImg";
 import Resume from "@/comps/Resume";
@@ -174,14 +177,14 @@ const DesContR = styled.div`
 `;
 
 const DivCont = styled.div`
-  width: 101%;
+  width: 100%;
   height: 100%;
   display: block;
   position: absolute;
   top: -1px;
-  left: -1px;
+  left: 0px;
   z-index: -99;
-  over-flow: hidden;
+  overflow: hidden;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px) {
     background-size: 150%;
@@ -192,17 +195,21 @@ const DivCont = styled.div`
 const AboutSec = ({ topL = 10, topR = 35 }) => {
   const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <ContCont>
       <DivCont>
         <DivImg url="./images/img_Div_Black.svg" position="left top" />
       </DivCont>
-      <SubTitle titColor={medBlue[theme]} lineColor={lylac[theme]}>
+      <SubTitle titColor={lylac[theme]} lineColor={medBlue[theme]}>
         About me
       </SubTitle>
 
       <Cont>
-        <DesContL top={topL}>
+        <DesContL top={topL}  data-aos="fade-down">
           <Prof src="./images/img_profile.png" alt="profile image" />
           <ProfBox/>
         </DesContL>

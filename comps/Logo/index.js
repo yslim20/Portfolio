@@ -7,8 +7,6 @@ const LogoCont = styled.div`
   width: ${props=>props.cwidth}px;
   height: ${props=>props.cheight}px;
   margin-top: ${props=>props.mtop};
-  // margin-bottom: ${props=>props.mbttm};
-  // margin-bottom: 260px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -17,8 +15,7 @@ const LogoCont = styled.div`
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     width: 100px;
     height: 65px;
-    // margin-top: 170px;
-    // margin-bottom: 110px;
+
   }
 `;
 

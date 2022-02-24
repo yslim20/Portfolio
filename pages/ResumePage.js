@@ -7,8 +7,8 @@ import { useTheme } from "@/utils/provider";
 import { themes, lylac, medBlue, lightTxt, ltLylac } from "@/utils/variables";
 
 import Resume from "@/comps/Resume";
-import NaviMobile from "@/comps/NaviMobile";
-import NaviDef from "@/comps/NaviDef";
+import NaviMobRe from "@/comps/NaviMobRe";
+import NaviDefRe from "@/comps/NaviDefRe";
 
 
 const Wrap = styled.div`
@@ -116,51 +116,17 @@ const ResumePage = ({
       {/* Navigations */}
       <SideBar>
         <DefCont>
-          <NaviDef
+          <NaviDefRe
             onLogoClick={() => {
               router.push(routeTo)
-              // sectionOne.current.scrollIntoView({ behavior: "smooth" });
-            }}
-            onAboutClick={() => {
-              router.push(routeTo)
-              // sectionTwo.current.scrollIntoView({ behavior: "smooth" });
-            }}
-            onWebClick={() => {
-              router.push(routeTo)
-              // sectionThree.current.scrollIntoView({ behavior: "smooth" });
-            }}
-            onDesClick={() => {
-              router.push(routeTo)
-              // sectionFour.current.scrollIntoView({ behavior: "smooth" });
-            }}
-            onContClick={() => {
-              router.push(routeTo)
-              // sectionFive.current.scrollIntoView({ behavior: "smooth" });
             }}
           />
         </DefCont>
       </SideBar>
       <MobCont>
-        <NaviMobile
+        <NaviMobRe
           onLogoClick={() => {
             router.push(routeTo)
-            // sectionOne.current.scrollIntoView({ behavior: "smooth" });
-          }}
-          onAboutClick={() => {
-            router.push(routeTo)
-            // sectionTwo.current.scrollIntoView({ behavior: "smooth" });
-          }}
-          onWebClick={() => {
-            router.push(routeTo)
-            // sectionThree.current.scrollIntoView({ behavior: "smooth" });
-          }}
-          onDesClick={() => {
-            router.push(routeTo)
-            // sectionFour.current.scrollIntoView({ behavior: "smooth" });
-          }}
-          onContClick={() => {
-            router.push(routeTo)
-            // sectionFive.current.scrollIntoView({ behavior: "smooth" });
           }}
         />
       </MobCont>

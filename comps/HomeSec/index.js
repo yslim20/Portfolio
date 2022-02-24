@@ -34,7 +34,7 @@ const TxtCont = styled.div`
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     padding: 0 1.5em;
-    justify-content: flex-start;
+    justify-content: center;
     align-items:flex-start;
   }
 `

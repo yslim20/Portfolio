@@ -17,7 +17,7 @@ const Cont = styled.div`
     justify-content:flex-end;
     align-items:center;  
     flex-direction: row;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     box-sizing: border-box;
   }
 `;

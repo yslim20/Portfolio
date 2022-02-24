@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import FocusLock from 'react-focus-lock';
 
 import Burger from '../Burger'
-import Menu from '../Menu';
+import MenuRe from '../MenuRe';
 
 // ============ CSS ============== //
 const Cont = styled.div`      
@@ -23,12 +23,8 @@ const Cont = styled.div`
 
 
 // ============ Layout
-const NaviMobile =({
+const NaviMobRe =({
   onLogoClick = () => {},
-  onAboutClick = () =>{},
-  onWebClick = () => {},
-  onDesClick = () =>{},
-  // onContClick = () => {}, 
 
 }) =>{
 
@@ -60,26 +56,10 @@ const NaviMobile =({
     <Cont>
       <FocusLock disabled = {!open} >
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-        <Menu open={open} setOpen={setOpen} id={menuId} 
+        <MenuRe open={open} setOpen={setOpen} id={menuId} 
           onLogoClick ={() => {
             onLogoClick();
             setOpen(false);
-          }}
-          onWebClick={() =>{
-            onWebClick();
-            setOpen(false);
-          }}
-          onDesClick={() => {
-            onDesClick();
-            setOpen(false);
-          }}
-          // onContClick={() =>{
-          //   onContClick();
-          //   setOpen(false);
-          // }}        
-          onAboutClick={() =>{
-            onAboutClick();
-            setOpen(false)
           }}
         />      
       </FocusLock>   
@@ -87,4 +67,4 @@ const NaviMobile =({
   )
 }
 
-export default NaviMobile;
+export default NaviMobRe;

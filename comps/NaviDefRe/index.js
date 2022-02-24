@@ -35,13 +35,10 @@ const LinkCont = styled.div`
 `
 
 // ============ Layout
-const NaviDef =({
+const NaviDefRe =({
   
   onLogoClick = () => {},
-  onAboutClick = () =>{},
-  onWebClick = () => {},
-  onDesClick = () =>{},
-  // onContClick = () => {},
+
 
 })=>{
   
@@ -50,34 +47,10 @@ const NaviDef =({
       <Logo 
         onClick={onLogoClick}
       />
-
-      <LinkCont>
-        <NavText 
-          onClick = {onWebClick}
-          text ="Web"
-        />
-
-        <NavText 
-          onClick = {onDesClick}
-          text ="Design" 
-          borderT=""       
-        />
-
-        {/* <NavText 
-          onClick = {onContClick}
-          text ="Contact" 
-          borderT=""         
-        /> */}
-
-        <NavText 
-          onClick = {onAboutClick}
-          borderT=""
-        />
-      </LinkCont>
       
       <LinkVer />
     </Container>
   );
 }
 
-export default NaviDef;
+export default NaviDefRe;

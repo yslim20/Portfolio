@@ -129,24 +129,24 @@ const Home = ({
               sectionOne.current.scrollIntoView(
                 {behavior: "smooth"}
               )
-            }}
-            onAboutClick = {() => {
+            }}            
+            onWebClick = {() => {
               sectionTwo.current.scrollIntoView(
                 {behavior: "smooth"}
               )
             }}
-            onWebClick = {() => {
+            onDesClick = {() => {
               sectionThree.current.scrollIntoView(
                 {behavior: "smooth"}
               )
             }}
-            onDesClick = {() => {
+            // onContClick = {() => {
+            //   sectionFive.current.scrollIntoView(
+            //     {behavior: "smooth"}
+            //   )
+            // }}
+            onAboutClick = {() => {
               sectionFour.current.scrollIntoView(
-                {behavior: "smooth"}
-              )
-            }}
-            onContClick = {() => {
-              sectionFive.current.scrollIntoView(
                 {behavior: "smooth"}
               )
             }}
@@ -160,26 +160,27 @@ const Home = ({
               {behavior: "smooth"}
             )
           }}
-          onAboutClick = {() => {
+          
+          onWebClick = {() => {
             sectionTwo.current.scrollIntoView(
               {behavior: "smooth"}
             )
           }}
-          onWebClick = {() => {
+          onDesClick = {() => {
             sectionThree.current.scrollIntoView(
               {behavior: "smooth"}
             )
           }}
-          onDesClick = {() => {
+          // onContClick = {() => {
+          //   sectionFive.current.scrollIntoView(
+          //     {behavior: "smooth"}
+          //   )
+          // }}  
+          onAboutClick = {() => {
             sectionFour.current.scrollIntoView(
               {behavior: "smooth"}
             )
-          }}
-          onContClick = {() => {
-            sectionFive.current.scrollIntoView(
-              {behavior: "smooth"}
-            )
-          }}        
+          }}      
         />        
       </MobCont> 
 {/* Navigation ends */}
@@ -197,19 +198,19 @@ const Home = ({
             />
         </SecCont>
 
-        <SecCont ref = {sectionThree} height = {heightAll}>
+        <SecCont ref = {sectionTwo} height = {heightAll}>
           <WebSec />
         </SecCont>
 
-        <SecCont ref = {sectionFour} height = {heightAll}>
+        <SecCont ref = {sectionThree} height = {heightAll}>
           <DesignSec />
         </SecCont>
-
+{/* 
         <SecCont ref = {sectionFive} height = {height}>
           <ContactSec />
-        </SecCont>     
+        </SecCont>      */}
            
-        <SecCont ref = {sectionTwo} height = {heightAll}>
+        <SecCont ref = {sectionFour} height = {heightAll}>
           <AboutSec />
         </SecCont>
       </Cont>
