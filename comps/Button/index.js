@@ -74,11 +74,15 @@ const ButtonInput = styled.button`
     }
 
     @media only screen and (min-width: 1001px) and (max-width: 1100px){    
-      min-width: 0;
+      min-width: 170px;
     } 
 
-    @media only screen and (min-width: 1px) and (max-width: 1000px){    
-      min-width: 0;
+    @media only screen and (min-width: 481px) and (max-width: 1000px){    
+      min-width: 150px; 
+    } 
+
+    @media only screen and (min-width: 1px) and (max-width: 480px){    
+      min-width: 150px; 
     } 
 `;
 
@@ -88,7 +92,7 @@ const ButtonText = styled.p`
     font-weight: ${props=>props.fontWeight};
     margin: 0;
 
-    @media only screen and (min-width: 1px) and (max-width: 1000px){    
+    @media only screen and (min-width: 1px) and (max-width: 480px){    
       font-size: ${props=>props.fontSize}em;
     } 
 `;
@@ -102,11 +106,11 @@ const Button = ({
     text="Contact me",
     conwidth = "100%",
     margintop = 40,
-    mmtop = '',
+    mmtop = '20',
     width = "100%",
     minWidth = 182,
     marginright = "",
-    mmright = '',
+    mmright = '0',
     justify="center",
     align = 'flex-start',
     bgcolor = "transparent",
@@ -115,7 +119,7 @@ const Button = ({
     borderStyle = "solid",
     bshadow = "",
     bgafter = "rgba(85, 80, 242, 0.5)",
-    fontSize = '',
+    fontSize = '0.875',
     onClick = () =>{},
 
 }) => {

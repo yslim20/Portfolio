@@ -98,16 +98,8 @@ const globalStyles = createGlobalStyle`
     object {
       width: 100%;
       height: 100vh;
+      background-color: #fff;
     }
-
-    button {
-      display: block;
-      padding: 5px 40px;
-      background: lightblue;
-      color: white;
-      margin: 10px auto;
-    }
-
 `;
 
 export default globalStyles;

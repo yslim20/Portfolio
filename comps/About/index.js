@@ -17,8 +17,13 @@ const DescCont = styled.div`
   justify-content: center;
   position: relative;
 
-  @media only screen and (min-width: 1px) and (max-width: 1000px) {
+  @media only screen and (min-width: 601px) and (max-width: 1000px) {
     width: 72.46%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0 1.5em;
   }
 `;
 
@@ -60,88 +65,21 @@ const DescText = styled.p`
 `;
 
 const BttnCont = styled.div`
-  width: 100%;
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
+  
   @media only screen and (min-width: 1px) and (max-width: 600px) {
     flex-direction: column;
-  }
-`;
-
-const EmailBttn = styled.a`
-  width: ${(props) => props.width};
-  min-width: ${(props) => props.minWidth}px;
-  height: ${(props) => props.height}px;
-  display: block;
-  display: flex;
-  background-color: ${(props) => props.bg};
-  border-style: ${(props) => props.borderStyle};
-  border-width: 2px;
-  border-color: ${(props) => props.borderColor};
-  border-radius: ${(props) => props.radius}px;
-  align-items: center;
-  justify-content: center;
-  box-shadow: ${(props) => props.bshadow};
-  cursor: pointer;
-  overflow: hidden;
-  margin-top: 20px;
-
-  position: relative;
-  z-index: 1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  box-sizing: border-box;
-
-  :after {
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    background: ${(props) => props.bgafter};
-    transform: skewX(15deg);
-    z-index: -1;
-  }
-
-  :hover {
-    color: #fff;
-  }
-
-  :hover:after {
-    left: -10%;
-    width: 120%;
-  }
-
-  @media only screen and (min-width: 1001px) and (max-width: 1100px) {
     width: 100%;
-    min-width: 147px;
+    justify-content: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
   }
+`
 
-  @media only screen and (min-width: 601px) and (max-width: 1000px) {
-    width: 100%;
-    min-width: 147px;
-  }
-
-  @media only screen and (max-width: 601px)  {
-    margin-top: 10px;
-  }
-
-  @media only screen and (max-width: 330px)  {
-    min-width: 0;
-  }
-`;
 
 // ============ Function ============== //
 
@@ -165,17 +103,6 @@ const About = ({
   justify = "flex-start",
   routeTo = "/ResumePage",
 
-  width = "100%",
-  minWidth = 182,
-  radius = 10,
-  height = 48,
-  borderStyle = "solid",
-  bshadow = "",
-  bgafter = "rgba(85, 80, 242, 0.5)",
-
-  type = "submit",
-  bgcolor = "#fff",
-
 }) => {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
@@ -198,31 +125,25 @@ const About = ({
 
       <BttnCont data-aos="fade-up">
         <Button
-          width="100%"
+          width='100%'
           text="Resume"
           marginright="20"
           mmright='0'
           margintop = '20'
           mmtop = '20'
-          bgcolor="#fff"
           onClick={() => router.push(routeTo)}
         />
 
-        <EmailBttn
-          type={type}
-          bg={bgcolor}
-          radius={radius}
-          width={width}
-          height={height}
-          borderStyle={borderStyle}
-          borderColor={medBlue[theme]}
-          bshadow={bshadow}
-          minWidth={minWidth}
-          bgafter={bgafter}
-          href="mailto:yslim.bcit@gmail.com"
-        >
-          Email me
-        </EmailBttn>
+        <Button
+          width='100%'
+          text="Email me"
+          marginright="0"
+          mmright='0'
+          margintop = '20'
+          mmtop = '0'
+          onClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
+        >          
+        </Button>
       </BttnCont>
     </DescCont>
   );
