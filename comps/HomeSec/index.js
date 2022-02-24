@@ -15,7 +15,7 @@ const Cont = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 9.02%;
-  background: #000;
+  background: #101010;
   position: relative;
   overflow: hidden;
   z-index: 1;  
@@ -34,7 +34,7 @@ const TxtCont = styled.div`
   
   @media only screen and (min-width: 1px) and (max-width: 1000px){
     padding: 0 1.5em;
-    justify-content:center;
+    justify-content: flex-start;
     align-items:flex-start;
   }
 `
@@ -229,7 +229,9 @@ const HomeSec = ({
         <ExTxt>
           Passionate about front-end development and UX/UI design. I am excited to bring my creativity  and marketing expertise to digital design and development through my previous professional experience in design and manufacturing.
         </ExTxt>
+        
         <Button
+          conwidth = ''
           onClick={onButtonClick}   
           width='242px'     
         />

@@ -16,7 +16,7 @@ const Nav = styled.div`
   justify-content:center;
   cursor: pointer; 
   color: #999;
-  background-color: #000;
+  background-color: #101010;
 
   :hover h6{
     color: ${props => props.hovColor};     

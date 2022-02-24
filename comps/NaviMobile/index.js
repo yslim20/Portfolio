@@ -65,10 +65,6 @@ const NaviMobile =({
             onLogoClick();
             setOpen(false);
           }}
-          onAboutClick={() =>{
-            onAboutClick();
-            setOpen(false)
-          }}
           onWebClick={() =>{
             onWebClick();
             setOpen(false);
@@ -81,6 +77,10 @@ const NaviMobile =({
             onContClick();
             setOpen(false);
           }}        
+          onAboutClick={() =>{
+            onAboutClick();
+            setOpen(false)
+          }}
         />      
       </FocusLock>   
     </Cont>

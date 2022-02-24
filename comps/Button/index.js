@@ -8,10 +8,17 @@ import { themes, ltLylac, medBlue } from '@/utils/variables';
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
-    width: 100%;
+    width: ${props=>props.conwidth};
     display:flex;
+    flex-direction: column;
     justify-content:${props=>props.justify}; 
+    align-items: ${props=>props.align}; 
     z-index: 0;
+
+    @media only screen and (min-width: 1px) and (max-width: 600px) {
+      margin-right: ${props=>props.mmright}px;
+      margin-top: ${props=>props.mmtop}px;
+    }
 `;
 
 const ButtonInput = styled.button`
@@ -90,10 +97,14 @@ const Button = ({
 // ============ Props
     type = "",
     text="Contact me",
+    conwidth = "100%",
     margintop = 40,
+    mmtop = '',
     width = "100%",
     minWidth = 182,
-    marginright="",
+    marginright = "",
+    mmright = '',
+    align = 'flex-start',
     bgcolor = "transparent",
     radius = 10,
     height = 48,
@@ -111,8 +122,12 @@ const Button = ({
   return (
     <ButtonCont 
       mtop={margintop}
+      mmtop={mmtop}
       mright={marginright}
+      mmright={mmright}
       justify={justify}
+      align={align}
+      conwidth={conwidth}
 
 // ============ onClick function
       onClick={onClick}

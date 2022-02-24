@@ -94,6 +94,20 @@ const globalStyles = createGlobalStyle`
       font-size: 1em;
     }
 
+    iframe,
+    object {
+      width: 100%;
+      height: 100vh;
+    }
+
+    button {
+      display: block;
+      padding: 5px 40px;
+      background: lightblue;
+      color: white;
+      margin: 10px auto;
+    }
+
 `;
 
 export default globalStyles;

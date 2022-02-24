@@ -53,6 +53,18 @@ const ColorTxt = styled.span`
   font-weight: 500;
 `
 
+const LangText = styled.p`
+  width:100%;
+  margin-bottom: ${props => props.TxtMarginB}px;
+  color: ${props => props.lancolor};
+  font-style: italic;
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px){    
+    // font-size: 0.875em;
+    diplay: none; 
+  } 
+`
+
 const ShapeCont = styled.div`
   width: ${props => props.width}px;
   height: ${props => props.height}px;
@@ -101,8 +113,9 @@ const WebProjMob = ({
   title = "MyLandlord",
   span = "MyLandlord",
   text = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.",
+  language = 'Next.js, React, React UI',
   TitMarginB = 20,
-  TxtMarginB = "",
+  TxtMarginB = 20,
 
   src = "./images/projects/img_MyLandlord.png",
 
@@ -156,6 +169,10 @@ const WebProjMob = ({
           >{span}</ColorTxt>
           {text}
         </WebProjText>
+
+        <LangText lancolor = {medBlue[theme]}>
+            {language}
+        </LangText>
 
         <BttnCont>
           <Button 

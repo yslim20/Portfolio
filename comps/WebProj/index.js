@@ -68,32 +68,18 @@ const ColorTxt = styled.span`
   font-weight: 500;
 `
 
-const ShapeCont = styled.div`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
-  background-image: url(${props => props.url});
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  position: relative;
-  top: ${props => props.top}px;
-  left: ${props => props.left}px;
-  z-index: -9;
+const LangText = styled.p`
+  width:100%;
+  margin-bottom: ${props => props.TxtMarginB}px;
+  color: ${props => props.lancolor};
+  font-style: italic;
 
-  @media only screen and (min-width: 1000px) and (max-width: 1024px){   
-    transform: scale(0.8);
-    top: ${props => props.topM}px;
-    left: ${props => props.leftM};
-  }
-
-  @media only screen and (min-width: 1px) and (max-width: 800px){    
-    top: ${props => props.topM}px;
-    left: ${props => props.leftM};
-    transform: scale(0.7);
-    transition: all 1s;
+  @media only screen and (min-width: 1px) and (max-width: 1000px){    
+    // font-size: 0.875em;
     diplay: none; 
   } 
 `
+
 const ProImg = styled.img`
   width: 45%; height: auto;
   display: block;
@@ -133,28 +119,19 @@ const WebProj = ({
   leftonClickB = () => {},
   rightonClickB = () => {},
 
-  url = "",
-  urlB = "./images/img_Circles.svg",
-  top = "",
-  left = -20, 
-  topM = 50, 
-  leftM = "30%",
-
-  topB = 15,
-  leftB = -260, 
-  topMB = 20, 
-  leftMB = "-25%",
-
   titleOne = "MyLandlord",
   spanOne = "MyLandlord",
   textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.",
+  languageone = 'Next.js, React, React UI',
+
   TitMarginB = 20,
-  TxtMarginB = "",
+  TxtMarginB = 20,
 
 
   titleTwo = "reVamp",
   spanTwo = "reVamp",
   textTwo = "is an application that shows how old clothes can be repurposed through its tutorials. It offers many different methods for upcycling clothing items. Additionally, the app aims to educate users about the relationship between sustainability and fast fashion.",
+  languagetwo = 'Next.js, React',
 
   srcT = "./images/projects/img_MyLandlord.png",
   srcB = "./images/projects/img_reVamp.png",
@@ -196,15 +173,6 @@ const WebProj = ({
     >
     {flip=== false ? <>
         <ContCont marginR = {marginRT} marginL = {marginLT}>
-          <ShapeCont
-            url = {url} 
-            top = {top}
-            left = {left}  
-            topM = {topM}   
-            leftM = {leftM}
-            width = {shapeWidthT}
-            height = {shapeHeightT}
-          />
           <WebProjTit TitMarginB = {TitMarginB} >            
             {titleOne}
           </WebProjTit>
@@ -215,6 +183,10 @@ const WebProj = ({
             >{spanOne}</ColorTxt>
             {textOne}
           </WebProjText>
+
+          <LangText lancolor = {medBlue[theme]}>
+            {languageone}
+          </LangText>
 
           <BttnCont>
             <Button 
@@ -249,15 +221,6 @@ const WebProj = ({
         />
 
         <ContCont  marginR = {marginRB} marginL = {marginLB}>
-          <ShapeCont
-            url = {urlB} 
-            top = {topB}
-            left = {leftB}  
-            topM = {topMB}   
-            leftM = {leftMB}
-            width = {shapeWidthB}
-            height = {shapeHeightB}
-          />
           <WebProjTit TitMarginB = {TitMarginB} >
             {titleTwo}
           </WebProjTit>
@@ -268,6 +231,10 @@ const WebProj = ({
             >{spanTwo}</ColorTxt>
             {textTwo}
           </WebProjText>
+
+          <LangText lancolor = {medBlue[theme]}>
+            {languagetwo}
+          </LangText>
 
           <BttnCont>
             <Button 

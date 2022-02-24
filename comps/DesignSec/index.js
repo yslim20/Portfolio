@@ -18,11 +18,10 @@ const Cont = styled.div`
   flex-direction: column;
   // padding: 5% 9.02%;
   position: relative;
-  background: #000;
+  background: #101010;
   z-index: 1;  
   box-sizing: border-box;  
   padding-bottom: 100px;
-  background-color: #000;
   overflow: hidden;
   position: relative;
 `

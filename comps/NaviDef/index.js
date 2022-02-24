@@ -11,7 +11,7 @@ const Container = styled.div`
   display: block;
   height: calc(100vh);
   width: 110px;
-  background-color: #181818;
+  background-color: #202020;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -53,13 +53,8 @@ const NaviDef =({
 
       <LinkCont>
         <NavText 
-          onClick = {onAboutClick}
-        />
-
-        <NavText 
           onClick = {onWebClick}
           text ="Web"
-          borderT=""
         />
 
         <NavText 
@@ -72,6 +67,11 @@ const NaviDef =({
           onClick = {onContClick}
           text ="Contact" 
           borderT=""         
+        />
+
+        <NavText 
+          onClick = {onAboutClick}
+          borderT=""
         />
       </LinkCont>
       

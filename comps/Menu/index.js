@@ -11,7 +11,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content:space-between;
   align-items: center;
-  background-color: #181818;
+  background-color: #202020;
   padding-top: calc(16.60vh);
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
@@ -58,17 +58,9 @@ const Menu = ({
 
       <LinkCont>
         <NavText 
-          onClick = {()=>{
-            onAboutClick()
-            // setNav('about')
-          }}
-          // color={nav ==='about' ? 'blue':'white'}
-        />
-
-        <NavText 
           onClick = {onWebClick}
           text ="Web"
-          borderT=""
+          // borderT=""
         />
 
         <NavText 
@@ -82,6 +74,12 @@ const Menu = ({
           text ="Contact" 
           borderT=""         
         />
+
+        <NavText 
+          onClick = {onAboutClick}
+          borderT=""         
+        />
+
       </LinkCont>
       
       <LinkHor />

@@ -197,10 +197,6 @@ const Home = ({
             />
         </SecCont>
 
-        <SecCont ref = {sectionTwo} height = {heightAll}>
-          <AboutSec />
-        </SecCont>
-
         <SecCont ref = {sectionThree} height = {heightAll}>
           <WebSec />
         </SecCont>
@@ -211,7 +207,11 @@ const Home = ({
 
         <SecCont ref = {sectionFive} height = {height}>
           <ContactSec />
-        </SecCont>        
+        </SecCont>     
+           
+        <SecCont ref = {sectionTwo} height = {heightAll}>
+          <AboutSec />
+        </SecCont>
       </Cont>
 
     </Wrap>

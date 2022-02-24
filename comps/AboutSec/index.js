@@ -1,24 +1,40 @@
-import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
-import styles from '@/styles/Home.module.css';
-import Desc from '@/comps/Desc';
-import DivImg from '@/comps/DivImg';
-import Scroll from '../Scroll';
+import React, { useState, useRef, useEffect } from "react";
+import styled from "styled-components";
+import styles from "@/styles/Home.module.css";
+import Desc from "@/comps/Desc";
+import DivImg from "@/comps/DivImg";
+import Resume from "@/comps/Resume";
+import Scroll from "../Scroll";
+import About from "@/comps/About";
 
 import { useTheme } from "@/utils/provider";
-import { themes, ltLylac } from '@/utils/variables';
-
+import { themes, lylac, medBlue, lightTxt, ltLylac } from "@/utils/variables";
 
 // ============ CSS ============== //
+
+const ContCont = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 9.02%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 1000px) {
+    height: 100%;
+    padding: 9.02%;
+    flex-wrap: wrap;
+  }
+`;
+
 const Cont = styled.div`  
-  width: 100%; height: 100vh;
+  width: 100%; height: 100%;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
-  padding: 0 9.02%;
-  position: relative;
-  // overflow: hidden;
-  z-index: -1;  
+  align-items: center;
   position: relative;
   box-sizing: border-box;
 
@@ -27,133 +43,177 @@ const Cont = styled.div`
     align-items: center;  
     justify-content center; 
     height: 100%; 
-    margin-bottom: 100px;
   }
-`
+`;
+
+const SubTitle = styled.h5`
+  width: 100%;
+  margin-bottom: 3rem;
+  color: ${(props) => props.titColor};
+  transition: all 0.3s;
+  position: relative;
+
+  :before {
+    content: "";
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    height: 1.5px;
+    background: ${(props) => props.lineColor};
+    transform-origin: left center;
+
+    @media only screen and (min-width: 460px) {
+      width: 65px;
+      top: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 461px) and (max-width: 1000px) {
+    margin-bottom: 4rem;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 460px) {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 3em;
+  }
+`;
 
 const ImgCont = styled.div`
-  width: 100%; height: 100%; 
+  width: 100%;
+  height: 100%;
   background-image: url("./images/img_Background.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   opacity: 0.2;
   position: absolute;
-  bottom: 0; left: 0;
-  z-index: -999;  
-  box-sizing: border-box;  
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  box-sizing: border-box;
 
-  @media only screen and (min-width: 1px) and (max-width: 1000px){
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
     background-size: 100%;
   }
-`
+`;
 
 const DesContL = styled.div`
-  width: 45%; 
+  width: 45%;
+  height: 85%;
   display: flex;
-  flex-direction: column;  
-  align-items: flex-start;
-  // margin-top: ${props => props.marginT}%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  position: relative;
-  top: ${props => props.top}%;
   transition: all 0.3s;
-  
-  @media only screen and (min-width: 1px) and (max-width: 1000px){
-    width: 100%;
+  position: relative;
+
+  :hover img {
+    opacity: 1;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
+    width: 100%; height: 80%;
     align-items: center;
     justify-content: center;
-    top: 5%; left: -10%;
-    margin-bottom: 48px;    
+    margin-bottom: 2rem;
+  }
+`;
+
+const Prof = styled.img`
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+  transition: all 0.3s;
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
+    width: 50%;
+    height: auto;
+  }
+`;
+
+const ProfBox = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: #181818;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
+    width: 50%;
+    margin-left: 25%;
   }
 `
 
 const DesContR = styled.div`
-  width: 45%; 
+  width: 45%;
   display: flex;
-  flex-direction: column;  
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  position: relative;
-  top: ${props => props.top}%;
   transition: all 0.3s;
-  
-  @media only screen and (min-width: 1px) and (max-width: 1000px){
+
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
     width: 100%;
     align-items: center;
     justify-content: center;
     position: static;
     left: 10%;
   }
-`
+`;
 
 const DivCont = styled.div`
-  width: 100%;
+  width: 101%;
   height: 100%;
   display: block;
   position: absolute;
   top: -1px;
-  left: 0px;
-  z-index: -10;
-`
+  left: -1px;
+  z-index: -99;
+  over-flow: hidden;
 
-const CirCont = styled.div`
-  width: 4.0625em; height: 4.0625em;
-  background-image: url("./images/img_Circles.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  position: absolute;
-  top: -6em;
-  left: 0;
-  z-index: -1;
-
-  @media only screen and (min-width: 461px) and (max-width: 1000px){    
-    width: 3em; height: 3em;    
+  @media only screen and (min-width: 1px) and (max-width: 1000px) {
+    background-size: 150%;
     transition: all 0.3s;
   }
+`;
 
-  @media only screen and (min-width: 1px) and (max-width:460px){    
-    display: none;
-  }
-`
-
-
-const AboutSec = ({
-  topL = 15,
-  topR = 50,
-
-}) => {
+const AboutSec = ({ topL = 10, topR = 35 }) => {
   const { theme, setTheme } = useTheme();
-  
+
   return (
-    <Cont>
+    <ContCont>
       <DivCont>
-        <DivImg url ="" />
+        <DivImg url="./images/img_Div_Black.svg" position="left top" />
       </DivCont>
+      <SubTitle titColor={medBlue[theme]} lineColor={lylac[theme]}>
+        About me
+      </SubTitle>
 
-      <Scroll />
+      <Cont>
+        <DesContL top={topL}>
+          <Prof src="./images/img_profile.png" alt="profile image" />
+          <ProfBox/>
+        </DesContL>
 
-      <DesContL
-        top ={topL}
-      >
-        <Desc 
-          bkColor={ltLylac[theme]}
-          TxtMarginB = "30"  
-                  
-        />
-      </DesContL>
-
-      <DesContR 
-        top = {topR}
-      >
-        <CirCont />
-        <Desc flip = {true} />
-      </DesContR>      
-      <ImgCont/>
-    </Cont>
-    );
-}
+        <DesContR top={topR}>
+          <About />
+        </DesContR>
+        <ImgCont />
+      </Cont>
+    </ContCont>
+  );
+};
 
 export default AboutSec;
