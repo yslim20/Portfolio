@@ -100,16 +100,17 @@ const ProImg = styled.img`
 `;
 
 const BttnCont = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (min-width: 1px) and (max-width: 600px) {
-    flex-direction: column;
-    justify-content: flex-start;
     margin-top: 20px;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `;
 

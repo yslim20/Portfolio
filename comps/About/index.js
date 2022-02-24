@@ -140,7 +140,7 @@ const About = ({
           marginright="0"
           mmright='0'
           margintop = '20'
-          mmtop = '0'
+          mmtop = '20'
           onClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
         >          
         </Button>
