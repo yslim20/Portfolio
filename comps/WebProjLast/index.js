@@ -96,9 +96,9 @@ const ProImg = styled.img`
 const BttnCont = styled.div`
   width: 100%;  
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;  
+  flex-direction: column;
+  align-items: flex-start;  
+  justify-content: center;
 `
 
 
@@ -172,8 +172,8 @@ const WebProjLast = ({
           <Button 
             onClick={onClick}
             text = {bttnTxt}
-            width='50%'
-            marginright = "20"
+            width='100%'
+            conwidth = '50%'
           />
         </BttnCont>
       </ContCont>        

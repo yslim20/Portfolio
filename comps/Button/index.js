@@ -6,9 +6,9 @@ import { themes, ltLylac, medBlue } from '@/utils/variables';
 
 // ============ CSS ============== //
 const ButtonCont = styled.div`
+    width: ${props=>props.conwidth};
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
-    width: ${props=>props.conwidth};
     display:flex;
     flex-direction: column;
     justify-content:${props=>props.justify}; 
@@ -83,11 +83,14 @@ const ButtonInput = styled.button`
 `;
 
 const ButtonText = styled.p`
-    color:${props=>props.color} ;
-    font-size: ${props=>props.fontSize};
+    color:${props=>props.color} ;    
     text-align:center;
     font-weight: ${props=>props.fontWeight};
     margin: 0;
+
+    @media only screen and (min-width: 1px) and (max-width: 1000px){    
+      font-size: ${props=>props.fontSize}em;
+    } 
 `;
 
 // ============ Function ============== //
@@ -104,14 +107,15 @@ const Button = ({
     minWidth = 182,
     marginright = "",
     mmright = '',
+    justify="center",
     align = 'flex-start',
     bgcolor = "transparent",
     radius = 10,
     height = 48,
     borderStyle = "solid",
     bshadow = "",
-    justify="flex-start",
     bgafter = "rgba(85, 80, 242, 0.5)",
+    fontSize = '',
     onClick = () =>{},
 
 }) => {
@@ -121,13 +125,13 @@ const Button = ({
 // ============ Layout
   return (
     <ButtonCont 
+      conwidth={conwidth}
       mtop={margintop}
       mmtop={mmtop}
       mright={marginright}
       mmright={mmright}
       justify={justify}
       align={align}
-      conwidth={conwidth}
 
 // ============ onClick function
       onClick={onClick}
@@ -146,6 +150,7 @@ const Button = ({
       >
         <ButtonText
           color={medBlue[theme]}
+          fontSize={fontSize}
         >
           {text}
         </ButtonText>

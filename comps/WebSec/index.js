@@ -180,13 +180,13 @@ const WebSec = ({
         text = "is a dating application designed to help users meet that special someone while having fun. The point system in this app helps users break the ice and get to know each other better."
         language = 'Figma, HTML, CSS, jQuery'
         leftonClick = {() => window.open('https://www.figma.com/proto/RRoFoBBwCjVylyz1niMRwD/idsp-but-its-figma?node-id=495%3A10404&scaling=scale-down&page-id=399%3A7384&starting-point-node-id=495%3A10404', '_blank')}
-        rightonClick = {() => window.open('http://younsoolim.com/irl_Dater/home.html', '_blank')}
+        rightonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         bttnTxtL = "Figma Protptype"
         bttnTxtR = "Marketing Page"
       />      
 
       <WebProjLast 
-        onClick = {() => window.open('https://younsoolim.com/About_Kingdom/', '_blank')}
+        onClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}
       />
 
       
