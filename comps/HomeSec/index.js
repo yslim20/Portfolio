@@ -231,7 +231,7 @@ const HomeSec = ({
         </ExTxt>
         
         <Button
-          conwidth = ''
+          conwidth = '0'
           onClick={onButtonClick}   
           width='242px'     
         />

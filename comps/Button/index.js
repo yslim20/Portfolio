@@ -82,7 +82,7 @@ const ButtonInput = styled.button`
     } 
 
     @media only screen and (min-width: 1px) and (max-width: 480px){    
-      min-width: 150px; 
+      min-width: 110px; width:100%;
     } 
 `;
 
@@ -110,7 +110,7 @@ const Button = ({
     width = "100%",
     minWidth = 182,
     marginright = "",
-    mmright = '0',
+    mmright = 10,
     justify="center",
     align = 'flex-start',
     bgcolor = "transparent",

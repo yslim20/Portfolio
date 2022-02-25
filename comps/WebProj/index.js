@@ -154,11 +154,6 @@ const WebProj = ({
   imgMarginLB = "0",
   imgMarginRB = "5%",
 
-  shapeWidthT = "",
-  shapeHeightT = "",
-  shapeWidthB = 41,
-  shapeHeightB = 41,
-
   bttnTxtL = "Homepage",
   bttnTxtR = "GitHub",
 }) => {

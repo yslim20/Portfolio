@@ -72,11 +72,9 @@ const BttnCont = styled.div`
   justify-content: space-between;
   
   @media only screen and (min-width: 1px) and (max-width: 600px) {
-    flex-direction: column;
     width: 100%;
     justify-content: flex-start;
     margin-top: 20px;
-    flex-wrap: wrap;
   }
 `
 
@@ -123,14 +121,12 @@ const About = ({
         <DescText TxtMarginB={TxtMarginBB}>{textTwo}</DescText>
       </div>
 
-      <BttnCont data-aos="fade-up">
+      <BttnCont data-aos="fade-up" /*data-aos-once="true"*/>
         <Button
           width='100%'
           text="Resume"
           marginright="20"
-          mmright='0'
           margintop = '20'
-          mmtop = '20'
           onClick={() => router.push(routeTo)}
         />
 
@@ -140,7 +136,6 @@ const About = ({
           marginright="0"
           mmright='0'
           margintop = '20'
-          mmtop = '20'
           onClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
         >          
         </Button>
