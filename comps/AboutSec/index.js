@@ -173,6 +173,7 @@ const DesContR = styled.div`
     justify-content: center;
     position: static;
     left: 10%;
+    padding-bottom: 30px;
   }
 `;
 

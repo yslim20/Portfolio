@@ -74,7 +74,6 @@ const BttnCont = styled.div`
   @media only screen and (min-width: 1px) and (max-width: 600px) {
     width: 100%;
     justify-content: flex-start;
-    margin-top: 20px;
   }
 `
 
