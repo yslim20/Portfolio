@@ -51,13 +51,13 @@ const ColorTxt = styled.span`
   color: ${props => props.spanColor};
   display: inline; margin-right: 5px;
   font-weight: 500;
+  font-style: italic;
 `
 
 const LangText = styled.p`
   width:100%;
   margin-bottom: ${props => props.TxtMarginB}px;
   color: ${props => props.lancolor};
-  font-style: italic;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
     // font-size: 0.875em;
@@ -112,8 +112,12 @@ const WebProjMob = ({
 
   title = "MyLandlord",
   span = "MyLandlord",
-  text = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.",
-  language = 'Next.js, React, React UI',
+  text = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
+  languageT = "Role: Front-End Developer, UX/UI Designer",
+  lanSpanT = '',
+  languageB = "Tools: ",
+  lanSpanB = 'Next.js, React, React UI',
+
   TitMarginB = 20,
   TxtMarginB = 20,
 
@@ -163,16 +167,20 @@ const WebProjMob = ({
           {title}
         </WebProjTit>
 
-        <WebProjText TxtMarginB = {TxtMarginB} >
-          <ColorTxt
-            spanColor = {medBlue[theme]}
-          >{span}</ColorTxt>
-          {text}
-        </WebProjText>
+        <WebProjText TxtMarginB={TxtMarginB}>
+            <ColorTxt spanColor={medBlue[theme]}>{span}</ColorTxt>
+            {text}
+          </WebProjText>
 
-        <LangText lancolor = {medBlue[theme]}>
-            {language}
-        </LangText>
+          <LangText TxtMarginB={TxtMarginB}>
+            {languageT}
+            <ColorTxt spanColor={medBlue[theme]}>{lanSpanT}</ColorTxt>              
+          </LangText>
+
+          <LangText>
+            {languageB}
+            <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>              
+          </LangText>
 
         <BttnCont>
           <Button 

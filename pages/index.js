@@ -140,11 +140,6 @@ const Home = ({
                 {behavior: "smooth"}
               )
             }}
-            // onContClick = {() => {
-            //   sectionFive.current.scrollIntoView(
-            //     {behavior: "smooth"}
-            //   )
-            // }}
             onAboutClick = {() => {
               sectionFour.current.scrollIntoView(
                 {behavior: "smooth"}
@@ -171,11 +166,6 @@ const Home = ({
               {behavior: "smooth"}
             )
           }}
-          // onContClick = {() => {
-          //   sectionFive.current.scrollIntoView(
-          //     {behavior: "smooth"}
-          //   )
-          // }}  
           onAboutClick = {() => {
             sectionFour.current.scrollIntoView(
               {behavior: "smooth"}
@@ -190,11 +180,7 @@ const Home = ({
 
         <SecCont ref = {sectionOne} height = {height}>
             <HomeSec 
-              onButtonClick={() => {
-                sectionFour.current.scrollIntoView(
-                  {behavior: "smooth"}
-                )
-              }}
+              onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
             />
         </SecCont>
 
@@ -205,10 +191,6 @@ const Home = ({
         <SecCont ref = {sectionThree} height = {heightAll}>
           <DesignSec />
         </SecCont>
-{/* 
-        <SecCont ref = {sectionFive} height = {height}>
-          <ContactSec />
-        </SecCont>      */}
            
         <SecCont ref = {sectionFour} height = {heightAll}>
           <AboutSec />

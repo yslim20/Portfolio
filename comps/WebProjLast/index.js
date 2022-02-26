@@ -65,13 +65,13 @@ const ColorTxt = styled.span`
   color: ${props => props.spanColor};
   display: inline; margin-right: 5px;
   font-weight: 500;
+  font-style: italic;
 `
 
 const LangText = styled.p`
   width:100%;
   margin-bottom: ${props => props.TxtMarginB}px;
-  color: ${props => props.lancolor};
-  font-style: italic;
+  color: ${props => props.lancolor};  
 
   @media only screen and (min-width: 1px) and (max-width: 1000px){    
     // font-size: 0.875em;
@@ -118,8 +118,11 @@ const WebProjLast = ({
 
   title = "About Kingdom",
   span ='About Kingdom',
-  text ='is a blog site with information about the Korean drama series, The Kingdom, which aired on Netflix in 2019. The website features character profiles, synopses, and bios for the writer and producer. Additionally, it contains information about the original comic book, costumes, filming locations, and news about the upcoming season.',
-  language = 'WordPress',
+  text ='is a blog site with information about the Korean drama series, The Kingdom, which aired on Netflix in 2019.',
+  languageT = "Role: Web Developer",
+  lanSpanT = '',
+  languageB = "Tool: ",
+  lanSpanB = 'WordPress',
 
   src = "./images/projects/img_Kingdom.png",
 
@@ -164,8 +167,14 @@ const WebProjLast = ({
           {text}
         </WebProjText>
 
-        <LangText lancolor = {medBlue[theme]}>
-          {language}
+        <LangText TxtMarginB={TxtMargin}>
+          {languageT}
+          <ColorTxt spanColor={medBlue[theme]}>{lanSpanT}</ColorTxt>              
+        </LangText>
+
+        <LangText>
+          {languageB}
+          <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>              
         </LangText>
 
         <BttnCont>

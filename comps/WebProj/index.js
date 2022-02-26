@@ -69,13 +69,13 @@ const ColorTxt = styled.span`
   display: inline;
   margin-right: 5px;
   font-weight: 500;
+  font-style: italic;
 `;
 
 const LangText = styled.p`
   width: 100%;
   margin-bottom: ${(props) => props.TxtMarginB}px;
-  color: ${(props) => props.lancolor};
-  font-style: italic;
+  color: ${(props) => props.lancolor};  
 
   @media only screen and (min-width: 1px) and (max-width: 1000px) {
     // font-size: 0.875em;
@@ -130,16 +130,22 @@ const WebProj = ({
 
   titleOne = "MyLandlord",
   spanOne = "MyLandlord",
-  textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.",
-  languageone = "Next.js, React, React UI",
+  textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
+  languageTOne = "Role: Front-End Developer, UX/UI Designer",
+  lanSpanTOne = '',
+  languageBOne = "Tools: ",
+  lanSpanBOne = 'Next.js, React, React UI',
 
   TitMarginB = 20,
   TxtMarginB = 20,
 
   titleTwo = "reVamp",
   spanTwo = "reVamp",
-  textTwo = "is an application that shows how old clothes can be repurposed through its tutorials. It offers many different methods for upcycling clothing items. Additionally, the app aims to educate users about the relationship between sustainability and fast fashion.",
-  languagetwo = "Next.js, React",
+  textTwo = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items.",
+  languageTTwo = "Role: Front-End Developer, UX/UI Designer",
+  lanSpanTTwo = '',
+  languageBTwo = "Tools: ",
+  lanSpanBTwo = 'Next.js, React',
 
   srcT = "./images/projects/img_MyLandlord.png",
   srcB = "./images/projects/img_reVamp.png",
@@ -182,7 +188,15 @@ const WebProj = ({
               {textOne}
             </WebProjText>
 
-            <LangText lancolor={medBlue[theme]}>{languageone}</LangText>
+            <LangText TxtMarginB={TxtMarginB}>
+              {languageTOne}
+              <ColorTxt spanColor={medBlue[theme]}>{lanSpanTOne}</ColorTxt>              
+            </LangText>
+
+            <LangText>
+              {languageBOne}
+              <ColorTxt spanColor={medBlue[theme]}>{lanSpanBOne}</ColorTxt>              
+            </LangText>
 
             <BttnCont>
               <Button
@@ -209,7 +223,15 @@ const WebProj = ({
               {textTwo}
             </WebProjText>
 
-            <LangText lancolor={medBlue[theme]}>{languagetwo}</LangText>
+            <LangText TxtMarginB={TxtMarginB}>
+              {languageTTwo}
+              <ColorTxt spanColor={medBlue[theme]}>{lanSpanTTwo}</ColorTxt>              
+            </LangText>
+
+            <LangText>
+              {languageBTwo}
+              <ColorTxt spanColor={medBlue[theme]}>{lanSpanBTwo}</ColorTxt>              
+            </LangText>
 
             <BttnCont>
               <Button

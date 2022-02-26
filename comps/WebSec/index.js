@@ -146,15 +146,19 @@ const WebSec = ({
 
           titleOne = "irl_Dater"
           spanOne = "irl_Dater"
-          textOne = "is a dating application designed to help users meet that special someone while having fun. The point system in this app helps users break the ice and get to know each other better."
+          textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
           languageone = 'Figma, HTML, CSS, jQuery'
+          languageTOne = "Role: Web Developer(Marketing Page), UX/UI Designer"
+          lanSpanTOne = ''
+          languageBOne = "Tools: "
+          lanSpanBOne = 'HTML, CSS, jQuery'
           srcT = "./images/projects/img_irl_Dater.png"
 
-          rightonClickT = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
-          leftonClickT = {() => window.open('https://www.figma.com/proto/RRoFoBBwCjVylyz1niMRwD/idsp-but-its-figma?node-id=447%3A191&scaling=scale-down&page-id=399%3A7384&starting-point-node-id=495%3A10404', '_blank')}
+          rightonClickT = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+          leftonClickT = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         
-          bttnTxtR = "Marketing Page"
-          bttnTxtL = "Figma Protptype"
+          bttnTxtL = "Marketing Page"
+          bttnTxtR = "GitHub"
         />
       </WebCont>
       
@@ -167,8 +171,11 @@ const WebSec = ({
         src = "./images/projects/img_reVamp.png"
         title = "reVamp"
         span = "reVamp"
-        text = "is an application that shows how old clothes can be repurposed through its tutorials. It offers many different methods for upcycling clothing items. Additionally, the app aims to educate users about the relationship between sustainability and fast fashion."
-        language = 'Next.js, React'
+        text = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items."
+        languageT = "Role: Front-End Developer, UX/UI Designer"
+        lanSpanT = ''
+        languageB = "Tools: "
+        lanSpanB = 'Next.js, React'
         leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
       />
@@ -177,12 +184,16 @@ const WebSec = ({
         src = "./images/projects/img_irl_Dater.png"
         title = "irl_Dater"
         span = "irl_Dater"
-        text = "is a dating application designed to help users meet that special someone while having fun. The point system in this app helps users break the ice and get to know each other better."
-        language = 'Figma, HTML, CSS, jQuery'
-        leftonClick = {() => window.open('https://www.figma.com/proto/RRoFoBBwCjVylyz1niMRwD/idsp-but-its-figma?node-id=495%3A10404&scaling=scale-down&page-id=399%3A7384&starting-point-node-id=495%3A10404', '_blank')}
-        rightonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
-        bttnTxtL = "Figma Protptype"
-        bttnTxtR = "Marketing Page"
+        text = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
+        languageT = "Role: Web Developer(Marketing Page), UX/UI Designer"
+        lanSpanT = ''
+        languageB = "Tools: "
+        lanSpanB = 'HTML, CSS, jQuery'
+        leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
+        rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+      
+        bttnTxtL = "Marketing Page"
+        bttnTxtR = "GitHub"
       />      
 
       <WebProjLast 
