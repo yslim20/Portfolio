@@ -2,11 +2,20 @@
 
 Youn Soo Lim is passionate about front-end development and UX/UI design. She looks forward to bringing her creativity and marketing expertise to digital development and design from her previous experience in design and manufacturing.
 
-Portfolio: http://portfolio-yslim.vercel.app/
+
+## Homepage
+[@Homepage](https://www.younsoolim.com/)
+
+
+## Authors
+[@Youn Soo Lim](https://www.linkedin.com/in/younsoo-lim)
+
+
+
+## Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
 First, run the development server:
 
