@@ -233,7 +233,8 @@ const HomeSec = ({
         <Button
           conwidth = '0'
           onClick={onButtonClick}   
-          width='242px'     
+          width='242px' 
+          mminWid='115'    
         />
       </TxtCont>
 

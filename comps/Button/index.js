@@ -18,6 +18,7 @@ const ButtonCont = styled.div`
     @media only screen and (min-width: 1px) and (max-width: 600px) {
       margin-right: ${props=>props.mmright}px;
       margin-top: ${props=>props.mmtop}px;
+      min-width: ${props=>props.mminWid}px;
     }
 `;
 
@@ -105,6 +106,7 @@ const Button = ({
     type = "",
     text="Contact me",
     conwidth = "100%",
+    mminWid = '',
     margintop = 40,
     mmtop = '20',
     width = "100%",
@@ -130,6 +132,7 @@ const Button = ({
   return (
     <ButtonCont 
       conwidth={conwidth}
+      mminWid={mminWid}
       mtop={margintop}
       mmtop={mmtop}
       mright={marginright}
