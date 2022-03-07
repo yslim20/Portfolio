@@ -133,6 +133,10 @@ const WebProj = ({
   textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
   languageTOne = "Role: Front-End Developer, UX/UI Designer",
   lanSpanTOne = '',
+  roleTop = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
+  • Collaborated with back-end developers, full-stack students, on improving usability.
+  • Created user-friendly web pages by using markup languages, such as React, Next.js.`,
+ 
   languageBOne = "Tools: ",
   lanSpanBOne = 'Next.js, React, React UI',
 
@@ -141,9 +145,13 @@ const WebProj = ({
 
   titleTwo = "reVamp",
   spanTwo = "reVamp",
-  textTwo = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items.",
+  textTwo = `is an application that shows how old clothes can be repurposed through its tutorials. 
+  Also, it offers many different methods for upcycling clothing items.`,
   languageTTwo = "Role: Front-End Developer, UX/UI Designer",
   lanSpanTTwo = '',
+  roleBttm = `• Contributed to all stages of development, including planning, testing, and coding.
+  • Constructed a user-interactive site architecture.
+  • Built reusable and scalable code and components.`,
   languageBTwo = "Tools: ",
   lanSpanBTwo = 'Next.js, React',
 
@@ -169,6 +177,7 @@ const WebProj = ({
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  
 
   // ============ Layout
   return (
@@ -193,9 +202,13 @@ const WebProj = ({
               <ColorTxt spanColor={medBlue[theme]}>{lanSpanTOne}</ColorTxt>              
             </LangText>
 
-            <LangText>
+            <LangText TxtMarginB={TxtMarginB}>
               {languageBOne}
               <ColorTxt spanColor={medBlue[theme]}>{lanSpanBOne}</ColorTxt>              
+            </LangText>
+
+            <LangText className='new-line'>
+              {roleTop}            
             </LangText>
 
             <BttnCont>
@@ -228,9 +241,13 @@ const WebProj = ({
               <ColorTxt spanColor={medBlue[theme]}>{lanSpanTTwo}</ColorTxt>              
             </LangText>
 
-            <LangText>
+            <LangText TxtMarginB={TxtMarginB}>
               {languageBTwo}
               <ColorTxt spanColor={medBlue[theme]}>{lanSpanBTwo}</ColorTxt>              
+            </LangText>
+
+            <LangText className='new-line'>
+              {roleBttm}            
             </LangText>
 
             <BttnCont>

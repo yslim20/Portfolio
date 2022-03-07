@@ -150,6 +150,10 @@ const WebSec = ({
           languageone = 'Figma, HTML, CSS, jQuery'
           languageTOne = "Role: Web Developer(Marketing Page), UX/UI Designer"
           lanSpanTOne = ''
+          roleTop = {`• Collected, researched, investigated and evaluated user requirements. 
+          • Provided an exceptional user experience through intuitive application design. 
+          • Designed and developed a marketing website for the application.`}
+          roleBttm = ''
           languageBOne = "Tools: "
           lanSpanBOne = 'HTML, CSS, jQuery'
           srcT = "./images/projects/img_irl_Dater.png"
@@ -176,6 +180,9 @@ const WebSec = ({
         lanSpanT = ''
         languageB = "Tools: "
         lanSpanB = 'Next.js, React'
+        role = {`• Contributed to all stages of development, including planning, testing, and coding.
+          • Constructed a user-interactive site architecture.
+          • Built reusable and scalable code and components.`}
         leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
       />
@@ -188,6 +195,9 @@ const WebSec = ({
         languageT = "Role: Web Developer(Marketing Page), UX/UI Designer"
         lanSpanT = ''
         languageB = "Tools: "
+        role = {`• Collected, researched, investigated and evaluated user requirements. 
+          • Provided an exceptional user experience through intuitive application design. 
+          • Designed and developed a marketing website for the application.`}
         lanSpanB = 'HTML, CSS, jQuery'
         leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}

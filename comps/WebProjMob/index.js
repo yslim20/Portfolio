@@ -118,6 +118,10 @@ const WebProjMob = ({
   languageB = "Tools: ",
   lanSpanB = 'Next.js, React, React UI',
 
+  role = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
+  • Collaborated with back-end developers, full-stack students, on improving usability.
+  • Created user-friendly web pages by using markup languages, such as React, Next.js.`,
+
   TitMarginB = 20,
   TxtMarginB = 20,
 
@@ -177,9 +181,13 @@ const WebProjMob = ({
             <ColorTxt spanColor={medBlue[theme]}>{lanSpanT}</ColorTxt>              
           </LangText>
 
-          <LangText>
+          <LangText TxtMarginB={TxtMarginB}>
             {languageB}
             <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>              
+          </LangText>
+
+          <LangText className='new-line'>
+              {role}            
           </LangText>
 
         <BttnCont>

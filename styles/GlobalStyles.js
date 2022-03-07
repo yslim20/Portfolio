@@ -100,6 +100,11 @@ const globalStyles = createGlobalStyle`
       height: 100vh;
       background-color: #fff;
     }
+
+    .new-line {
+      white-space: pre-line;
+      color: #202020;
+    }
 `;
 
 export default globalStyles;
