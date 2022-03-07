@@ -37,7 +37,7 @@ const Logo = ({
 
 // ============ Props  
   cwidth = 60,
-  cheight = 38,
+  cheight = 'auto',
   width = 100,
   height = 100,
   src= "./icons/icon_Logo.svg",
