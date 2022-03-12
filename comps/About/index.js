@@ -126,7 +126,7 @@ const About = ({
           text="Resume"
           marginright="20"
           margintop = '20'
-          onClick={() => router.push(routeTo)}
+          onClick={() => window.open('./asset/YounSoo_Lim_Resume.pdf', '_blank')}
         />
 
         <Button
