@@ -180,7 +180,10 @@ const Home = ({
 
         <SecCont ref = {sectionOne} height = {height}>
             <HomeSec 
-              onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
+              // onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
+              onButtonClick={() => sectionFour.current.scrollIntoView(
+                {behavior: "smooth"}
+              )}
             />
         </SecCont>
 
