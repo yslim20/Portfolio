@@ -82,7 +82,7 @@ const Title = styled.p`
 const ThumbBox = ({
   
   url = "./images/design/img_Illustposter.svg",
-  title = "Illustrator: Poster",
+  title = "Illustrator: Concert Poster",
   bkSize = "160",
   mbkPos = '10% 25%',
   just = 'center',

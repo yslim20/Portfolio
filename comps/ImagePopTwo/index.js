@@ -55,9 +55,9 @@ const ImagePopTwo = ({
     width = '35',
     marginL = '-17.5',
     marginT = '-23.3',
-    fistSrc = "./images/design/illust/design_Poster2.jpg",
+    fistSrc = "/images/design/illust/design_Poster2.jpg",
     altOne = "Concert Poster version 1",
-    secSrc = "./images/design/illust/design_Poster1.jpg",
+    secSrc = "/images/design/illust/design_Poster1.jpg",
     altTwo = "Concert Poster version 2",
 
     clickHandler=() => {},

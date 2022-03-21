@@ -99,7 +99,7 @@ const LinkHor = ({
           hPosition={hPositionG}
         >
           <GitHub 
-            href = {hrefG}
+            onClick={() => window.open(hrefG)}
           />
         </Img>   
         <Img
@@ -108,7 +108,7 @@ const LinkHor = ({
           hPosition={hPositionD}     
         >
           <GitHub 
-            href = {hrefD}
+            onClick={() => window.open(hrefD)}
           />
         </Img> 
         <Img
@@ -117,7 +117,7 @@ const LinkHor = ({
           hPosition={hPositionL}     
         >
           <GitHub 
-            href = {hrefL}
+            onClick={() => window.open(hrefL)}
           />
         </Img> 
       </UlCont>
