@@ -203,7 +203,7 @@ const AboutSec = ({ topL = 10, topR = 35 }) => {
   return (
     <ContCont>
       <DivCont>
-        <DivImg url="./images/img_Div_Black.svg" position="left top" />
+        <DivImg url="/images/img_Div_Black.svg" position="left top" />
       </DivCont>
       <SubTitle titColor={lylac[theme]} lineColor={medBlue[theme]}>
         About me
@@ -211,7 +211,7 @@ const AboutSec = ({ topL = 10, topR = 35 }) => {
 
       <Cont>
         <DesContL top={topL}  data-aos="fade-down">
-          <Prof src="./images/img_profile.png" alt="profile image" />
+          <Prof src="/images/img_profile.png" alt="profile image" />
           <ProfBox/>
         </DesContL>
 

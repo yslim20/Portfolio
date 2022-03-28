@@ -240,7 +240,7 @@ const HomeSec = ({
 
       <DivCont>
         <DivImg 
-          url = "./images/img_Div_whiteBttm.svg"
+          url = "/images/img_Div_whiteBttm.svg"
           position = "left bottom"
         />
       </DivCont>

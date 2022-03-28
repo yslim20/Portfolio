@@ -21,7 +21,7 @@ const WebProjCont = styled.div`
     justify-content: center;  
     position: relative;
     padding: 0 3%;
-    margin-bottom: 50px;
+    margin-bottom: ${props => props.marginB}px ;
   } 
 `;
 
@@ -102,11 +102,11 @@ const WebProjMob = ({
 // ============ Props
   direction = "column",
   justify="flex-start", 
+  contMarginB = '50',
 
   leftonClick = () => {},
-  rightonClick = () => {},
 
-  url = "./images/projects/img_MyLandlord.png",
+  url = "/images/projects/img_MyLandlord.png",
   top = "",
   left = -20, 
 
@@ -135,7 +135,7 @@ const WebProjMob = ({
   shapeWidth = "",
   shapeHeight = "",
 
-  bttnTxtL = 'Homepage',
+  bttnTxtL = 'Go to Detail page',
   bttnTxtR = 'GitHub',
 
 }) => {
@@ -152,6 +152,7 @@ const WebProjMob = ({
       data-aos="fade-up"
       direction={direction}
       justify={justify}
+      marginB={contMarginB}
     >
       <ProImg 
         src = {src}  
@@ -186,22 +187,22 @@ const WebProjMob = ({
             <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>              
           </LangText>
 
-          <LangText className='new-line'>
+          {/* <LangText className='new-line'>
               {role}            
-          </LangText>
+          </LangText> */}
 
         <BttnCont>
           <Button 
             onClick={leftonClick}
             text = {bttnTxtL}
-            width='100%'
+            width='50%'
             marginright = "20"
           />
-          <Button 
+          {/* <Button 
             onClick= {rightonClick}
             text = {bttnTxtR}
             width='100%'
-          />
+          /> */}
         </BttnCont>
 
       </ContCont>

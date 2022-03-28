@@ -72,11 +72,7 @@ const NaviMobile =({
           onDesClick={() => {
             onDesClick();
             setOpen(false);
-          }}
-          // onContClick={() =>{
-          //   onContClick();
-          //   setOpen(false);
-          // }}        
+          }}     
           onAboutClick={() =>{
             onAboutClick();
             setOpen(false)

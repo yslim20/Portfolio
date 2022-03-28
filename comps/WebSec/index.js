@@ -129,13 +129,36 @@ const WebSec = ({
           rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}    
         />
 
-        <WebProj flip = {true} 
-          leftonClickB = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
-          rightonClickB = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
+        <WebProj
+          shapeHeightT = "34"
+          shapeWidthT = "60"
+          top = "45"
+          left = "50"
+          
+          topM = ""
+          leftM ='-10'
+
+          titleOne = "reVamp"
+          spanOne = "reVamp"
+          textOne = "An an educational app to recycle or to upcycle old clothes"
+
+          // textOne = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items."
+          languageone = 'Next.js, React, GitHub'
+          languageT = "Role: Front-End Developer, UX/UI Designer"
+          lanSpanT = ''
+          roleTop = {`• Contributed to all stages of development, including planning, testing, and coding.
+          • Constructed a user-interactive site architecture.
+          • Built reusable and scalable code and components.`}
+          roleBttm = ''
+          languageB = "Tools: "
+          lanSpanB = 'Next.js, React, GitHub'
+          srcT = "/images/projects/img_reVamp.png"
+
+          leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
+          rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
         />
 
-        <WebProj 
-          // url = "./images/img_ProTriangle.svg"        
+        <WebProj      
           shapeHeightT = "34"
           shapeWidthT = "60"
           top = "45"
@@ -146,23 +169,50 @@ const WebSec = ({
 
           titleOne = "irl_Dater"
           spanOne = "irl_Dater"
-          textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
-          languageone = 'Figma, HTML, CSS, jQuery'
-          languageTOne = "Role: Web Developer(Marketing Page), UX/UI Designer"
-          lanSpanTOne = ''
+          textOne = "A dating application and marketing website"
+
+          // textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
+          languageT = "Role: Front-End Developer(Marketing Page), UX/UI Designer"
+          lanSpanT = ''
           roleTop = {`• Collected, researched, investigated and evaluated user requirements. 
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
           roleBttm = ''
-          languageBOne = "Tools: "
-          lanSpanBOne = 'HTML, CSS, jQuery'
-          srcT = "./images/projects/img_irl_Dater.png"
+          languageB = "Tools: "
+          lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
+          srcT = "/images/projects/img_irl_Dater.png"
 
-          rightonClickT = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
-          leftonClickT = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
-        
-          bttnTxtL = "Marketing Page"
-          bttnTxtR = "GitHub"
+          rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+          leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
+        />
+
+        <WebProj 
+          shapeHeightT = "34"
+          shapeWidthT = "60"
+          top = "45"
+          left = "50"
+          
+          topM = ""
+          leftM ='-10'
+
+          titleOne = "About Kingdom"
+          spanOne = ""
+          textOne = "A blog site about the Korean drama series, The Kingdom"
+
+          // textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
+          languageT = "Role: Web Developer"
+          lanSpanT = ''
+          roleTop = {`• Collected, researched, investigated and evaluated user requirements. 
+          • Provided an exceptional user experience through intuitive application design. 
+          • Designed and developed a marketing website for the application.`}
+          roleBttm = ''
+          languageB = "Tool: "
+          lanSpanB = "WordPress"
+          srcT = "/images/projects/img_Kingdom.png"
+
+          bttnTxtL = 'Go to Homepage'
+
+          leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}  
         />
       </WebCont>
       
@@ -172,7 +222,7 @@ const WebSec = ({
       />
 
       <WebProjMob 
-        src = "./images/projects/img_reVamp.png"
+        src = "/images/projects/img_reVamp.png"
         title = "reVamp"
         span = "reVamp"
         text = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items."
@@ -188,7 +238,7 @@ const WebSec = ({
       />
 
       <WebProjMob 
-        src = "./images/projects/img_irl_Dater.png"
+        src = "/images/projects/img_irl_Dater.png"
         title = "irl_Dater"
         span = "irl_Dater"
         text = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
@@ -202,18 +252,32 @@ const WebSec = ({
         leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
       
-        bttnTxtL = "Marketing Page"
-        bttnTxtR = "GitHub"
-      />      
+      />    
 
-      <WebProjLast 
+      <WebProjMob 
+        src = "/images/projects/img_Kingdom.png"
+        title = "About Kingdom"
+        contMarginB = '80'
+        span = ""
+        text = "A blog site about the Korean drama series, The Kingdom"
+        languageT = "Role: Web Developer(Marketing Page), UX/UI Designer"
+        lanSpanT = ''
+        languageB = "Tools: "
+        role = {`• Collected, researched, investigated and evaluated user requirements. 
+          • Provided an exceptional user experience through intuitive application design. 
+          • Designed and developed a marketing website for the application.`}
+        lanSpanB = 'HTML, CSS, jQuery'
+        leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}      
+      />   
+
+      {/* <WebProjLast 
         onClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}
-      />
+      /> */}
 
       
       <DivConB>
         <DivImg 
-          url = "./images/img_Div_blackBttm.svg"
+          url = "/images/img_Div_blackBttm.svg"
           position = "left bottom"
         />
       </DivConB>

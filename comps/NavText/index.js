@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
 import { useTheme } from "@/utils/provider";
+
 import { themes, ltLylac, medBlue } from '@/utils/variables';
 
 // ============ CSS ============== //

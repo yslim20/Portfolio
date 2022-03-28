@@ -121,16 +121,16 @@ const About = ({
       </div>
 
       <BttnCont data-aos="fade-up" /*data-aos-once="true"*/>
-        <Button
+        {/* <Button
           width='100%'
           text="Resume"
           marginright="20"
           margintop = '20'
           onClick={() => window.open('./asset/YounSoo_Lim_Resume.pdf', '_blank')}
-        />
+        /> */}
 
         <Button
-          width='100%'
+          width='50%'
           text="Email me"
           marginright="0"
           mmright='0'

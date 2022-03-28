@@ -118,7 +118,7 @@ const WebProjLast = ({
 
   title = "About Kingdom",
   span = "About Kingdom",
-  text = "is a blog site with information about the Korean drama series, The Kingdom, which aired on Netflix in 2019.",
+  text = "A blog site about the Korean drama series, The Kingdom",
   languageT = "Role: Web Developer",
   lanSpanT = "",
   languageB = "Tool: ",
@@ -128,14 +128,15 @@ const WebProjLast = ({
   • Formulated an effective and responsive design.
   `,
 
-  src = "./images/projects/img_Kingdom.png",
+  src = "/images/projects/img_Kingdom.png",
 
-  marginR = "0",
-  marginL = "5%",
-  imgMarginL = "0",
-  imgMarginR = "5%",
+  marginR = "5%",
+  marginL = "0",
 
-  bttnTxt = "Homepage",
+  imgMarginL = "5%",
+  imgMarginR = "0",
+
+  bttnTxt = "Go to Homepage",
 }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -146,14 +147,13 @@ const WebProjLast = ({
 
   // ============ Layout
   return (
-    <WebProjCont direction={direction} justify={justify} data-aos="fade-up">
-      <ProImg src={src} marginL={imgMarginL} marginR={imgMarginR} />
+    <WebProjCont direction={direction} justify={justify} data-aos="fade-up">      
 
       <ContCont marginR={marginR} marginL={marginL}>
         <WebProjTit TitMarginB={TitMargin}>{title}</WebProjTit>
 
         <WebProjText TxtMarginB={TxtMargin}>
-          <ColorTxt spanColor={medBlue[theme]}>{span}</ColorTxt>
+          {/* <ColorTxt spanColor={medBlue[theme]}>{span}</ColorTxt> */}
           {text}
         </WebProjText>
 
@@ -167,9 +167,9 @@ const WebProjLast = ({
           <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>
         </LangText>
 
-        <LangText className="new-line">
+        {/* <LangText className="new-line">
           {role}
-        </LangText>
+        </LangText> */}
 
         <BttnCont>
           <Button
@@ -180,6 +180,8 @@ const WebProjLast = ({
           />
         </BttnCont>
       </ContCont>
+
+      <ProImg src={src} marginL={imgMarginL} marginR={imgMarginR} />
     </WebProjCont>
   );
 };

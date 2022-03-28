@@ -75,7 +75,7 @@ const ImagePopOne = ({
     mWidth = '100vw',
     mMartinT = '-33.33',
 
-    src = "./images/design/illust/design_Tech_Drawing.svg",
+    src = "/images/design/illust/design_Tech_Drawing.svg",
     alt = "Technical Drawing",
 
     clickHandler=() => {},

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { useTheme } from "@/utils/provider";
+import { useRouter } from 'next/router';
 
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
@@ -12,7 +13,6 @@ import DesignSec from '@/comps/DesignSec'
 import Scroll from '@/comps/Scroll';
 import ContactSec from '@/comps/ContactSec';
 import Contact from '@/comps/Contact';
-//
 
 // ============ CSS ============== //
 const Wrap = styled.div`
@@ -102,6 +102,7 @@ const ContCont = styled.div`
   }
 `
 
+
 const Home = ({
   conwidth ="",  
   height = "100vh",
@@ -114,7 +115,45 @@ const Home = ({
   const sectionThree = useRef();
   const sectionFour = useRef();
   const sectionFive = useRef();
- 
+  const router = useRouter();
+
+  // function scrollViewTwo() { 
+  //   useEffect(() => {   
+  //     setTimeout(() => {   
+  //       document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
+  //     }, 500);
+  //   }, [])
+  // };
+  
+
+  // React.useEffect(()=>{
+  //   scrollViewTwo();
+  //   scrollViewThree();
+  //   scrollViewFour();
+  // }, []);
+
+  // function scrollViewTwo() {
+  //   useEffect(() => {
+  //     setTimeout(() => {
+  //       document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
+  //     }, 500);
+  //   }, []);
+  // }
+    // document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
+  // }
+
+  function scrollViewTwo() {
+    document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
+  }
+
+  function scrollViewThree() {
+    document.getElementById('sectionThree').scrollIntoView({behavior: 'smooth'});
+  }
+
+  function scrollViewFour() {
+    document.getElementById('sectionFour').scrollIntoView({behavior: 'smooth'});
+  }
+   
   return (
     <Wrap>
       <Head>
@@ -125,25 +164,28 @@ const Home = ({
       <SideBar>
         <DefCont>
           <NaviDef 
-            onLogoClick={ () => {
+            onLogoClick={ () => { 
+              router.push('/')            
               sectionOne.current.scrollIntoView(
                 {behavior: "smooth"}
               )
             }}            
             onWebClick = {() => {
-              sectionTwo.current.scrollIntoView(
-                {behavior: "smooth"}
-              )
+              // router.push('/')   
+              scrollViewTwo();
             }}
             onDesClick = {() => {
-              sectionThree.current.scrollIntoView(
-                {behavior: "smooth"}
-              )
+              // sectionThree.current.scrollIntoView(
+              //   {behavior: "smooth"}
+              // )
+              scrollViewThree();
             }}
             onAboutClick = {() => {
-              sectionFour.current.scrollIntoView(
-                {behavior: "smooth"}
-              )
+              // sectionFour.current.scrollIntoView(
+              //   {behavior: "smooth"}
+              // )
+              // router.push('/')  
+              scrollViewFour();
             }}
           />
         </DefCont>      
@@ -151,6 +193,7 @@ const Home = ({
       <MobCont>
         <NaviMobile 
           onLogoClick={ () => {
+
             sectionOne.current.scrollIntoView(
               {behavior: "smooth"}
             )
@@ -187,15 +230,15 @@ const Home = ({
             />
         </SecCont>
 
-        <SecCont ref = {sectionTwo} height = {heightAll}>
+        <SecCont ref = {sectionTwo} id = 'sectionTwo' height = {heightAll}>
           <WebSec />
         </SecCont>
 
-        <SecCont ref = {sectionThree} height = {heightAll}>
+        <SecCont ref = {sectionThree} id = 'sectionThree' height = {heightAll}>
           <DesignSec />
         </SecCont>
            
-        <SecCont ref = {sectionFour} height = {heightAll}>
+        <SecCont ref = {sectionFour} id = 'sectionFour' height = {heightAll}>
           <AboutSec />
         </SecCont>
       </Cont>
@@ -203,7 +246,5 @@ const Home = ({
     </Wrap>
   )
 }
-
-
 
 export default Home;

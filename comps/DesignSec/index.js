@@ -122,7 +122,7 @@ const InCont = styled.div`
 `
 
 const InItem = styled.div`
-  width: 100%; height: 290px;
+  width: 50%; height: 290px;
   display: flex;
   box-sizing: border-box;
 

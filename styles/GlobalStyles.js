@@ -103,7 +103,9 @@ const globalStyles = createGlobalStyle`
 
     .new-line {
       white-space: pre-line;
-      color: #202020;
+      color: #4C4C4C;
+      font-weight: 200;
+      font-size: 1em;
     }
 `;
 

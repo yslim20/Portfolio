@@ -116,7 +116,7 @@ const ContactSec = ({
     <Cont>
       <DivCont>
         <DivImg 
-          url = "./images/img_Div_Black.svg"
+          url = "/images/img_Div_Black.svg"
           position = "left top"
         />
       </DivCont>

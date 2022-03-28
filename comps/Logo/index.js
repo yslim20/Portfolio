@@ -40,7 +40,7 @@ const Logo = ({
   cheight = 'auto',
   width = 100,
   height = 100,
-  src= "./icons/icon_Logo.svg",
+  src= "/icons/icon_Logo.svg",
   alt="Younsoo Lim's logo",
   cursor="pointer",
   onClick = () =>{},

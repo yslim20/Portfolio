@@ -23,7 +23,7 @@ const WebProjCont = styled.div`
     diplay: none;
     width: 0;
     height: 0;
-    overflow: hidden;
+    overflow: hidden;    
   }
 `;
 
@@ -36,9 +36,6 @@ const ContCont = styled.div`
   margin-right: ${(props) => props.marginR};
 
   @media only screen and (min-width: 1px) and (max-width: 1000px) {
-    // width: 100%;
-    // margin-bottom: 50px;
-    // margin-right: 0;
     diplay: none;
   }
 `;
@@ -75,7 +72,8 @@ const ColorTxt = styled.span`
 const LangText = styled.p`
   width: 100%;
   margin-bottom: ${(props) => props.TxtMarginB}px;
-  color: ${(props) => props.lancolor};  
+  color: ${(props) => props.lancolor};
+  line-height: 1.5em;
 
   @media only screen and (min-width: 1px) and (max-width: 1000px) {
     // font-size: 0.875em;
@@ -118,58 +116,37 @@ const BttnCont = styled.div`
 
 const WebProj = ({
   // ============ Props
-  flip = false,
   direction = "row",
   justify = "flex-start",
 
-  leftonClickT = () => {},
-  rightonClickT = () => {},
-
-  leftonClickB = () => {},
-  rightonClickB = () => {},
+  leftonClick = () => {},
 
   titleOne = "MyLandlord",
-  spanOne = "MyLandlord",
-  textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
-  languageTOne = "Role: Front-End Developer, UX/UI Designer",
-  lanSpanTOne = '',
+  spanOne = "a website to review Landlord",
+  textOne = "A website to review Landlord",
+  languageT = "Role: Front-End Developer, UX/UI Designer",
+  lanSpanT = "",
+
+  languageB = "Tools: ",
+  lanSpanB = 'Next.js, React, React UI, GitHub',
+
   roleTop = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
   • Collaborated with back-end developers, full-stack students, on improving usability.
   • Created user-friendly web pages by using markup languages, such as React, Next.js.`,
- 
-  languageBOne = "Tools: ",
-  lanSpanBOne = 'Next.js, React, React UI',
 
   TitMarginB = 20,
   TxtMarginB = 20,
 
-  titleTwo = "reVamp",
-  spanTwo = "reVamp",
-  textTwo = `is an application that shows how old clothes can be repurposed through its tutorials. 
-  Also, it offers many different methods for upcycling clothing items.`,
-  languageTTwo = "Role: Front-End Developer, UX/UI Designer",
-  lanSpanTTwo = '',
-  roleBttm = `• Contributed to all stages of development, including planning, testing, and coding.
-  • Constructed a user-interactive site architecture.
-  • Built reusable and scalable code and components.`,
-  languageBTwo = "Tools: ",
-  lanSpanBTwo = 'Next.js, React',
-
-  srcT = "./images/projects/img_MyLandlord.png",
-  srcB = "./images/projects/img_reVamp.png",
+  srcT = "/images/projects/img_MyLandlord.png",
 
   marginRT = "5%",
   marginLT = "0",
-  marginRB = "0",
-  marginLB = "5%",
 
   imgMarginLT = "5%",
   imgMarginRT = "0",
-  imgMarginLB = "0",
-  imgMarginRB = "5%",
 
-  bttnTxtL = "Homepage",
-  bttnTxtR = "GitHub",
+  bttnTxtL = "Go to Detail page",
+
 }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -177,7 +154,6 @@ const WebProj = ({
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-  
 
   // ============ Layout
   return (
@@ -187,81 +163,37 @@ const WebProj = ({
       data-aos="fade-up"
       // data-aos-once="true"
     >
-      {flip === false ? (
-        <>
-          <ContCont marginR={marginRT} marginL={marginLT}>
-            <WebProjTit TitMarginB={TitMarginB}>{titleOne}</WebProjTit>
+      <ContCont marginR={marginRT} marginL={marginLT}>
+        <WebProjTit TitMarginB={TitMarginB}>{titleOne}</WebProjTit>
 
-            <WebProjText TxtMarginB={TxtMarginB}>
-              <ColorTxt spanColor={medBlue[theme]}>{spanOne}</ColorTxt>
-              {textOne}
-            </WebProjText>
+        <WebProjText TxtMarginB={TxtMarginB}>
+          {/* <ColorTxt spanColor={medBlue[theme]}>{spanOne}</ColorTxt> */}
+          {textOne}
+        </WebProjText>
 
-            <LangText TxtMarginB={TxtMarginB}>
-              {languageTOne}
-              <ColorTxt spanColor={medBlue[theme]}>{lanSpanTOne}</ColorTxt>              
-            </LangText>
+        <LangText TxtMarginB={TxtMarginB}>
+          {languageT}
+          <ColorTxt spanColor={medBlue[theme]}>{lanSpanT}</ColorTxt>
+        </LangText>
 
-            <LangText TxtMarginB={TxtMarginB}>
-              {languageBOne}
-              <ColorTxt spanColor={medBlue[theme]}>{lanSpanBOne}</ColorTxt>              
-            </LangText>
+        <LangText TxtMarginB={TxtMarginB}>
+          {languageB}
+          <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>
+        </LangText>
 
-            <LangText className='new-line'>
-              {roleTop}            
-            </LangText>
+        {/* <LangText className="new-line">{roleTop}</LangText> */}
 
-            <BttnCont>
-              <Button
-                onClick={leftonClickT}
-                text={bttnTxtL}
-                width="100%"
-                marginright="20"
-              />
-              <Button onClick={rightonClickT} text={bttnTxtR} width="100%" />
-            </BttnCont>
-          </ContCont>
+        <BttnCont>
+          <Button
+            onClick={leftonClick}
+            text={bttnTxtL}
+            width="50%"
+            marginright=""
+          />
+        </BttnCont>
+      </ContCont>
 
-          <ProImg src={srcT} marginL={imgMarginLT} marginR={imgMarginRT} />
-        </>
-      ) : (
-        <>
-          <ProImg src={srcB} marginL={imgMarginLB} marginR={imgMarginRB} />
-
-          <ContCont marginR={marginRB} marginL={marginLB}>
-            <WebProjTit TitMarginB={TitMarginB}>{titleTwo}</WebProjTit>
-
-            <WebProjText TxtMarginB={TxtMarginB}>
-              <ColorTxt spanColor={medBlue[theme]}>{spanTwo}</ColorTxt>
-              {textTwo}
-            </WebProjText>
-
-            <LangText TxtMarginB={TxtMarginB}>
-              {languageTTwo}
-              <ColorTxt spanColor={medBlue[theme]}>{lanSpanTTwo}</ColorTxt>              
-            </LangText>
-
-            <LangText TxtMarginB={TxtMarginB}>
-              {languageBTwo}
-              <ColorTxt spanColor={medBlue[theme]}>{lanSpanBTwo}</ColorTxt>              
-            </LangText>
-
-            <LangText className='new-line'>
-              {roleBttm}            
-            </LangText>
-
-            <BttnCont>
-              <Button
-                onClick={leftonClickB}
-                text={bttnTxtL}
-                width="100%"
-                marginright="20"
-              />
-              <Button onClick={rightonClickB} text={bttnTxtR} width="100%" />
-            </BttnCont>
-          </ContCont>
-        </>
-      )}
+      <ProImg src={srcT} marginL={imgMarginLT} marginR={imgMarginRT} />
     </WebProjCont>
   );
 };
