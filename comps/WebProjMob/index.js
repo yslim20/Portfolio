@@ -29,7 +29,7 @@ const ContCont = styled.div`
   width: 100%;
   display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;  
   margin-bottom: ${props => props.contContMB}px;
 `
@@ -87,11 +87,11 @@ const ProImg = styled.img`
 `
 
 const BttnCont = styled.div`
-  width: 100%;  
+  width: 50%;  
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;  
+  align-items: center; 
+  justify-content: center;  
 `
 
 
@@ -116,7 +116,7 @@ const WebProjMob = ({
   languageT = "Role: Front-End Developer, UX/UI Designer",
   lanSpanT = '',
   languageB = "Tools: ",
-  lanSpanB = 'Next.js, React, React UI',
+  lanSpanB = 'Next.js, React, React UI, GitHub',
 
   role = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
   • Collaborated with back-end developers, full-stack students, on improving usability.
@@ -195,7 +195,7 @@ const WebProjMob = ({
           <Button 
             onClick={leftonClick}
             text = {bttnTxtL}
-            width='50%'
+            width='100%'
             marginright = "20"
           />
           {/* <Button 

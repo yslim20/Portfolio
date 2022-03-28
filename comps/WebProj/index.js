@@ -31,7 +31,7 @@ const ContCont = styled.div`
   width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-right: ${(props) => props.marginR};
 
@@ -98,7 +98,7 @@ const ProImg = styled.img`
 `;
 
 const BttnCont = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -187,7 +187,7 @@ const WebProj = ({
           <Button
             onClick={leftonClick}
             text={bttnTxtL}
-            width="50%"
+            width="100%"
             marginright=""
           />
         </BttnCont>

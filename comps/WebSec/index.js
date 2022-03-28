@@ -229,7 +229,7 @@ const WebSec = ({
         languageT = "Role: Front-End Developer, UX/UI Designer"
         lanSpanT = ''
         languageB = "Tools: "
-        lanSpanB = 'Next.js, React'
+        lanSpanB = 'Next.js, React, GitHub'
         role = {`• Contributed to all stages of development, including planning, testing, and coding.
           • Constructed a user-interactive site architecture.
           • Built reusable and scalable code and components.`}
@@ -248,7 +248,7 @@ const WebSec = ({
         role = {`• Collected, researched, investigated and evaluated user requirements. 
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
-        lanSpanB = 'HTML, CSS, jQuery'
+        lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
         leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
       
@@ -260,13 +260,13 @@ const WebSec = ({
         contMarginB = '80'
         span = ""
         text = "A blog site about the Korean drama series, The Kingdom"
-        languageT = "Role: Web Developer(Marketing Page), UX/UI Designer"
+        languageT = "Role: Web Developer"
         lanSpanT = ''
         languageB = "Tools: "
         role = {`• Collected, researched, investigated and evaluated user requirements. 
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
-        lanSpanB = 'HTML, CSS, jQuery'
+        lanSpanB = 'WordPress'
         leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}      
       />   
 
