@@ -35,65 +35,45 @@ const LinkCont = styled.div`
 
 // ============ Layout
 const NaviDef = ({
-  onLogoClick = () => {},
-  onAboutClick = () => {},
-  onWebClick = () => {},
-  onDesClick = () => {},
-  // onContClick = () => {},
+
 }) => {
-  
   const router = useRouter();
 
-  if (router.pathname === '/') {
-    return (
-      <Container>
-        <Logo onClick={onLogoClick}/>
+  return (
+    <Container>
+      <Logo
+        onClick={() => {
+          router.push('/',undefined,{shallow:true})
+        }}
+      />
 
-        <LinkCont>
-          <NavText
-            onClick={onWebClick} text="Web"
-          />
-
-          <NavText onClick={onDesClick} text="Design" borderT="" />
-
-          <NavText onClick={onAboutClick} borderT="" />
-        </LinkCont>
-
-        <LinkVer />
-      </Container>
-    );
-  }
-  else {
-    return (
-      <Container>
-        <Logo onClick={onLogoClick}/>
-
-        <LinkCont>
-          <NavText onClick={() => {
-              router.push('/')
-              onWebClick
-            }} text="Web"
-          />
-
-          <NavText onClick={() => {
-              router.push('/')
-              onDesClick
-            }} 
-            text="Design" borderT="" 
-          />
-
-          <NavText onClick={() => {
-            router.push('/')
-            onAboutClick
+      <LinkCont>
+        <NavText
+          onClick={() => {
+            router.push('/?section=sectionTwo',undefined,{shallow:true})
           }}
-            borderT="" 
-          />
-        </LinkCont>
+          text="Web"
+        />
 
-        <LinkVer />
-      </Container>
-    );
-  }
+        <NavText
+          onClick={() => {
+            router.push('/?section=sectionThree',undefined,{shallow:true})
+          }}
+          text="Design"
+          borderT=""
+        />
+
+        <NavText
+          onClick={() => {
+            router.push('/?section=sectionFour',undefined,{shallow:true})
+          }}
+          borderT=""
+        />
+      </LinkCont>
+
+      <LinkVer />
+    </Container>
+  );
 };
 
 export default NaviDef;

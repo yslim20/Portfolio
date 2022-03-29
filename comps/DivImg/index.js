@@ -21,7 +21,7 @@ z-index: -10;
 const DivImg = ({
 
   height = "100%",
-  url = "./images/img_Div_purTop.svg",
+  url = "/images/img_Div_purTop.svg",
   position = "top left",
   
 }) => {

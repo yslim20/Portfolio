@@ -13,6 +13,8 @@ import DesignSec from '@/comps/DesignSec'
 import Scroll from '@/comps/Scroll';
 import ContactSec from '@/comps/ContactSec';
 import Contact from '@/comps/Contact';
+import Hero from '@/comps/Hero';
+import Description from '@/comps/Description'
 
 // ============ CSS ============== //
 const Wrap = styled.div`
@@ -74,36 +76,40 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-const ContCont = styled.div`
-  width: 45%; height: 100%;
-  display: flex;
-  justify-content: center;
-  items-align: center;
-  position: absolute;
-  margin-left: 25%;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-
-  @media only screen and (min-width: 1001px) and (max-width:1100px){    
-    width: 50%;
-    margin-left: 10%;
-  }
-
-  @media only screen and (min-width: 481px) and (max-width:1000px){    
-    width: 100%;
-    margin-left: 0;
-    padding: 0 9.02%;
-  }
-
-  @media only screen and (min-width: 1px) and (max-width:480px){    
-    width: 100%;
-    margin-left: 0;
-    padding: 0 9.02%;
-  }
-`
 
 
-const Home = ({
+
+
+// const ContCont = styled.div`
+//   width: 45%; height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   items-align: center;
+//   position: absolute;
+//   margin-left: 25%;
+//   box-sizing: border-box;
+//   transition: all 0.3s ease-in-out;
+
+//   @media only screen and (min-width: 1001px) and (max-width:1100px){    
+//     width: 50%;
+//     margin-left: 10%;
+//   }
+
+//   @media only screen and (min-width: 481px) and (max-width:1000px){    
+//     width: 100%;
+//     margin-left: 0;
+//     padding: 0 9.02%;
+//   }
+
+//   @media only screen and (min-width: 1px) and (max-width:480px){    
+//     width: 100%;
+//     margin-left: 0;
+//     padding: 0 9.02%;
+//   }
+// `
+
+
+const MyLandlord = ({
   conwidth ="",  
   height = "100vh",
   heightAll = "",
@@ -114,14 +120,24 @@ const Home = ({
   const sectionTwo = useRef();
   const sectionThree = useRef();
   const sectionFour = useRef();
+  const sectionFive = useRef();
   const router = useRouter();
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById(router.query.section || 'sectionOne').scrollIntoView({behavior: 'smooth'});
-    }, 1000);
-  }, [router.query.section]);
   
+
+
+  function scrollViewTwo() {
+    document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
+  }
+
+  function scrollViewThree() {
+    document.getElementById('sectionThree').scrollIntoView({behavior: 'smooth'});
+  }
+
+  function scrollViewFour() {
+    document.getElementById('sectionFour').scrollIntoView({behavior: 'smooth'});
+  }
+   
   return (
     <Wrap>
       <Head>
@@ -131,18 +147,42 @@ const Home = ({
 {/* Navigations */}
       <SideBar>
         <DefCont>
-          <NaviDef/>
+        <NaviDef/>
         </DefCont>      
       </SideBar>
       <MobCont>
-        <NaviMobile/>        
+        <NaviMobile 
+          onLogoClick={ () => {
+
+            sectionOne.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          
+          onWebClick = {() => {
+            sectionTwo.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onDesClick = {() => {
+            sectionThree.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}
+          onAboutClick = {() => {
+            sectionFour.current.scrollIntoView(
+              {behavior: "smooth"}
+            )
+          }}      
+        />        
       </MobCont> 
 {/* Navigation ends */}
+
       <Cont
         conwidth={conwidth}
       >
 
-        <SecCont ref = {sectionOne} id = 'sectionOne' height = {height}>
+        {/* <SecCont ref = {sectionOne} height = {height}>
             <HomeSec 
               // onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
               onButtonClick={() => sectionFour.current.scrollIntoView(
@@ -161,11 +201,20 @@ const Home = ({
            
         <SecCont ref = {sectionFour} id = 'sectionFour' height = {heightAll}>
           <AboutSec />
+        </SecCont> */}
+        <SecCont>
+          <Hero />
         </SecCont>
+
+        <SecCont>
+          <Description />
+        </SecCont>
+
+
       </Cont>
 
     </Wrap>
   )
 }
 
-export default Home;
+export default MyLandlord;

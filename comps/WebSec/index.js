@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import styles from '@/styles/Home.module.css'
 import { useTheme } from "@/utils/provider";
+import { useRouter } from 'next/router';
 import { lylac, medBlue, themes } from '@/utils/variables';
 
 import Button from '../Button';
 import Scroll from '../Scroll';
 import DivImg from '../DivImg';
 import WebProj from '../WebProj';
-import WebProjLast from '../WebProjLast';
 import WebProjMob from '../WebProjMob';
 
 // ============ CSS ============== //
@@ -114,6 +114,7 @@ const WebSec = ({
 }) => {
 
   const {theme, setTheme} = useTheme();
+  const router = useRouter();
   
   return (
     <Cont>
@@ -123,10 +124,11 @@ const WebSec = ({
       </Title>
 
       <WebCont>
-
+{/* ==================== Web Projects */}
         <WebProj 
           // leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-          rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}    
+          // rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}  
+          leftonClick = {() => router.push('/MyLandlord')}
         />
 
         <WebProj
@@ -154,8 +156,10 @@ const WebSec = ({
           lanSpanB = 'Next.js, React, GitHub'
           srcT = "/images/projects/img_reVamp.png"
 
-          leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
-          rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
+          leftonClick = {() => router.push('/Revamp')}
+
+          // leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
+          // rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
         />
 
         <WebProj      
@@ -182,8 +186,10 @@ const WebSec = ({
           lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
           srcT = "/images/projects/img_irl_Dater.png"
 
-          rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
-          leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
+          leftonClick = {() => router.push('/Irl_Dater')}
+
+          // rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+          // leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         />
 
         <WebProj 
@@ -215,10 +221,12 @@ const WebSec = ({
           leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}  
         />
       </WebCont>
-      
+
+{/* ==================== Mobile Projects */}
       <WebProjMob 
         // leftonClick = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-        rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}      
+        // rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}   
+        leftonClick = {() => router.push('/MyLandlord')}
       />
 
       <WebProjMob 
@@ -233,8 +241,10 @@ const WebSec = ({
         role = {`• Contributed to all stages of development, including planning, testing, and coding.
           • Constructed a user-interactive site architecture.
           • Built reusable and scalable code and components.`}
-        leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
-        rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
+
+        leftonClick = {() => router.push('/Revamp')}
+        // leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
+        // rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
       />
 
       <WebProjMob 
@@ -249,8 +259,10 @@ const WebSec = ({
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
         lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
-        leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
-        rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+
+        leftonClick = {() => router.push('/Irl_Dater')}
+        // leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
+        // rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
       
       />    
 
@@ -267,13 +279,9 @@ const WebSec = ({
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
         lanSpanB = 'WordPress'
+        bttnTxtL = 'Homepage'
         leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}      
       />   
-
-      {/* <WebProjLast 
-        onClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}
-      /> */}
-
       
       <DivConB>
         <DivImg 

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, { useState, useRef, useEffect } from 'react';
 import FocusLock from 'react-focus-lock';
+import { useRouter } from "next/router";
 
 import Burger from '../Burger'
 import Menu from '../Menu';
@@ -24,17 +25,13 @@ const Cont = styled.div`
 
 // ============ Layout
 const NaviMobile =({
-  onLogoClick = () => {},
-  onAboutClick = () =>{},
-  onWebClick = () => {},
-  onDesClick = () =>{},
-  // onContClick = () => {}, 
 
 }) =>{
 
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
+  const router = useRouter();
 
   const useOnClickOutside = (ref, handler) => {
     useEffect(() => {
@@ -62,19 +59,19 @@ const NaviMobile =({
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
         <Menu open={open} setOpen={setOpen} id={menuId} 
           onLogoClick ={() => {
-            onLogoClick();
+            router.push('/',undefined,{shallow:true})
             setOpen(false);
           }}
           onWebClick={() =>{
-            onWebClick();
+            router.push('/?section=sectionTwo',undefined,{shallow:true})
             setOpen(false);
           }}
           onDesClick={() => {
-            onDesClick();
+            router.push('/?section=sectionThree',undefined,{shallow:true})
             setOpen(false);
           }}     
           onAboutClick={() =>{
-            onAboutClick();
+            router.push('/?section=sectionFour',undefined,{shallow:true})
             setOpen(false)
           }}
         />      
