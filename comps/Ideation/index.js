@@ -74,7 +74,7 @@ const Ideation = ({
 
   titletxt = 'Ideation',
   TxtMarginB = 20,
-  children = ' is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.',
+  text = ' is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.',
 
   marginR = "5%",
   marginL = "0",
@@ -101,7 +101,7 @@ const Ideation = ({
         </Title>
 
         <Text TxtMarginB={TxtMarginB} className = 'new-line'>
-          {children}
+          {text}
         </Text>
 
       </ContCont>
