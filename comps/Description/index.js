@@ -76,13 +76,14 @@ const LangText = styled.p`
 `;
 
 const BttnCont = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (min-width: 1px) and (max-width: 600px) {
+    width: 80%;
     margin-top: 20px;
     flex-wrap: wrap;
     flex-direction: column;

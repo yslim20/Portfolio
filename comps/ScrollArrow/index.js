@@ -11,6 +11,7 @@ const TopBttn = styled.button`
   outline: none;
   background-color: #c4c4c4;
   color: white;
+  text-align: center;
   cursor: pointer;
   width: 50px;
   height: 50px;
