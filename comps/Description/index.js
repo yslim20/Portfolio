@@ -81,9 +81,10 @@ const BttnCont = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s;
 
   @media only screen and (min-width: 1px) and (max-width: 600px) {
-    width: 80%;
+    width: 70%;
     margin-top: 20px;
     flex-wrap: wrap;
     flex-direction: column;
