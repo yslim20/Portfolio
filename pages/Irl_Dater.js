@@ -125,7 +125,7 @@ const irl_Dater = ({
         <SecCont>
           <Ideation 
             background = '#FDF3F5'
-            children = {`
+            text = {`
               irl_Dater is designed to help singles meet other singles in a fun environment. The game aspect of this dating app will allow users to have fun while forming meaningful relationships. 
 
               Our app offers the most suitable choices for users. Using our app, users can find their own irl_Love with high-quality matches they can imagine. It is especially convenient for users to share their points with someone they have matched with, so the points can be redeemed by both of them. In this way, users can redeem their points for movie tickets or dinners.
@@ -177,7 +177,7 @@ const irl_Dater = ({
           <Ideation 
             background = '#FDF3F5'
             titletxt = 'Conclusion'
-            children = {`We started with a low-fidelity prototype, which we gradually developed into a beautifully designed application over time. We designed all aspects of irl_Dater, including colours, icons, and typography. During the usability test, we learned what was working well and what needed to be changed on our app. We revised and updated the prototype based on this and created a spec sheet for full-stack students who would code out the front-end.
+            text = {`We started with a low-fidelity prototype, which we gradually developed into a beautifully designed application over time. We designed all aspects of irl_Dater, including colours, icons, and typography. During the usability test, we learned what was working well and what needed to be changed on our app. We revised and updated the prototype based on this and created a spec sheet for full-stack students who would code out the front-end.
 
             In addition, we created a marketing page and a video to promote the irl_Dater app.`}
           />

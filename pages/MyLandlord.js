@@ -154,7 +154,7 @@ const MyLandlord = ({
           <Ideation 
             titletxt = 'Conclusion'
             span = ''
-            children = {`In order to make it more user-friendly, we performed several usability tests after constructing the task model, persona, and wireframe. We then created a final prototype based on these tests to develop our application and to start coding it. 
+            text = {`In order to make it more user-friendly, we performed several usability tests after constructing the task model, persona, and wireframe. We then created a final prototype based on these tests to develop our application and to start coding it. 
 
             We have built the frontend of the application using markup languages, such as React and Next.js, in collaboration with full-stack developers.`}
           />

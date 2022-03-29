@@ -122,7 +122,7 @@ const Revamp = ({
 
         <SecCont>
           <Ideation 
-            children = {`
+            text = {`
               Our web app idea was to create an app that could repurpose your clothing items in a variety of ways: 
 
               1. The app provides tutorials for repurposing old clothes, as well as information about how to recycle old clothes.
@@ -176,7 +176,7 @@ const Revamp = ({
         <SecCont>
           <Ideation 
             titletxt = 'Conclusion'
-            children = {`When we built the scope and feature document, we identified what features and functions we were going to make for each page. By doing this, we could clearly see how the page layout would look when the app was coded.
+            text = {`When we built the scope and feature document, we identified what features and functions we were going to make for each page. By doing this, we could clearly see how the page layout would look when the app was coded.
 
             Our final high-fidelity prototype was designed based on user testing between each prototype. We implemented reusable components and routing functions using the tests to design the final high-fidelity prototype.`}
           />
