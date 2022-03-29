@@ -19,7 +19,7 @@ const Cont = styled.div`
   padding: 0 3%;
   margin-bottom: 80px;
   overflow: hidden;
-  
+
   @media only screen and (min-width: 1px) and (max-width: 1000px) { 
   }
 `;
@@ -100,9 +100,9 @@ const Description = ({
   leftonClick = () => {},
   rightonClick = () => {},
 
-  titleOne = "MyLandlord",
-  spanOne = "MyLandlord",
-  textOne = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
+  title = "MyLandlord",
+  span = "MyLandlord",
+  text = "is a website that is targeted towards residents looking to find an ideal Landlord to rent from the Greater Vancouver.",
   languageT = "Role: Front-End Developer, UX/UI Designer",
   lanSpanT = "",
 
@@ -117,8 +117,8 @@ const Description = ({
   marginRT = "5%",
   marginLT = "0",
 
-  bttnTxtL = "Homepage",
-  bttnTxtR = 'GitHub'
+  bttnTxtL = "Go to Homepage",
+  bttnTxtR = 'Go to GitHub'
 
 }) => {
 
@@ -137,11 +137,11 @@ const Description = ({
       // data-aos-once="true"
     >
       <ContCont marginR={marginRT} marginL={marginLT}>
-        <WebProjTit TitMarginB={TitMarginB}>{titleOne}</WebProjTit>
+        <WebProjTit TitMarginB={TitMarginB}>{title}</WebProjTit>
 
         <WebProjText TxtMarginB={TxtMarginB}>
-          <ColorTxt spanColor={medBlue[theme]}>{spanOne}</ColorTxt>
-          {textOne}
+          <ColorTxt spanColor={medBlue[theme]}>{span}</ColorTxt>
+          {text}
         </WebProjText>
 
         <LangText TxtMarginB={TxtMarginB}>

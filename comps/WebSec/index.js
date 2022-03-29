@@ -126,8 +126,6 @@ const WebSec = ({
       <WebCont>
 {/* ==================== Web Projects */}
         <WebProj 
-          // leftonClickT = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-          // rightonClickT = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}  
           leftonClick = {() => router.push('/MyLandlord')}
         />
 
@@ -144,7 +142,6 @@ const WebSec = ({
           spanOne = "reVamp"
           textOne = "An an educational app to recycle or to upcycle old clothes"
 
-          // textOne = "is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items."
           languageone = 'Next.js, React, GitHub'
           languageT = "Role: Front-End Developer, UX/UI Designer"
           lanSpanT = ''
@@ -157,9 +154,6 @@ const WebSec = ({
           srcT = "/images/projects/img_reVamp.png"
 
           leftonClick = {() => router.push('/Revamp')}
-
-          // leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
-          // rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
         />
 
         <WebProj      

@@ -25,12 +25,11 @@ const Frame = styled.img`
 const Hero = ({
   url = "/images/projects/MyLandlord/mylandlord_cover.png",
   urlMobile = "/images/projects/MyLandlord/mylandlord_cover_900.png",
-  position = "top left",
   src="/video/arrow_blue-down-arrow.gif"
 }) => {
   return (
     <>
-      <HeroImg url={url} urlMobile={urlMobile} position={position} />
+      <HeroImg url={url} urlMobile={urlMobile} alt='Hero image'/>
       <Frame src={src} />
     </>
   );

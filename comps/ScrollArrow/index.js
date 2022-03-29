@@ -16,6 +16,7 @@ const TopBttn = styled.button`
   height: 50px;
   border-radius: 50%;
   transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
   :hover {
     background-color: #d7aef2;

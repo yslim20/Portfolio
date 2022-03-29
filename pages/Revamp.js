@@ -74,7 +74,7 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-const MyLandlord = ({
+const Revamp = ({
   conwidth ="",  
 }) => {
  
@@ -95,57 +95,80 @@ const MyLandlord = ({
       </MobCont> 
 {/* Navigation ends */}
 
-      <Cont conwidth={conwidth}>
+<Cont conwidth={conwidth}>
         <SecCont>
-          <Hero />
-        </SecCont>
-
-        <SecCont>
-          <Description 
-            // leftonClick= {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-            rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}  
+          <Hero 
+            url = "/images/projects/reVamp/revamp_cover.png"
+            urlMobile = "/images/projects/reVamp/revamp_cover_900.png"
           />
         </SecCont>
 
         <SecCont>
-          <Ideation />
+          <Description 
+            title = "reVamp"
+            span = "reVamp "
+            text = " is an application that shows how old clothes can be repurposed through its tutorials. Also, it offers many different methods for upcycling clothing items."
+            languageT = "Role: Front-End Developer, UX/UI Designer"
+            lanSpanT = ""
+
+            languageB = "Tools: "
+            lanSpanB = 'React, Next.js, JavaScript, GitHub, Figma'
+
+            year = 'Year: 2021'
+            leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
+            rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
+          />
         </SecCont>
 
         <SecCont>
-          <Process />
+          <Ideation 
+            children = {`
+              Our web app idea was to create an app that could repurpose your clothing items in a variety of ways: 
+
+              1. The app provides tutorials for repurposing old clothes, as well as information about how to recycle old clothes.
+              2. An educational app that educates users about the impact of fast fashion on the environment
+              
+              Our research on current and popular sustainable clothing applications helped us determine our competitive edge. Our goal was to focus on ways to repurpose clothes in a creative and interactive way - through DIY crafts. In addition, users can donate their clothes to a few donation centers where clothes can be dropped off. 
+            `}
+          />
         </SecCont>
 
         <SecCont>
           <Process 
-            title='Task Models'
-            background = '#F0F8FC'
+            src='/images/projects/reVamp/revamp_persona.png'       
+          />
+        </SecCont>
+
+        <SecCont>
+          <Process 
+            title='Site Map'
+            background = '#E9F6FB'
             aos = "fade-right"
-            src='/images/projects/MyLandlord/mylandlord_taskmodel_.png'
+            src='/images/projects/reVamp/revamp_sitemap.png'
             alt='task model'
           />
         </SecCont>
 
         <SecCont>
+          <StyleGuide 
+            src='/images/projects/reVamp/revamp_styleguide.png'
+          />
+        </SecCont>
+
+        <SecCont>
           <Process 
-            title='Low-fidelity Prototype'
-            src='/images/projects/MyLandlord/mylandlord_proto.png'
+            background = '#E9F6FB'
+            aos = "fade-right"
+            title='High-fidelity Prototype Ver.1'
+            src='/images/projects/reVamp/revamp_lo-fi.png'
             alt='lo-fi prototype'
           />
         </SecCont>
 
         <SecCont>
-          <StyleGuide 
-            background = '#F0F8FC'
-            aos = "fade-right"
-            imgWidth='70'
-            imgMWidth='70'
-          />
-        </SecCont>
-
-        <SecCont>
           <Process 
-            title='High-fidelity Prototype'
-            src='/images/projects/MyLandlord/mylandlord_hifi.png'
+            title='High-fidelity Prototype Ver.2'
+            src='/images/projects/reVamp/revamp_hi-fi.png'
             alt='hi-fi prototype'
           />
         </SecCont>
@@ -153,10 +176,9 @@ const MyLandlord = ({
         <SecCont>
           <Ideation 
             titletxt = 'Conclusion'
-            span = ''
-            children = {`In order to make it more user-friendly, we performed several usability tests after constructing the task model, persona, and wireframe. We then created a final prototype based on these tests to develop our application and to start coding it. 
+            children = {`When we built the scope and feature document, we identified what features and functions we were going to make for each page. By doing this, we could clearly see how the page layout would look when the app was coded.
 
-            We have built the frontend of the application using markup languages, such as React and Next.js, in collaboration with full-stack developers.`}
+            Our final high-fidelity prototype was designed based on user testing between each prototype. We implemented reusable components and routing functions using the tests to design the final high-fidelity prototype.`}
           />
         </SecCont>
 
@@ -169,4 +191,4 @@ const MyLandlord = ({
   )
 }
 
-export default MyLandlord;
+export default Revamp;

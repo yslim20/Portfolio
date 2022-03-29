@@ -74,7 +74,7 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-const MyLandlord = ({
+const irl_Dater = ({
   conwidth ="",  
 }) => {
  
@@ -97,66 +97,89 @@ const MyLandlord = ({
 
       <Cont conwidth={conwidth}>
         <SecCont>
-          <Hero />
-        </SecCont>
-
-        <SecCont>
-          <Description 
-            // leftonClick= {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-            rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}  
+          <Hero 
+            url = "/images/projects/irl_Dater/irl_dater_cover.png"
+            urlMobile = "/images/projects/irl_Dater/irl_dater_cover_900.png"
+            src ="/video/arrow_gray-down-arrow.gif"
           />
         </SecCont>
 
         <SecCont>
-          <Ideation />
+          <Description 
+            title = "irl_Dater"
+            span = "irl_Dater "
+            text = " is a dating application designed to help users meet that special someone while having fun with an unique point system."
+            languageT = "Role: Front-End Developer, UX/UI Designer"
+            lanSpanT = ""
+
+            languageB = "Tools: "
+            lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
+
+            year = 'Year: 2021'
+            bttnTxtL = 'Go to Marketing page'
+            leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
+            rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
+          />
         </SecCont>
 
         <SecCont>
-          <Process />
+          <Ideation 
+            background = '#FDF3F5'
+            children = {`
+              irl_Dater is designed to help singles meet other singles in a fun environment. The game aspect of this dating app will allow users to have fun while forming meaningful relationships. 
+
+              Our app offers the most suitable choices for users. Using our app, users can find their own irl_Love with high-quality matches they can imagine. It is especially convenient for users to share their points with someone they have matched with, so the points can be redeemed by both of them. In this way, users can redeem their points for movie tickets or dinners.
+            `}
+          />
         </SecCont>
 
         <SecCont>
           <Process 
-            title='Task Models'
-            background = '#F0F8FC'
+            src='/images/projects/irl_Dater/irl_dater_persona.png'       
+          />
+        </SecCont>
+
+        <SecCont>
+          <Process 
+            title='Site Map'
+            background = 'rgba(253, 243, 245, 0.5)'
             aos = "fade-right"
-            src='/images/projects/MyLandlord/mylandlord_taskmodel_.png'
+            src='/images/projects/irl_Dater/irl_dater_lo-fi.png'
             alt='task model'
           />
         </SecCont>
 
         <SecCont>
+          <StyleGuide 
+            src='/images/projects/irl_Dater/irl_dater_styleguide.png'
+          />
+        </SecCont>
+
+        <SecCont>
           <Process 
-            title='Low-fidelity Prototype'
-            src='/images/projects/MyLandlord/mylandlord_proto.png'
+            background = 'rgba(253, 243, 245, 0.5)'
+            aos = "fade-right"
+            title='High-fidelity Prototype'
+            src='/images/projects/irl_Dater/irl_dater_hi-fi.png'
             alt='lo-fi prototype'
           />
         </SecCont>
 
         <SecCont>
-          <StyleGuide 
-            background = '#F0F8FC'
-            aos = "fade-right"
-            imgWidth='70'
-            imgMWidth='70'
-          />
-        </SecCont>
-
-        <SecCont>
           <Process 
-            title='High-fidelity Prototype'
-            src='/images/projects/MyLandlord/mylandlord_hifi.png'
+            title='Marketing Page'
+            src='/images/projects/irl_Dater/irl_dater_marketingpage.png'
             alt='hi-fi prototype'
           />
         </SecCont>
 
         <SecCont>
           <Ideation 
+            background = '#FDF3F5'
             titletxt = 'Conclusion'
-            span = ''
-            children = {`In order to make it more user-friendly, we performed several usability tests after constructing the task model, persona, and wireframe. We then created a final prototype based on these tests to develop our application and to start coding it. 
+            children = {`We started with a low-fidelity prototype, which we gradually developed into a beautifully designed application over time. We designed all aspects of irl_Dater, including colours, icons, and typography. During the usability test, we learned what was working well and what needed to be changed on our app. We revised and updated the prototype based on this and created a spec sheet for full-stack students who would code out the front-end.
 
-            We have built the frontend of the application using markup languages, such as React and Next.js, in collaboration with full-stack developers.`}
+            In addition, we created a marketing page and a video to promote the irl_Dater app.`}
           />
         </SecCont>
 
@@ -169,4 +192,4 @@ const MyLandlord = ({
   )
 }
 
-export default MyLandlord;
+export default irl_Dater;

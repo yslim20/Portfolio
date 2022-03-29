@@ -95,9 +95,8 @@ const StyleGuide = ({
 
   We chose purple and blue as our theme's predominant colours since purple symbolizes wealth and luxury, and blue symbolizes calm and responsibility.`,
 
-  title='Persona',  
-  src='/images/projects/MyLandlord/mylandlord_persona.png',
-  alt='persona',
+  title='Style Guide',  
+  src='/images/projects/MyLandlord/mylandlord_StyleGuide.png',
   imgWidth=100,
   imgMWidth=90,
 
@@ -129,7 +128,7 @@ const StyleGuide = ({
         <ImgCont>
           <Image 
             src = {src}
-            alt = {alt}
+            alt = 'style guide'
             width = {imgWidth}
             mWidth = {imgMWidth}
           />

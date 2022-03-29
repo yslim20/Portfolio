@@ -16,7 +16,7 @@ const Cont = styled.div`
   position: relative;
   padding: 0 3%;
   margin-bottom: 80px;
-  background: #F0F8FC;
+  background: ${props => props.bkColor};
 
   @media only screen and (min-width: 1px) and (max-width: 1000px) { 
   }
@@ -38,7 +38,7 @@ const ContCont = styled.div`
 
 const Title = styled.h5`
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: ${props => props.titColor};
   transition: all 0.3s;
   position: relative;
@@ -52,14 +52,6 @@ const Title = styled.h5`
     font-weight: 700; 
   }
 `
-
-const ColorTxt = styled.span`
-  color: ${(props) => props.spanColor};
-  display: inline;
-  margin-right: 5px;
-  font-weight: 600;
-  font-style: italic;
-`;
 
 const Text = styled.p`
   width: 100%;
@@ -78,10 +70,10 @@ const Ideation = ({
   // ============ Props
   direction = "column",
   justify = "flex-start",
+  background = '#F0F8FC',
 
   titletxt = 'Ideation',
   TxtMarginB = 20,
-  span = 'MyLandlord',
   children = ' is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.',
 
   marginR = "5%",
@@ -101,6 +93,7 @@ const Ideation = ({
       direction={direction}
       justify={justify}
       data-aos="fade-right"
+      bkColor={background}
     >
       <ContCont marginR={marginR} marginL={marginL}>
         <Title titColor = {medBlue[theme]}>
@@ -108,7 +101,6 @@ const Ideation = ({
         </Title>
 
         <Text TxtMarginB={TxtMarginB} className = 'new-line'>
-          <ColorTxt spanColor={medBlue[theme]}>{span}</ColorTxt>
           {children}
         </Text>
 
