@@ -144,7 +144,6 @@ const Home = ({
 
         <SecCont ref = {sectionOne} id = 'sectionOne' height = {height}>
             <HomeSec 
-              // onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
               onButtonClick={() => sectionFour.current.scrollIntoView(
                 {behavior: "smooth"}
               )}

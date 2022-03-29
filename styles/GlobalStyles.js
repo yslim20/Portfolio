@@ -105,7 +105,14 @@ const globalStyles = createGlobalStyle`
       white-space: pre-line;
       color: #4C4C4C;
       font-weight: 200;
-      font-size: 1em;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .none {
+      display: none;
     }
 `;
 

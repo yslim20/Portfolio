@@ -279,7 +279,7 @@ const WebSec = ({
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}
         lanSpanB = 'WordPress'
-        bttnTxtL = 'Homepage'
+        bttnTxtL = 'Go to Homepage'
         leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}      
       />   
       

@@ -6,20 +6,18 @@ import { useRouter } from 'next/router';
 
 import NaviMobile from '@/comps/NaviMobile';
 import NaviDef from '@/comps/NaviDef';
-import HomeSec from '@/comps/HomeSec';
-import AboutSec from '@/comps/AboutSec';
-import WebSec from '@/comps/WebSec';
-import DesignSec from '@/comps/DesignSec'
-import Scroll from '@/comps/Scroll';
-import ContactSec from '@/comps/ContactSec';
-import Contact from '@/comps/Contact';
 import Hero from '@/comps/Hero';
-import Description from '@/comps/Description'
+import Description from '@/comps/Description';
+import Ideation from '@/comps/Ideation';
+import Process from '@/comps/Process';
+import StyleGuide from '@/comps/StyleGuide';
+import ScrollArrow from '@/comps/ScrollArrow';
 
 // ============ CSS ============== //
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `
 
 const SideBar = styled.div`
@@ -76,68 +74,10 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-
-
-
-
-// const ContCont = styled.div`
-//   width: 45%; height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   items-align: center;
-//   position: absolute;
-//   margin-left: 25%;
-//   box-sizing: border-box;
-//   transition: all 0.3s ease-in-out;
-
-//   @media only screen and (min-width: 1001px) and (max-width:1100px){    
-//     width: 50%;
-//     margin-left: 10%;
-//   }
-
-//   @media only screen and (min-width: 481px) and (max-width:1000px){    
-//     width: 100%;
-//     margin-left: 0;
-//     padding: 0 9.02%;
-//   }
-
-//   @media only screen and (min-width: 1px) and (max-width:480px){    
-//     width: 100%;
-//     margin-left: 0;
-//     padding: 0 9.02%;
-//   }
-// `
-
-
 const MyLandlord = ({
   conwidth ="",  
-  height = "100vh",
-  heightAll = "",
-
 }) => {
-
-  const sectionOne = useRef();
-  const sectionTwo = useRef();
-  const sectionThree = useRef();
-  const sectionFour = useRef();
-  const sectionFive = useRef();
-  const router = useRouter();
-
-  
-
-
-  function scrollViewTwo() {
-    document.getElementById('sectionTwo').scrollIntoView({behavior: 'smooth'});
-  }
-
-  function scrollViewThree() {
-    document.getElementById('sectionThree').scrollIntoView({behavior: 'smooth'});
-  }
-
-  function scrollViewFour() {
-    document.getElementById('sectionFour').scrollIntoView({behavior: 'smooth'});
-  }
-   
+ 
   return (
     <Wrap>
       <Head>
@@ -151,66 +91,81 @@ const MyLandlord = ({
         </DefCont>      
       </SideBar>
       <MobCont>
-        <NaviMobile 
-          onLogoClick={ () => {
-
-            sectionOne.current.scrollIntoView(
-              {behavior: "smooth"}
-            )
-          }}
-          
-          onWebClick = {() => {
-            sectionTwo.current.scrollIntoView(
-              {behavior: "smooth"}
-            )
-          }}
-          onDesClick = {() => {
-            sectionThree.current.scrollIntoView(
-              {behavior: "smooth"}
-            )
-          }}
-          onAboutClick = {() => {
-            sectionFour.current.scrollIntoView(
-              {behavior: "smooth"}
-            )
-          }}      
-        />        
+        <NaviMobile />        
       </MobCont> 
 {/* Navigation ends */}
 
-      <Cont
-        conwidth={conwidth}
-      >
-
-        {/* <SecCont ref = {sectionOne} height = {height}>
-            <HomeSec 
-              // onButtonClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
-              onButtonClick={() => sectionFour.current.scrollIntoView(
-                {behavior: "smooth"}
-              )}
-            />
-        </SecCont>
-
-        <SecCont ref = {sectionTwo} id = 'sectionTwo' height = {heightAll}>
-          <WebSec />
-        </SecCont>
-
-        <SecCont ref = {sectionThree} id = 'sectionThree' height = {heightAll}>
-          <DesignSec />
-        </SecCont>
-           
-        <SecCont ref = {sectionFour} id = 'sectionFour' height = {heightAll}>
-          <AboutSec />
-        </SecCont> */}
+      <Cont conwidth={conwidth}>
         <SecCont>
           <Hero />
         </SecCont>
 
         <SecCont>
-          <Description />
+          <Description 
+            // leftonClick= {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
+            rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}  
+          />
         </SecCont>
 
+        <SecCont>
+          <Ideation />
+        </SecCont>
 
+        <SecCont>
+          <Process />
+        </SecCont>
+
+        <SecCont>
+          <Process 
+            title='Task Models'
+            background = '#F0F8FC'
+            aos = "fade-right"
+            src='/images/projects/MyLandlord/mylandlord_taskmodel_.png'
+            alt='task model'
+          />
+        </SecCont>
+
+        <SecCont>
+          <Process 
+            title='Low-fidelity Prototype'
+            src='/images/projects/MyLandlord/mylandlord_proto.png'
+            alt='lo-fi prototype'
+          />
+        </SecCont>
+
+        <SecCont>
+          <StyleGuide 
+            title='Style Guide'
+            background = '#F0F8FC'
+            aos = "fade-right"
+            src='/images/projects/MyLandlord/mylandlord_StyleGuide.png'
+            alt='style guide'
+            imgWidth='70'
+            imgMWidth='70'
+          />
+        </SecCont>
+
+        <SecCont>
+          <Process 
+            title='High-fidelity Prototype'
+            src='/images/projects/MyLandlord/mylandlord_hifi.png'
+            alt='hi-fi prototype'
+          />
+        </SecCont>
+
+        <SecCont>
+          <Ideation 
+            titletxt = 'Conclusion'
+            span = ''
+            children = {`In order to make it more user-friendly, we performed several usability tests after constructing the task model, persona, and wireframe. We then created a final prototype based on these tests to develop our application and to start coding it. 
+
+            We have built the frontend of the application using markup languages, such as React and Next.js, in collaboration with full-stack developers.`}
+          />
+        </SecCont>
+
+        <SecCont height = '50'>
+          <ScrollArrow/>
+        </SecCont>
       </Cont>
 
     </Wrap>

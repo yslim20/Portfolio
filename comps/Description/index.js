@@ -9,7 +9,7 @@ import Button from "../Button";
 import { medBlue } from "@/utils/variables";
 
 // ============ CSS ============== //
-const WebProjCont = styled.div`
+const Cont = styled.div`
   width: 100%;
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -18,14 +18,15 @@ const WebProjCont = styled.div`
   position: relative;
   padding: 0 3%;
   margin-bottom: 80px;
-
+  overflow: hidden;
+  
   @media only screen and (min-width: 1px) and (max-width: 1000px) { 
   }
 `;
 
 const ContCont = styled.div`
   width: 100%;
-  max-width: 950px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,9 +51,8 @@ const WebProjText = styled.p`
   width: 100%;
   margin-bottom: ${(props) => props.TxtMarginB}px;
 
-  @media only screen and (min-width: 1px) and (max-width: 1000px) {
-    // font-size: 0.875em;
-
+  @media only screen and (max-width:480px) {
+    font-size: 0.875em;
   }
 `;
 
@@ -70,9 +70,8 @@ const LangText = styled.p`
   color: ${(props) => props.lancolor};
   line-height: 1.5em;
 
-  @media only screen and (min-width: 1px) and (max-width: 1000px) {
-    // font-size: 0.875em;
-
+  @media only screen and (max-width:480px) {
+    font-size: 0.875em;
   }
 `;
 
@@ -108,7 +107,7 @@ const Description = ({
   lanSpanT = "",
 
   languageB = "Tools: ",
-  lanSpanB = 'Next.js, React, React UI, GitHub',
+  lanSpanB = 'React, React UI, Next.js, JavaScript, GitHub, Figma',
 
   year = 'Year: 2021',
 
@@ -122,7 +121,7 @@ const Description = ({
   bttnTxtR = 'GitHub'
 
 }) => {
-  const router = useRouter();
+
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -131,7 +130,7 @@ const Description = ({
 
   // ============ Layout
   return (
-    <WebProjCont
+    <Cont
       direction={direction}
       justify={justify}
       data-aos="fade-up"
@@ -159,8 +158,6 @@ const Description = ({
           <ColorTxt spanColor={medBlue[theme]}>{lanSpanB}</ColorTxt>
         </LangText>
 
-        {/* <LangText className="new-line">{roleTop}</LangText> */}
-
         <BttnCont>
           <Button
             onClick={leftonClick}
@@ -171,7 +168,7 @@ const Description = ({
           <Button onClick={rightonClick} text={bttnTxtR} width="100%" />
         </BttnCont>
       </ContCont>
-    </WebProjCont>
+    </Cont>
   );
 };
 
