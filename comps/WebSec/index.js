@@ -149,7 +149,7 @@ const WebSec = ({
           • Built reusable and scalable code and components.`}
           roleBttm = ''
           languageB = "Tools: "
-          lanSpanB = 'Next.js, React, GitHub'
+          lanSpanB = 'Next.js, React, GitHub, Figma'
           srcT = "/images/projects/img_reVamp.png"
 
           leftonClick = {() => router.push('/Revamp')}
@@ -223,7 +223,7 @@ const WebSec = ({
         languageT = "Role: Front-End Developer, UX/UI Designer"
         lanSpanT = ''
         languageB = "Tools: "
-        lanSpanB = 'Next.js, React, GitHub'
+        lanSpanB = 'Next.js, React, GitHub, Figma'
         role = {`• Contributed to all stages of development, including planning, testing, and coding.
           • Constructed a user-interactive site architecture.
           • Built reusable and scalable code and components.`}
@@ -239,10 +239,10 @@ const WebSec = ({
         languageT = "Role: Web Developer(Marketing Page), UX/UI Designer"
         lanSpanT = ''
         languageB = "Tools: "
+        lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
         role = {`• Collected, researched, investigated and evaluated user requirements. 
           • Provided an exceptional user experience through intuitive application design. 
-          • Designed and developed a marketing website for the application.`}
-        lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
+          • Designed and developed a marketing website for the application.`}        
 
         leftonClick = {() => router.push('/Irl_Dater')}      
       />    

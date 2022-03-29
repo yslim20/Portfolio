@@ -116,7 +116,7 @@ const WebProjMob = ({
   languageT = "Role: Front-End Developer, UX/UI Designer",
   lanSpanT = '',
   languageB = "Tools: ",
-  lanSpanB = 'Next.js, React, React UI, GitHub',
+  lanSpanB = 'Next.js, React, React UI, GitHub, Figma',
 
   role = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
   • Collaborated with back-end developers, full-stack students, on improving usability.

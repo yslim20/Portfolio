@@ -122,13 +122,12 @@ const WebProj = ({
   leftonClick = () => {},
 
   titleOne = "MyLandlord",
-  spanOne = "a website to review Landlord",
   textOne = "A website to review Landlord",
   languageT = "Role: Front-End Developer, UX/UI Designer",
   lanSpanT = "",
 
   languageB = "Tools: ",
-  lanSpanB = 'Next.js, React, React UI, GitHub',
+  lanSpanB = 'Next.js, React, React UI, GitHub, Figma',
 
   roleTop = `• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.
   • Collaborated with back-end developers, full-stack students, on improving usability.
@@ -161,7 +160,6 @@ const WebProj = ({
       direction={direction}
       justify={justify}
       data-aos="fade-up"
-      // data-aos-once="true"
     >
       <ContCont marginR={marginRT} marginL={marginLT}>
         <WebProjTit TitMarginB={TitMarginB}>{titleOne}</WebProjTit>
