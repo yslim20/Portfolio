@@ -109,7 +109,6 @@ const DivConB = styled.div`
 
 const WebSec = ({
 
-  // onButtonClick = () => {},
 
 }) => {
 
@@ -169,7 +168,6 @@ const WebSec = ({
           spanOne = "irl_Dater"
           textOne = "A dating application and marketing website"
 
-          // textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
           languageT = "Role: Front-End Developer(Marketing Page), UX/UI Designer"
           lanSpanT = ''
           roleTop = {`• Collected, researched, investigated and evaluated user requirements. 
@@ -181,12 +179,9 @@ const WebSec = ({
           srcT = "/images/projects/img_irl_Dater.png"
 
           leftonClick = {() => router.push('/Irl_Dater')}
-
-          // rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
-          // leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
         />
 
-        <WebProj 
+        {/* <WebProj 
           shapeHeightT = "34"
           shapeWidthT = "60"
           top = "45"
@@ -199,7 +194,6 @@ const WebSec = ({
           spanOne = ""
           textOne = "A blog site about the Korean drama series, The Kingdom"
 
-          // textOne = "is a dating application designed to help users meet that special someone while having fun with an unique point system."
           languageT = "Role: Web Developer"
           lanSpanT = ''
           roleTop = {`• Collected, researched, investigated and evaluated user requirements. 
@@ -213,13 +207,11 @@ const WebSec = ({
           bttnTxtL = 'Go to Homepage'
 
           leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}  
-        />
+        /> */}
       </WebCont>
 
 {/* ==================== Mobile Projects */}
-      <WebProjMob 
-        // leftonClick = {() => window.open('https://mylandlord-front-end.vercel.app', '_blank')}
-        // rightonClick = {() => window.open('https://github.com/yslim20/MyLandlord-Front-End', '_blank')}   
+      <WebProjMob   
         leftonClick = {() => router.push('/MyLandlord')}
       />
 
@@ -237,8 +229,6 @@ const WebSec = ({
           • Built reusable and scalable code and components.`}
 
         leftonClick = {() => router.push('/Revamp')}
-        // leftonClick = {() => window.open('https://revamp-yslim.vercel.app', '_blank')}
-        // rightonClick = {() => window.open('https://github.com/yslim20/reVamp', '_blank')}
       />
 
       <WebProjMob 
@@ -254,13 +244,10 @@ const WebSec = ({
           • Designed and developed a marketing website for the application.`}
         lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
 
-        leftonClick = {() => router.push('/Irl_Dater')}
-        // leftonClick = {() => window.open('http://irldater.younsoolim.com/', '_blank')}
-        // rightonClick = {() => window.open('https://github.com/yslim20/irl_Dater', '_blank')}
-      
+        leftonClick = {() => router.push('/Irl_Dater')}      
       />    
 
-      <WebProjMob 
+      {/* <WebProjMob 
         src = "/images/projects/img_Kingdom.png"
         title = "About Kingdom"
         contMarginB = '80'
@@ -275,7 +262,7 @@ const WebSec = ({
         lanSpanB = 'WordPress'
         bttnTxtL = 'Go to Homepage'
         leftonClick = {() => window.open('http://kingdom.younsoolim.com/', '_blank')}      
-      />   
+      />    */}
       
       <DivConB>
         <DivImg 

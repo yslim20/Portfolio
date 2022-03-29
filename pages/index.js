@@ -143,11 +143,11 @@ const Home = ({
       >
 
         <SecCont ref = {sectionOne} id = 'sectionOne' height = {height}>
-            <HomeSec 
-              onButtonClick={() => sectionFour.current.scrollIntoView(
-                {behavior: "smooth"}
-              )}
-            />
+          <HomeSec 
+            onButtonClick={() => sectionFour.current.scrollIntoView(
+              {behavior: "smooth"}
+            )}
+          />
         </SecCont>
 
         <SecCont ref = {sectionTwo} id = 'sectionTwo' height = {heightAll}>
