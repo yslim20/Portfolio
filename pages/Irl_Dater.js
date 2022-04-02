@@ -75,7 +75,7 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-const irl_Dater = ({
+const Irl_Dater = ({
   conwidth ="",  
 }) => {
  
@@ -100,7 +100,7 @@ const irl_Dater = ({
         <SecCont>
           <Hero 
             url = "/images/projects/irl_Dater/irl_dater_cover.png"
-            urlMobile = "/images/projects/irl_Dater/irl_dater_cover_900.png"
+            urlMobile = "/images/projects/irl_Dater/irl_Dater_cover_900.png"
             src ="/video/arrow_gray-down-arrow.gif"
           />
         </SecCont>
@@ -195,4 +195,4 @@ const irl_Dater = ({
   )
 }
 
-export default irl_Dater;
+export default Irl_Dater;
