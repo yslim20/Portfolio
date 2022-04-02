@@ -17,12 +17,18 @@ const DescCont = styled.div`
   justify-content: center;
   position: relative;
 
-  @media only screen and (min-width: 1056px) and (max-width: 1225px) {
-    padding-bottom: 1rem;
+  @media only screen and (min-width: 1081px) and (max-width: 1225px) {
+    padding-bottom: 2rem;
   }
 
-  @media only screen and (min-width: 1001px) and (max-width: 1055px) {
+  @media only screen and (min-width: 1061px) and (max-width: 1080px) {
+    padding-top: 1.5rem;
     padding-bottom: 3rem;
+  }
+
+  @media only screen and (min-width: 1001px) and (max-width: 1060px) {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 1000px) {
@@ -57,10 +63,10 @@ const DescTit = styled.h4`
 
 const TxtCont = styled.div`
   display: inline-flex;
+
   @media only screen and (max-width: 1000px) {
     font-size: 1em;
   }
-
 `
 
 const Text = styled.div`
