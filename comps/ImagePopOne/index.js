@@ -22,6 +22,7 @@ const PopCont = styled.div`
     z-index: 99999;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    background: ${props => props.bkground};
 
     :hover {
       transform: scale(1.05);
@@ -60,6 +61,7 @@ const ImagePopOne = ({
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 6px 18px",
     cdisplay="flex",
     width = "35",    
+    bkground,
     marginL = '-17.5',
     marginT = '-23',
     
@@ -87,6 +89,7 @@ const ImagePopOne = ({
       <PopCont 
         width = {width}
         cdisplay = {cdisplay}
+        bkground = {bkground}
         cbshadow = {cbshadow}
         marginL = {marginL}
         marginT = {marginT}

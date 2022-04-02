@@ -12,6 +12,7 @@ import Ideation from '@/comps/Ideation';
 import Process from '@/comps/Process';
 import StyleGuide from '@/comps/StyleGuide';
 import ScrollArrow from '@/comps/ScrollArrow';
+import Footer from '@/comps/Footer';
 
 // ============ CSS ============== //
 const Wrap = styled.div`
@@ -186,6 +187,8 @@ const irl_Dater = ({
         <SecCont height = '50'>
           <ScrollArrow/>
         </SecCont>
+
+        <Footer />
       </Cont>
 
     </Wrap>
