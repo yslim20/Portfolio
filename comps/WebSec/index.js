@@ -152,7 +152,7 @@ const WebSec = ({
           lanSpanB = 'Next.js, React, GitHub, Figma'
           srcT = "/images/projects/img_reVamp.png"
 
-          leftonClick = {() => router.push('/reVamp')}
+          leftonClick = {() => router.push('/ReVamp')}
         />
 
         <WebProj      
@@ -178,7 +178,7 @@ const WebSec = ({
           lanSpanB = 'HTML, CSS, jQuery, GitHub, Figma'
           srcT = "/images/projects/img_irl_Dater.png"
 
-          leftonClick = {() => router.push('/irl_Dater')}
+          leftonClick = {() => router.push('/Irl_Dater')}
         />
 
         {/* <WebProj 
@@ -228,7 +228,7 @@ const WebSec = ({
           • Constructed a user-interactive site architecture.
           • Built reusable and scalable code and components.`}
 
-        leftonClick = {() => router.push('/reVamp')}
+        leftonClick = {() => router.push('/ReVamp')}
       />
 
       <WebProjMob 
@@ -244,7 +244,7 @@ const WebSec = ({
           • Provided an exceptional user experience through intuitive application design. 
           • Designed and developed a marketing website for the application.`}        
 
-        leftonClick = {() => router.push('/irl_Dater')}      
+        leftonClick = {() => router.push('/Irl_Dater')}      
       />    
 
       {/* <WebProjMob 

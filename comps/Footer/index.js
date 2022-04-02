@@ -87,7 +87,7 @@ const Footer = ({}) => {
       </LogoCont>
 
       <LogoCont
-        onClick={() => router.push("/reVamp")}
+        onClick={() => router.push("/ReVamp")}
         urlHover="/images/logo_revamp_w.svg" 
       >
         <Logo
@@ -102,7 +102,7 @@ const Footer = ({}) => {
       </LogoCont>
 
       <LogoCont
-        onClick={() => router.push("/irl_Dater")}
+        onClick={() => router.push("/Irl_Dater")}
         urlHover="/images/logo_irl_dater_w.svg"  
       >
         <Logo
