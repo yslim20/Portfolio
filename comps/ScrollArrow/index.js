@@ -27,8 +27,7 @@ const TopBttn = styled.button`
     width: 40px;
     height: 40px;
     font-size: 0.875em;
-    bottom: 105px;
-    right: 50%;
+    bottom: 40px;
     margin-right: -20px;
   }
 `;
