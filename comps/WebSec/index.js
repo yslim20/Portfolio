@@ -37,7 +37,7 @@ const ImgCont = styled.div`
   background-attachment: fixed; 
   opacity: 0.2;
   position: absolute;
-  bottom: -1px; left: -1px;
+  bottom: -1px; left: 0;
   z-index: -999;  
   box-sizing: border-box;  
 
@@ -96,7 +96,7 @@ const DivConB = styled.div`
   display: block;
   position: absolute;
   bottom: -1px;
-  left: 0;
+  left: -1px;
   z-index: -99;
   overflow: hidden;
 
