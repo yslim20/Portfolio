@@ -17,6 +17,14 @@ const DescCont = styled.div`
   justify-content: center;
   position: relative;
 
+  @media only screen and (min-width: 1056px) and (max-width: 1225px) {
+    padding-bottom: 1rem;
+  }
+
+  @media only screen and (min-width: 1001px) and (max-width: 1055px) {
+    padding-bottom: 3rem;
+  }
+
   @media only screen and (min-width: 601px) and (max-width: 1000px) {
     width: 72.46%;
   }
@@ -47,20 +55,24 @@ const DescTit = styled.h4`
   }
 `;
 
-const ColorTxt = styled.span`
-  color: ${props => props.color};
-`
-
-const DescText = styled.p`
-  width: 100%;
-  margin-bottom: ${(props) => props.TxtMarginB}px;  
-
-  @media only screen and (min-width: 481px) and (max-width: 1000px) {
+const TxtCont = styled.div`
+  display: inline-flex;
+  @media only screen and (max-width: 1000px) {
     font-size: 1em;
   }
 
-  @media only screen and (min-width: 1px) and (max-width: 480px) {
-    font-size: 0.875em;
+`
+
+const Text = styled.div`
+  width: 100%;
+  display: inline;
+  margin-bottom: ${(props) => props.TxtMarginB}px;  
+  font-size: 1em;
+  font-weight: 300; 
+  line-height: 1.4em;  
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 1em;
   }
 `;
 
@@ -77,7 +89,6 @@ const BttnCont = styled.div`
   }
 `
 
-
 // ============ Function ============== //
 
 const About = ({
@@ -90,15 +101,12 @@ const About = ({
   title = "Hello, I am ...",
   fsize = 2,
   fsizeN = 2.5,
-  textOne = "My studies at British Columbia Institute of Technology gave me a solid foundation in front-end development, including HTML, CSS, JavaScript, jQuery, and React. As a front-end developer, I am excellent at managing time, resolving problems, and adapting to changing environments.",
   TitMarginB = 10,
   nameMarginB = 20,
   TxtMarginB = 10,
-  TxtMarginBB = '',
-  textTwo = "In addition, I studied Fashion Design, Visual Presentation & Exhibition Design, as well as a wide range of UX/UI design skills, including Adobe Illustrator, InDesign, Photoshop, and Figma. With my previous experience, I can provide a unique perspective on web development.",
+  TxtMarginBB,
 
   justify = "flex-start",
-  routeTo = "/ResumePage",
 
 }) => {
   const { theme, setTheme } = useTheme();
@@ -116,19 +124,27 @@ const About = ({
         <DescTit fsize={fsizeN} wid={widN} TitMarginB={nameMarginB} display={displayN} color = {medBlue[theme]}>
           Youn Soo Lim 💻🖱️
         </DescTit>
-        <DescText TxtMarginB={TxtMarginB}>{textOne}</DescText>
-        <DescText TxtMarginB={TxtMarginBB}>{textTwo}</DescText>
+        <TxtCont className='inline-flex'>
+          <Text TxtMarginB={TxtMarginB}>
+            My studies at British Columbia Institute of Technology gave me a solid foundation in&nbsp;
+            <Text className="color-txt">front-end development,</Text>&nbsp;including&nbsp;
+            <Text className="color-txt">HTML, CSS, JavaScript, jQuery, and React.</Text>
+            &nbsp;As a front-end developer, I am excellent at managing time, resolving problems, and adapting to changing environments.
+          </Text> 
+        </TxtCont>
+
+        <TxtCont className='inline-flex'>
+          <Text TxtMarginB={TxtMarginBB}>
+            In addition, I studied <Text className="color-txt">Fashion Design, Visual Presentation &amp; Exhibition Design</Text>, 
+            as well as a wide range of <Text className="color-txt">UX/UI design</Text> skills, including Adobe Illustrator, InDesign, Photoshop, and Figma. 
+            With my previous experience, I can provide a unique perspective on web development.
+          </Text>
+
+        </TxtCont>
+
       </div>
 
-      <BttnCont data-aos="fade-up" /*data-aos-once="true"*/>
-        {/* <Button
-          width='100%'
-          text="Resume"
-          marginright="20"
-          margintop = '20'
-          onClick={() => window.open('./asset/YounSoo_Lim_Resume.pdf', '_blank')}
-        /> */}
-
+      <BttnCont data-aos="fade-up" >
         <Button
           width='50%'
           text="Email me"

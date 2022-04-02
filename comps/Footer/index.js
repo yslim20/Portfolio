@@ -31,6 +31,16 @@ const LogoCont = styled.div`
     transform: scale(0.95);
   }
 
+  :active div{
+    background-image: url(${(props) => props.urlHover});
+    background-color: #d7aef2;
+    transform: scale(0.95);
+  }
+
+  :active p{
+    transform: scale(0.95);
+  }
+
   @media only screen and (max-width: 480px) {
     padding: 0 0.75rem;
     max-width: 68px;

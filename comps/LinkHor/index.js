@@ -72,11 +72,9 @@ const LinkHor = ({
   hrefG = 'https://github.com/yslim20?tab=repositories',
 
 
-  altD="Dribbble",
-  positionD = "center top",
-  hPositionD = "center bottom",
-  hrefD = 'https://dribbble.com/yslim2022',
-  
+  altE="Email",
+  positionE = "center top",
+  hPositionE = "center bottom",
 
   altL="Linkedin",
   positionL = "right top",
@@ -103,12 +101,12 @@ const LinkHor = ({
           />
         </Img>   
         <Img
-          alt={altD} 
-          position={positionD}   
-          hPosition={hPositionD}     
+          alt={altE} 
+          position={positionE}   
+          hPosition={hPositionE}     
         >
           <GitHub 
-            onClick={() => window.open(hrefD)}
+            onClick={() => window.open('mailto:yslim.bcit@gmail.com', '_blank')}
           />
         </Img> 
         <Img

@@ -114,6 +114,10 @@ const globalStyles = createGlobalStyle`
     .none {
       display: none;
     }
+
+    .color-txt {
+      color: #5550F2;
+    }
 `;
 
 export default globalStyles;
