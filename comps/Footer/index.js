@@ -87,7 +87,7 @@ const Footer = ({}) => {
       </LogoCont>
 
       <LogoCont
-        onClick={() => router.push("/ReVamp")}
+        onClick={() => router.push("/Revamp")}
         urlHover="/images/logo_revamp_w.svg" 
       >
         <Logo

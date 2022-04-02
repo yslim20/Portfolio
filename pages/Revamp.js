@@ -75,7 +75,7 @@ const SecCont = styled.div`
   box-sizing: border-box; 
 `
 
-const ReVamp = ({
+const Revamp = ({
   conwidth ="",  
 }) => {
  
@@ -193,4 +193,4 @@ const ReVamp = ({
   )
 }
 
-export default ReVamp;
+export default Revamp;

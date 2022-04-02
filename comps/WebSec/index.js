@@ -152,7 +152,7 @@ const WebSec = ({
           lanSpanB = 'Next.js, React, GitHub, Figma'
           srcT = "/images/projects/img_reVamp.png"
 
-          leftonClick = {() => router.push('/ReVamp')}
+          leftonClick = {() => router.push('/Revamp')}
         />
 
         <WebProj      
@@ -228,7 +228,7 @@ const WebSec = ({
           • Constructed a user-interactive site architecture.
           • Built reusable and scalable code and components.`}
 
-        leftonClick = {() => router.push('/ReVamp')}
+        leftonClick = {() => router.push('/Revamp')}
       />
 
       <WebProjMob 
